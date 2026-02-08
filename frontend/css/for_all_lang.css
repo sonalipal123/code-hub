@@ -1,0 +1,90 @@
+body {
+  background-color: #f8f9fb;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+}
+.navbar {
+  background-color: #0000ff;
+}
+.logo-brand{
+  color: #ffffff;
+  font-weight: bold;
+  font-size: large;
+}
+
+.btn{
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 980px;
+  margin: 17px auto;
+  padding: 0 6px;
+}
+
+.lang-title {
+  font-family: 'Rowdies', sans-serif;
+  color: #000;
+}
+
+
+
+::-webkit-scrollbar-thumb{
+  background-color: transparent;
+  width: 1px;
+  color: transparent;
+}
+::-webkit-scrollbar{
+  background-color: transparent;
+  width: 1px;
+  color: transparent;
+}
+
+.example-card {
+  cursor: default;
+}
+.example-title {
+  text-decoration: none;
+  color: #0b5ed7;
+  font-weight: 600;
+}
+.example-title:hover {
+  text-decoration: underline;
+  color: #19d50b;
+}
+.meta {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+.badge-diff {
+  margin-left: 8px;
+}
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+pre {
+  background: #fff;
+  border-radius: 6px;
+  padding: 12px;
+  overflow: auto;
+}
+.no-results {
+  color: #6c757d;
+  padding: 16px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #ececec;
+}
+.bookmarked {
+  color: #d63384;
+} /* pink color for bookmark icon when active */
+@media (max-width: 720px) {
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

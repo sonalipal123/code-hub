@@ -1,0 +1,836 @@
+[
+  {
+    "title": "Print Hello World",
+    "code": "#include <stdio.h>\nint main() {\n  printf(\"Hello, World!\");\n  return 0;\n}",
+    "input": "",
+    "output": "Hello, World!"
+  },
+  {
+    "title": "scanf()",
+    "code": "#include <stdio.h>\nint main() {\n  int num;\n  scanf(\"%d\", &num);\n  printf(\"You entered: %d\", num);\n  return 0;\n}",
+    "input": "10",
+    "output": "You entered: 10"
+  },
+  {
+    "title": "Print an Integer",
+    "code": "#include <stdio.h>\nint main() {\n  int a;\n  printf(\"Enter an integer number: \");\n  scanf(\"%d\", &a);\n  printf(\"You entered: %d\", a);\n  return 0;\n}",
+    "input": "25",
+    "output": "You entered: 25"
+  },
+  {
+    "title": "Sum and Subtraction of Two Numbers",
+    "code": "#include <stdio.h>\nint main() {\n  int a, b, sum, sub;\n  printf(\"Enter two numbers: \");\n  scanf(\"%d %d\", &a, &b);\n  sum = a + b;\n  sub = a - b;\n  printf(\"Sum = %d\\n\", sum);\n  printf(\"Subtraction = %d\", sub);\n  return 0;\n}",
+    "input": "8 3",
+    "output": "Sum = 11\nSubtraction = 5"
+  },
+  {
+    "title": "Square Root of a Number",
+    "code": "#include <stdio.h>\n#include <math.h>\nint main() {\n  int num;\n  scanf(\"%d\", &num);\n  printf(\"Square root: %f\", sqrt(num));\n  return 0;\n}",
+    "input": "25",
+    "output": "Square root: 5.000000"
+  },
+  {
+    "title": "AND Operator Example",
+    "code": "#include <stdio.h>\nint main() {\n  int a = 5, b = 10;\n  if (a > 0 && b > 0)\n    printf(\"Both numbers are positive\");\n  else\n    printf(\"At least one number is not positive\");\n  return 0;\n}",
+    "input": "",
+    "output": "Both numbers are positive"
+  },
+  {
+    "title": "OR Operator Example",
+    "code": "#include <stdio.h>\nint main() {\n  int a = -5, b = 10;\n  if (a > 0 || b > 0)\n    printf(\"At least one number is positive\");\n  else\n    printf(\"Both numbers are non-positive\");\n  return 0;\n}",
+    "input": "",
+    "output": "At least one number is positive"
+  },
+  {
+    "title": "NOT Operator Example",
+    "code": "#include <stdio.h>\nint main() {\n  int a = 0;\n  if (!a)\n    printf(\"a is zero\");\n  else\n    printf(\"a is not zero\");\n  return 0;\n}",
+    "input": "",
+    "output": "a is zero"
+  },
+  {
+    "title": "Prefix and Postfix Increment Operator",
+    "code": "#include <stdio.h>\nint main() {\n  int a = 10, b;\n\n  b = ++a;\n  printf(\"\\n After Prefix Increment  : \");\n  printf(\" a = %d and b = %d\", a, b);\n\n  a = 10;\n  b = a++;\n  printf(\"\\n After Postfix Increment : \");\n  printf(\" a = %d and b = %d\", a, b);\n\n  return 0;\n}",
+    "input": "",
+    "output": "After Prefix Increment  :  a = 11 and b = 11\nAfter Postfix Increment :  a = 11 and b = 10"
+  },
+  {
+    "title": "Bitwise Operators Example",
+    "code": "#include <stdio.h>\nint main() {\n  int a = 3, b = 6, c;\n\n  printf(\"a = %d\\n\", a);\n  printf(\"b = %d\\n\", b);\n\n  c = a & b;\n  printf(\"a & b = %d\\n\", c);\n\n  c = a | b;\n  printf(\"a | b = %d\\n\", c);\n\n  c = a ^ b;\n  printf(\"a ^ b = %d\\n\", c);\n\n  c = ~a;\n  printf(\"~a = %d\\n\", c);\n\n  c = a << 3;\n  printf(\"a << 3 = %d\\n\", c);\n\n  c = b >> 2;\n  printf(\"b >> 2 = %d\\n\", c);\n\n  return 0;\n}",
+    "input": "",
+    "output": "a = 3\nb = 6\na & b = 2\na | b = 7\na ^ b = 5\n~a = -4\na << 3 = 24\nb >> 2 = 1"
+  },
+  {
+    "title": "Conditional Operator Example",
+    "code": "#include <stdio.h>\nint main() {\n  int a = 10, b = 20;\n  int max = (a > b) ? a : b;\n  printf(\"Maximum = %d\", max);\n  return 0;\n}",
+    "input": "",
+    "output": "Maximum = 20"
+  },
+  {
+    "title": "Typecasting Example",
+    "code": "#include <stdio.h>\nint main() {\n  int a = 10, b = 3;\n  float result = (float)a / b;\n  printf(\"Result = %.2f\", result);\n  return 0;\n}",
+    "input": "",
+    "output": "Result = 3.33"
+  },
+  {
+    "title": "If-Else Example",
+    "code": "#include <stdio.h>\nint main() {\n  int num = 5;\n  if (num > 0)\n    printf(\"Positive number\");\n  else\n    printf(\"Non-positive number\");\n  return 0;\n}",
+    "input": "",
+    "output": "Positive number"
+  },
+  {
+    "title": "Check Odd or Even",
+    "code": "#include <stdio.h>\nint main() {\n  int num = 7;\n  if (num % 2 == 0)\n    printf(\"Even number\");\n  else\n    printf(\"Odd number\");\n  return 0;\n}",
+    "input": "",
+    "output": "Odd number"
+  },
+  {
+    "title": "Leap Year Checker (Else If)",
+    "code": "#include <stdio.h>\nint main() {\n  int year = 2024;\n  if (year % 400 == 0)\n    printf(\"Leap year\");\n  else if (year % 100 == 0)\n    printf(\"Not a leap year\");\n  else if (year % 4 == 0)\n    printf(\"Leap year\");\n  else\n    printf(\"Not a leap year\");\n  return 0;\n}",
+    "input": "",
+    "output": "Leap year"
+  },
+  {
+    "title": "Switch Case Example",
+    "code": "#include <stdio.h>\nint main() {\n  int choice = 2;\n  switch(choice) {\n    case 1: printf(\"One\"); break;\n    case 2: printf(\"Two\"); break;\n    case 3: printf(\"Three\"); break;\n    default: printf(\"Invalid choice\");\n  }\n  return 0;\n}",
+    "input": "",
+    "output": "Two"
+  },
+  {
+    "title": "Nested Switch Case Example",
+    "code": "#include <stdio.h>\nint main() {\n  int region = 1, city = 2;\n  switch(region) {\n    case 1:\n      switch(city) {\n        case 1: printf(\"Delhi\"); break;\n        case 2: printf(\"Mumbai\"); break;\n      }\n      break;\n    default:\n      printf(\"Unknown Region\");\n  }\n  return 0;\n}",
+    "input": "",
+    "output": "Mumbai"
+  },
+  {
+    "title": "For Loop Example",
+    "code": "#include <stdio.h>\nint main() {\n  for (int i = 1; i <= 5; i++) {\n    printf(\"%d \", i);\n  }\n  return 0;\n}",
+    "input": "",
+    "output": "1 2 3 4 5"
+  },
+  {
+    "title": "Print Name 10 Times (For Loop)",
+    "code": "#include <stdio.h>\nint main() {\n  for (int i = 1; i <= 10; i++) {\n    printf(\"Sonali\\n\");\n  }\n  return 0;\n}",
+    "input": "",
+    "output": "Sonali (10 times)"
+  },
+  {
+    "title": "Print 1 to N Numbers (For Loop)",
+    "code": "#include <stdio.h>\nint main() {\n  int n = 10;\n  for (int i = 1; i <= n; i++) {\n    printf(\"%d \", i);\n  }\n  return 0;\n}",
+    "input": "",
+    "output": "1 2 3 4 5 6 7 8 9 10"
+  },
+  {
+    "title": "Sum of Odd Numbers (1 to N)",
+    "code": "#include <stdio.h>\nint main() {\n  int n = 10, sum = 0;\n  for (int i = 1; i <= n; i += 2)\n    sum += i;\n  printf(\"Sum of odd numbers = %d\", sum);\n  return 0;\n}",
+    "input": "",
+    "output": "Sum of odd numbers = 25"
+  },
+  {
+    "title": "Multiplication Table",
+    "code": "#include <stdio.h>\nint main() {\n  int n = 5;\n  for (int i = 1; i <= 10; i++)\n    printf(\"%d x %d = %d\\n\", n, i, n*i);\n  return 0;\n}",
+    "input": "",
+    "output": "5 x 1 = 5\n5 x 2 = 10\n5 x 3 = 15\n5 x 4 = 20\n5 x 5 = 25\n5 x 6 = 30\n5 x 7 = 35\n5 x 8 = 40\n5 x 9 = 45\n5 x 10 = 50"
+  },
+  {
+    "title": "Simple While Loop",
+    "code": "#include <stdio.h>\nint main() {\n  int i = 1;\n  while (i <= 5) {\n    printf(\"%d \", i);\n    i++;\n  }\n  return 0;\n}",
+    "input": "",
+    "output": "1 2 3 4 5"
+  },
+  {
+    "title": "Sum of 1 to 10 (While Loop)",
+    "code": "#include <stdio.h>\nint main() {\n  int i = 1, sum = 0;\n  while (i <= 10) {\n    sum += i;\n    i++;\n  }\n  printf(\"Sum = %d\", sum);\n  return 0;\n}",
+    "input": "",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Do While Loop Example",
+    "code": "#include <stdio.h>\nint main() {\n  int i = 1;\n  do {\n    printf(\"%d \", i);\n    i++;\n  } while (i <= 5);\n  return 0;\n}",
+    "input": "",
+    "output": "1 2 3 4 5"
+  },
+  {
+    "title": "Array Example",
+    "code": "#include <stdio.h>\nint main() {\n  int arr[5] = {1, 2, 3, 4, 5};\n  for (int i = 0; i < 5; i++)\n    printf(\"%d \", arr[i]);\n  return 0;\n}",
+    "input": "",
+    "output": "1 2 3 4 5"
+  },
+  {
+    "title": "String Example",
+    "code": "#include <stdio.h>\nint main() {\n  char name[] = \"Sonali\";\n  printf(\"Hello, %s!\", name);\n  return 0;\n}",
+    "input": "",
+    "output": "Hello, Sonali!"
+  },
+  {
+    "title": "Structure Example",
+    "code": "#include <stdio.h>\nstruct Student {\n  int id;\n  char name[20];\n};\nint main() {\n  struct Student s1 = {1, \"Sonali\"};\n  printf(\"ID: %d, Name: %s\", s1.id, s1.name);\n  return 0;\n}",
+    "input": "",
+    "output": "ID: 1, Name: Sonali"
+  },
+  {
+    "title": "Pointer Example (Basic)",
+    "code": "#include <stdio.h>\nint main() {\n  int a = 10;\n  int *p = &a;\n  printf(\"Value of a = %d\", *p);\n  return 0;\n}",
+    "input": "",
+    "output": "Value of a = 10"
+  },
+  {
+    "title": "File Write Example",
+    "code": "#include <stdio.h>\nint main() {\n  FILE *f = fopen(\"data.txt\", \"w\");\n  fprintf(f, \"Hello File\");\n  fclose(f);\n  printf(\"Data written to file\");\n  return 0;\n}",
+    "input": "",
+    "output": "Data written to file"
+  },
+  {
+    "title": "File Read Example",
+    "code": "#include <stdio.h>\nint main() {\n  FILE *f = fopen(\"data.txt\", \"r\");\n  char ch;\n  while((ch = fgetc(f)) != EOF)\n    printf(\"%c\", ch);\n  fclose(f);\n  return 0;\n}",
+    "input": "",
+    "output": "Hello File"
+  },
+  {
+    "title": "Malloc Example",
+    "code": "#include <stdio.h>\n#include <stdlib.h>\nint main() {\n  int *ptr = (int*)malloc(5 * sizeof(int));\n  for(int i=0; i<5; i++) ptr[i] = i+1;\n  for(int i=0; i<5; i++) printf(\"%d \", ptr[i]);\n  free(ptr);\n  return 0;\n}",
+    "input": "",
+    "output": "1 2 3 4 5"
+  },
+  {
+    "title": "Calloc Example",
+    "code": "#include <stdio.h>\n#include <stdlib.h>\nint main() {\n  int *ptr = (int*)calloc(5, sizeof(int));\n  for(int i=0; i<5; i++) printf(\"%d \", ptr[i]);\n  free(ptr);\n  return 0;\n}",
+    "input": "",
+    "output": "0 0 0 0 0"
+  },
+  {
+    "title": "Realloc Example",
+    "code": "#include <stdio.h>\n#include <stdlib.h>\nint main() {\n  int *ptr = (int*)malloc(2 * sizeof(int));\n  ptr[0]=1; ptr[1]=2;\n  ptr = (int*)realloc(ptr, 4 * sizeof(int));\n  ptr[2]=3; ptr[3]=4;\n  for(int i=0; i<4; i++) printf(\"%d \", ptr[i]);\n  free(ptr);\n  return 0;\n}",
+    "input": "",
+    "output": "1 2 3 4"
+  },
+  {
+    "title": "Preprocessor Example",
+    "code": "#include <stdio.h>\n#define PI 3.14\nint main() {\n  float area, r = 5;\n  area = PI * r * r;\n  printf(\"Area = %.2f\", area);\n  return 0;\n}",
+    "input": "",
+    "output": "Area = 78.50"
+  },
+  {
+    "title": "Simple Graphics (Text Simulation)",
+    "code": "#include <stdio.h>\nint main() {\n  for(int i=0;i<5;i++){\n    for(int j=0;j<=i;j++) printf(\"*\");\n    printf(\"\\n\");\n  }\n  return 0;\n}",
+    "input": "",
+    "output": "*\n**\n***\n****\n*****"
+  },
+  {
+    "title": "2D Array Example",
+    "code": "#include <stdio.h>\nint main() {\n  int arr[2][2] = {{1,2},{3,4}};\n  for(int i=0;i<2;i++){\n    for(int j=0;j<2;j++) printf(\"%d \", arr[i][j]);\n    printf(\"\\n\");\n  }\n  return 0;\n}",
+    "input": "",
+    "output": "1 2\n3 4"
+  },
+  {
+    "title": "Dynamic Array Using Malloc",
+    "code": "#include <stdio.h>\n#include <stdlib.h>\nint main() {\n  int n=3; int *arr = (int*)malloc(n*sizeof(int));\n  for(int i=0;i<n;i++) arr[i]=i+1;\n  for(int i=0;i<n;i++) printf(\"%d \", arr[i]);\n  free(arr);\n  return 0;\n}",
+    "input": "",
+    "output": "1 2 3"
+  },
+  {
+    "title": "Simple Linked List Node",
+    "code": "#include <stdio.h>\n#include <stdlib.h>\nstruct Node {\n  int data;\n  struct Node* next;\n};\nint main() {\n  struct Node* head = (struct Node*)malloc(sizeof(struct Node));\n  head->data = 10;\n  head->next = NULL;\n  printf(\"Node data = %d\", head->data);\n  free(head);\n  return 0;\n}",
+    "input": "",
+    "output": "Node data = 10"
+  },
+  {
+    "title": "Pointer to Pointer Example",
+    "code": "#include <stdio.h>\nint main() {\n  int a=10; int *p=&a; int **q=&p;\n  printf(\"Value = %d\", **q);\n  return 0;\n}",
+    "input": "",
+    "output": "Value = 10"
+  },
+  {
+    "title": "Function Example",
+    "code": "#include <stdio.h>\nint add(int a,int b){ return a+b; }\nint main(){ printf(\"Sum = %d\", add(3,5)); return 0; }",
+    "input": "",
+    "output": "Sum = 8"
+  },
+  {
+    "title": "Recursion Example",
+    "code": "#include <stdio.h>\nint factorial(int n){ if(n==0) return 1; return n*factorial(n-1); }\nint main(){ printf(\"%d\", factorial(5)); return 0; }",
+    "input": "",
+    "output": "120"
+  },
+  {
+    "title": "Simple Calculator (Switch)",
+    "code": "#include <stdio.h>\nint main(){ char op='+'; int a=5,b=3;\n  switch(op){ case '+': printf(\"%d\",a+b); break; case '-': printf(\"%d\",a-b); break; }\n  return 0; }",
+    "input": "",
+    "output": "8"
+  },
+  {
+    "title": "Character ASCII Value",
+    "code": "#include <stdio.h>\nint main(){ char c='A'; printf(\"ASCII value of %c = %d\",c,c); return 0; }",
+    "input": "",
+    "output": "ASCII value of A = 65"
+  },
+  {
+    "title": "Sum of Array Elements (Fixed Size)",
+    "code": "#include <stdio.h>\nint main(){ int arr[5]={1,2,3,4,5},sum=0; for(int i=0;i<5;i++) sum+=arr[i]; printf(\"Sum = %d\",sum); return 0; }",
+    "input": "",
+    "output": "Sum = 15"
+  },
+  {
+    "title": "Reverse String Example",
+    "code": "#include <stdio.h>\n#include <string.h>\nint main(){ char s[20]=\"Hello\"; strrev(s); printf(\"%s\",s); return 0; }",
+    "input": "",
+    "output": "olleH"
+  },
+  {
+    "title": "Pointer Arithmetic",
+    "code": "#include <stdio.h>\nint main(){ int arr[3]={10,20,30}; int *p=arr; p++; printf(\"%d\",*p); return 0; }",
+    "input": "",
+    "output": "20"
+  },
+  {
+    "title": "File Append Example",
+    "code": "#include <stdio.h>\nint main(){ FILE *f=fopen(\"data.txt\",\"a\"); fprintf(f,\"\\nNew line added\"); fclose(f); printf(\"Data appended\"); return 0; }",
+    "input": "",
+    "output": "Data appended"
+  },
+  {
+    "title": "Array of Structures",
+    "code": "#include <stdio.h>\nstruct Student{int id; char name[10];};\nint main(){ struct Student s[2]={{1,\"A\"},{2,\"B\"}}; for(int i=0;i<2;i++) printf(\"%d %s\\n\",s[i].id,s[i].name); return 0; }",
+    "input": "",
+    "output": "1 A\n2 B"
+  },
+  {
+    "title": "Check Positive or Negative Number",
+    "code": "#include <stdio.h>\nint main() {\n  int num;\n  printf(\"Enter a number: \");\n  scanf(\"%d\", &num);\n  if (num > 0)\n    printf(\"Positive number\");\n  else if (num < 0)\n    printf(\"Negative number\");\n  else\n    printf(\"Zero\");\n  return 0;\n}",
+    "input": "-5",
+    "output": "Negative number"
+  },
+  {
+    "title": "Find Factorial Using Loop",
+    "code": "#include <stdio.h>\nint main() {\n  int n, i;\n  long fact = 1;\n  printf(\"Enter a number: \");\n  scanf(\"%d\", &n);\n  for (i = 1; i <= n; i++) {\n    fact *= i;\n  }\n  printf(\"Factorial = %ld\", fact);\n  return 0;\n}",
+    "input": "5",
+    "output": "Factorial = 120"
+  },
+  {
+    "title": "Find Factorial Using Recursion",
+    "code": "#include <stdio.h>\nint factorial(int n) {\n  if (n == 0) return 1;\n  return n * factorial(n - 1);\n}\nint main() {\n  int num;\n  scanf(\"%d\", &num);\n  printf(\"Factorial = %d\", factorial(num));\n  return 0;\n}",
+    "input": "4",
+    "output": "Factorial = 24"
+  },
+  {
+    "title": "Find Largest of Three Numbers",
+    "code": "#include <stdio.h>\nint main() {\n  int a, b, c;\n  scanf(\"%d %d %d\", &a, &b, &c);\n  if (a >= b && a >= c)\n    printf(\"%d is largest\", a);\n  else if (b >= a && b >= c)\n    printf(\"%d is largest\", b);\n  else\n    printf(\"%d is largest\", c);\n  return 0;\n}",
+    "input": "3 9 5",
+    "output": "9 is largest"
+  },
+  {
+    "title": "Reverse a Number",
+    "code": "#include <stdio.h>\nint main() {\n  int num, rev = 0, rem;\n  scanf(\"%d\", &num);\n  while (num != 0) {\n    rem = num % 10;\n    rev = rev * 10 + rem;\n    num /= 10;\n  }\n  printf(\"Reversed number = %d\", rev);\n  return 0;\n}",
+    "input": "1234",
+    "output": "Reversed number = 4321"
+  },
+  {
+    "title": "Check Palindrome Number",
+    "code": "#include <stdio.h>\nint main() {\n  int n, reversed = 0, remainder, original;\n  scanf(\"%d\", &n);\n  original = n;\n  while (n != 0) {\n    remainder = n % 10;\n    reversed = reversed * 10 + remainder;\n    n /= 10;\n  }\n  if (original == reversed)\n    printf(\"Palindrome number\");\n  else\n    printf(\"Not a palindrome\");\n  return 0;\n}",
+    "input": "121",
+    "output": "Palindrome number"
+  },
+  {
+    "title": "Check Prime Number",
+    "code": "#include <stdio.h>\nint main() {\n  int n, i, flag = 0;\n  scanf(\"%d\", &n);\n  if (n <= 1) flag = 1;\n  for (i = 2; i <= n/2; i++) {\n    if (n % i == 0) {\n      flag = 1; break;\n    }\n  }\n  if (flag == 0)\n    printf(\"Prime number\");\n  else\n    printf(\"Not prime\");\n  return 0;\n}",
+    "input": "7",
+    "output": "Prime number"
+  },
+  {
+    "title": "Sum of Array Elements (User Input)",
+    "code": "#include <stdio.h>\nint main() {\n  int n, i, sum = 0;\n  int arr[10];\n  scanf(\"%d\", &n);\n  for (i = 0; i < n; i++) scanf(\"%d\", &arr[i]);\n  for (i = 0; i < n; i++) sum += arr[i];\n  printf(\"Sum = %d\", sum);\n  return 0;\n}",
+    "input": "5\n1 2 3 4 5",
+    "output": "Sum = 15"
+  },
+  {
+    "title": "Find Maximum Element in Array",
+    "code": "#include <stdio.h>\nint main() {\n  int n, i, max;\n  int arr[10];\n  scanf(\"%d\", &n);\n  for (i = 0; i < n; i++) scanf(\"%d\", &arr[i]);\n  max = arr[0];\n  for (i = 1; i < n; i++) {\n    if (arr[i] > max)\n      max = arr[i];\n  }\n  printf(\"Largest = %d\", max);\n  return 0;\n}",
+    "input": "4\n3 9 2 6",
+    "output": "Largest = 9"
+  },
+  {
+    "title": "String Length Without strlen()",
+    "code": "#include <stdio.h>\nint main() {\n  char str[100];\n  int i = 0;\n  gets(str);\n  while (str[i] != '\\0') i++;\n  printf(\"Length = %d\", i);\n  return 0;\n}",
+    "input": "hello",
+    "output": "Length = 5"
+  },
+  {
+    "title": "Concatenate Two Strings",
+    "code": "#include <stdio.h>\n#include <string.h>\nint main() {\n  char s1[100], s2[100];\n  gets(s1);\n  gets(s2);\n  strcat(s1, s2);\n  printf(\"Result = %s\", s1);\n  return 0;\n}",
+    "input": "hello\nworld",
+    "output": "Result = helloworld"
+  },
+  {
+    "title": "Pointer Example (Address and Value)",
+    "code": "#include <stdio.h>\nint main() {\n  int a = 10;\n  int *p = &a;\n  printf(\"Value of a = %d\\n\", a);\n  printf(\"Address of a = %p\\n\", p);\n  printf(\"Value using pointer = %d\", *p);\n  return 0;\n}",
+    "input": "",
+    "output": "Value of a = 10\nAddress of a = 0x7ffeef\nValue using pointer = 10"
+  },
+  {
+    "title": "Call by Reference Example",
+    "code": "#include <stdio.h>\nvoid swap(int *x, int *y) {\n  int temp = *x;\n  *x = *y;\n  *y = temp;\n}\nint main() {\n  int a = 5, b = 10;\n  swap(&a, &b);\n  printf(\"a = %d, b = %d\", a, b);\n  return 0;\n}",
+    "input": "",
+    "output": "a = 10, b = 5"
+  },
+  {
+    "title": "Write to File Example",
+    "code": "#include <stdio.h>\nint main() {\n  FILE *f = fopen(\"sample.txt\", \"w\");\n  fprintf(f, \"Hello File!\");\n  fclose(f);\n  printf(\"Data written successfully\");\n  return 0;\n}",
+    "input": "",
+    "output": "Data written successfully"
+  },
+  {
+    "title": "Read from File Example",
+    "code": "#include <stdio.h>\nint main() {\n  char ch;\n  FILE *f = fopen(\"sample.txt\", \"r\");\n  while ((ch = fgetc(f)) != EOF)\n    printf(\"%c\", ch);\n  fclose(f);\n  return 0;\n}",
+    "input": "",
+    "output": "Hello File!"
+  },
+  {
+    "title": "Fibonacci Series (Loop)",
+    "code": "#include <stdio.h>\nint main() {\n  int n, a = 0, b = 1, next, i;\n  scanf(\"%d\", &n);\n  for (i = 1; i <= n; i++) {\n    printf(\"%d \", a);\n    next = a + b;\n    a = b;\n    b = next;\n  }\n  return 0;\n}",
+    "input": "7",
+    "output": "0 1 1 2 3 5 8"
+  },
+  {
+    "title": "Sum of Digits of a Number",
+    "code": "#include <stdio.h>\nint main() {\n  int n, sum = 0, rem;\n  scanf(\"%d\", &n);\n  while (n != 0) {\n    rem = n % 10;\n    sum += rem;\n    n /= 10;\n  }\n  printf(\"Sum of digits = %d\", sum);\n  return 0;\n}",
+    "input": "1234",
+    "output": "Sum of digits = 10"
+  },
+  {
+    "title": "GCD of Two Numbers",
+    "code": "#include <stdio.h>\nint main() {\n  int a, b;\n  scanf(\"%d %d\", &a, &b);\n  while (a != b) {\n    if (a > b) a = a - b;\n    else b = b - a;\n  }\n  printf(\"GCD = %d\", a);\n  return 0;\n}",
+    "input": "24 18",
+    "output": "GCD = 6"
+  },
+  {
+    "title": "LCM of Two Numbers",
+    "code": "#include <stdio.h>\nint main() {\n  int a, b, m;\n  scanf(\"%d %d\", &a, &b);\n  m = (a > b) ? a : b;\n  while (1) {\n    if (m % a == 0 && m % b == 0) {\n      printf(\"LCM = %d\", m);\n      break;\n    }\n    m++;\n  }\n  return 0;\n}",
+    "input": "4 6",
+    "output": "LCM = 12"
+  },
+  {
+    "title": "Linear Search in Array",
+    "code": "#include <stdio.h>\nint main() {\n  int n, key, i, pos = -1;\n  int arr[100];\n  scanf(\"%d\", &n);\n  for (i = 0; i < n; i++) scanf(\"%d\", &arr[i]);\n  scanf(\"%d\", &key);\n  for (i = 0; i < n; i++) {\n    if (arr[i] == key) { pos = i; break; }\n  }\n  if (pos == -1) printf(\"Not found\");\n  else printf(\"Found at index %d\", pos);\n  return 0;\n}",
+    "input": "5\n1 4 2 7 5\n7",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Bubble Sort (Ascending)",
+    "code": "#include <stdio.h>\nint main() {\n  int n, i, j, temp;\n  int arr[100];\n  scanf(\"%d\", &n);\n  for (i = 0; i < n; i++) scanf(\"%d\", &arr[i]);\n  for (i = 0; i < n-1; i++) {\n    for (j = 0; j < n-i-1; j++) {\n      if (arr[j] > arr[j+1]) {\n        temp = arr[j];\n        arr[j] = arr[j+1];\n        arr[j+1] = temp;\n      }\n    }\n  }\n  for (i = 0; i < n; i++) printf(\"%d \", arr[i]);\n  return 0;\n}",
+    "input": "5\n5 1 4 2 3",
+    "output": "1 2 3 4 5"
+  },
+  {
+    "title": "Binary Search (Sorted Array)",
+    "code": "#include <stdio.h>\nint main() {\n  int n, key, low = 0, high, mid, i;\n  int arr[100];\n  scanf(\"%d\", &n);\n  for (i = 0; i < n; i++) scanf(\"%d\", &arr[i]);\n  scanf(\"%d\", &key);\n  high = n - 1;\n  while (low <= high) {\n    mid = (low + high) / 2;\n    if (arr[mid] == key) {\n      printf(\"Found at index %d\", mid);\n      return 0;\n    } else if (arr[mid] < key) low = mid + 1;\n    else high = mid - 1;\n  }\n  printf(\"Not found\");\n  return 0;\n}",
+    "input": "5\n1 2 3 4 5\n4",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Count Vowels in a String",
+    "code": "#include <stdio.h>\nint main() {\n  char str[100];\n  int i, count = 0;\n  gets(str);\n  for (i = 0; str[i] != '\\0'; i++) {\n    char c = str[i];\n    if (c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='A'||c=='E'||c=='I'||c=='O'||c=='U')\n      count++;\n  }\n  printf(\"Vowels = %d\", count);\n  return 0;\n}",
+    "input": "hello world",
+    "output": "Vowels = 3"
+  },
+  {
+    "title": "Copy String Without strcpy()",
+    "code": "#include <stdio.h>\nint main() {\n  char src[100], dest[100];\n  int i;\n  gets(src);\n  for (i = 0; src[i] != '\\0'; i++) {\n    dest[i] = src[i];\n  }\n  dest[i] = '\\0';\n  printf(\"Copied: %s\", dest);\n  return 0;\n}",
+    "input": "Sumit",
+    "output": "Copied: Sumit"
+  },
+  {
+    "title": "Convert String to Uppercase",
+    "code": "#include <stdio.h>\nint main() {\n  char str[100];\n  int i;\n  gets(str);\n  for (i = 0; str[i] != '\\0'; i++) {\n    if (str[i] >= 'a' && str[i] <= 'z')\n      str[i] = str[i] - 32;\n  }\n  printf(\"Uppercase: %s\", str);\n  return 0;\n}",
+    "input": "Hello World",
+    "output": "Uppercase: HELLO WORLD"
+  },
+  {
+    "title": "Armstrong Number (3 Digits)",
+    "code": "#include <stdio.h>\nint main() {\n  int n, sum = 0, rem, original;\n  scanf(\"%d\", &n);\n  original = n;\n  while (n != 0) {\n    rem = n % 10;\n    sum += rem*rem*rem;\n    n /= 10;\n  }\n  if (sum == original)\n    printf(\"Armstrong number\");\n  else\n    printf(\"Not Armstrong\");\n  return 0;\n}",
+    "input": "153",
+    "output": "Armstrong number"
+  },
+  {
+    "title": "Transpose of a 2x3 Matrix",
+    "code": "#include <stdio.h>\nint main() {\n  int a[2][3] = {{1,2,3},{4,5,6}};\n  int i,j;\n  printf(\"Original:\\n\");\n  for(i=0;i<2;i++){\n    for(j=0;j<3;j++) printf(\"%d \",a[i][j]);\n    printf(\"\\n\");\n  }\n  printf(\"Transpose:\\n\");\n  for(j=0;j<3;j++){\n    for(i=0;i<2;i++) printf(\"%d \",a[i][j]);\n    printf(\"\\n\");\n  }\n  return 0;\n}",
+    "input": "",
+    "output": "Original:\n1 2 3\n4 5 6\nTranspose:\n1 4\n2 5\n3 6"
+  },
+  {
+    "title": "Sum of Even Numbers (1 to N)",
+    "code": "#include <stdio.h>\nint main() {\n  int n, sum = 0;\n  scanf(\"%d\", &n);\n  for (int i = 2; i <= n; i += 2)\n    sum += i;\n  printf(\"Sum of even numbers = %d\", sum);\n  return 0;\n}",
+    "input": "10",
+    "output": "Sum of even numbers = 30"
+  },
+  {
+    "title": "Count Digits of a Number",
+    "code": "#include <stdio.h>\nint main() {\n  int n, count = 0;\n  scanf(\"%d\", &n);\n  if (n == 0) count = 1;\n  while (n != 0) {\n    count++;\n    n /= 10;\n  }\n  printf(\"Digits = %d\", count);\n  return 0;\n}",
+    "input": "12345",
+    "output": "Digits = 5"
+  },
+  {
+    "title": "Swap Two Numbers Without Temporary Variable",
+    "code": "#include <stdio.h>\nint main() {\n  int a, b;\n  scanf(\"%d %d\", &a, &b);\n  a = a + b;\n  b = a - b;\n  a = a - b;\n  printf(\"a = %d, b = %d\", a, b);\n  return 0;\n}",
+    "input": "5 7",
+    "output": "a = 7, b = 5"
+  },
+  {
+    "title": "General Armstrong Number (Any Digits)",
+    "code": "#include <stdio.h>\n#include <math.h>\nint main() {\n  int n, temp, digits = 0;\n  double sum = 0;\n  scanf(\"%d\", &n);\n  temp = n;\n  while (temp != 0) {\n    digits++;\n    temp /= 10;\n  }\n  temp = n;\n  while (temp != 0) {\n    int rem = temp % 10;\n    sum += pow(rem, digits);\n    temp /= 10;\n  }\n  if ((int)sum == n)\n    printf(\"Armstrong number\");\n  else\n    printf(\"Not Armstrong\");\n  return 0;\n}",
+    "input": "9474",
+    "output": "Armstrong number"
+  },
+  {
+    "title": "Matrix Addition (2x2)",
+    "code": "#include <stdio.h>\nint main() {\n  int a[2][2], b[2][2], c[2][2];\n  int i, j;\n  for (i = 0; i < 2; i++)\n    for (j = 0; j < 2; j++)\n      scanf(\"%d\", &a[i][j]);\n  for (i = 0; i < 2; i++)\n    for (j = 0; j < 2; j++)\n      scanf(\"%d\", &b[i][j]);\n  for (i = 0; i < 2; i++)\n    for (j = 0; j < 2; j++)\n      c[i][j] = a[i][j] + b[i][j];\n  for (i = 0; i < 2; i++) {\n    for (j = 0; j < 2; j++)\n      printf(\"%d \", c[i][j]);\n    printf(\"\\n\");\n  }\n  return 0;\n}",
+    "input": "1 2 3 4\n5 6 7 8",
+    "output": "6 8\n10 12"
+  },
+  {
+    "title": "Matrix Multiplication (2x2)",
+    "code": "#include <stdio.h>\nint main() {\n  int a[2][2], b[2][2], c[2][2];\n  int i, j, k;\n  for (i = 0; i < 2; i++)\n    for (j = 0; j < 2; j++)\n      scanf(\"%d\", &a[i][j]);\n  for (i = 0; i < 2; i++)\n    for (j = 0; j < 2; j++)\n      scanf(\"%d\", &b[i][j]);\n  for (i = 0; i < 2; i++) {\n    for (j = 0; j < 2; j++) {\n      c[i][j] = 0;\n      for (k = 0; k < 2; k++)\n        c[i][j] += a[i][k] * b[k][j];\n    }\n  }\n  for (i = 0; i < 2; i++) {\n    for (j = 0; j < 2; j++)\n      printf(\"%d \", c[i][j]);\n    printf(\"\\n\");\n  }\n  return 0;\n}",
+    "input": "1 2 3 4\n5 6 7 8",
+    "output": "19 22\n43 50"
+  },
+  {
+    "title": "Sum of Main Diagonal of 3x3 Matrix",
+    "code": "#include <stdio.h>\nint main() {\n  int a[3][3];\n  int i, j, sum = 0;\n  for (i = 0; i < 3; i++)\n    for (j = 0; j < 3; j++)\n      scanf(\"%d\", &a[i][j]);\n  for (i = 0; i < 3; i++)\n    sum += a[i][i];\n  printf(\"Diagonal sum = %d\", sum);\n  return 0;\n}",
+    "input": "1 2 3\n4 5 6\n7 8 9",
+    "output": "Diagonal sum = 15"
+  },
+  {
+    "title": "Check Character Vowel or Consonant",
+    "code": "#include <stdio.h>\nint main() {\n  char c;\n  scanf(\"%c\", &c);\n  if (c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||\n      c=='A'||c=='E'||c=='I'||c=='O'||c=='U')\n    printf(\"Vowel\");\n  else\n    printf(\"Consonant\");\n  return 0;\n}",
+    "input": "a",
+    "output": "Vowel"
+  },
+  {
+    "title": "Convert Celsius to Fahrenheit",
+    "code": "#include <stdio.h>\nint main() {\n  float c, f;\n  scanf(\"%f\", &c);\n  f = (c * 9 / 5) + 32;\n  printf(\"Fahrenheit = %.2f\", f);\n  return 0;\n}",
+    "input": "37",
+    "output": "Fahrenheit = 98.60"
+  },
+  {
+    "title": "Simple Interest Calculator",
+    "code": "#include <stdio.h>\nint main() {\n  float p, r, t, si;\n  scanf(\"%f %f %f\", &p, &r, &t);\n  si = (p * r * t) / 100;\n  printf(\"Simple Interest = %.2f\", si);\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100.00"
+  },
+  {
+    "title": "Check Alphabet Digit or Special Character",
+    "code": "#include <stdio.h>\nint main() {\n  char c;\n  scanf(\"%c\", &c);\n  if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))\n    printf(\"Alphabet\");\n  else if (c >= '0' && c <= '9')\n    printf(\"Digit\");\n  else\n    printf(\"Special character\");\n  return 0;\n}",
+    "input": "@",
+    "output": "Special character"
+  },
+  {
+    "title": "Sort Strings in Dictionary Order",
+    "code": "#include <stdio.h>\n#include <string.h>\nint main() {\n  char s[3][20];\n  char temp[20];\n  int i, j;\n  for (i = 0; i < 3; i++)\n    gets(s[i]);\n  for (i = 0; i < 2; i++) {\n    for (j = i + 1; j < 3; j++) {\n      if (strcmp(s[i], s[j]) > 0) {\n        strcpy(temp, s[i]);\n        strcpy(s[i], s[j]);\n        strcpy(s[j], temp);\n      }\n    }\n  }\n  for (i = 0; i < 3; i++)\n    printf(\"%s\\n\", s[i]);\n  return 0;\n}",
+    "input": "banana\napple\ncat",
+    "output": "apple\nbanana\ncat"
+  },
+  {
+    "title": "Structure as Function Argument",
+    "code": "#include <stdio.h>\nstruct Student {\n  int id;\n  char name[20];\n};\nvoid printStudent(struct Student s) {\n  printf(\"ID: %d, Name: %s\", s.id, s.name);\n}\nint main() {\n  struct Student s1 = {1, \"Sumit\"};\n  printStudent(s1);\n  return 0;\n}",
+    "input": "",
+    "output": "ID: 1, Name: Sumit"
+  },
+  {
+    "title": "Union Example",
+    "code": "#include <stdio.h>\nunion Data {\n  int i;\n  float f;\n  char c;\n};\nint main() {\n  union Data d;\n  d.i = 10;\n  printf(\"i = %d\\n\", d.i);\n  d.f = 3.5f;\n  printf(\"f = %.1f\\n\", d.f);\n  d.c = 'A';\n  printf(\"c = %c\\n\", d.c);\n  return 0;\n}",
+    "input": "",
+    "output": "i = 10\nf = 3.5\nc = A"
+  },
+  {
+    "title": "Enum Example",
+    "code": "#include <stdio.h>\nenum Weekday {MON = 1, TUE, WED, THU, FRI, SAT, SUN};\nint main() {\n  enum Weekday today = WED;\n  printf(\"Today = %d\", today);\n  return 0;\n}",
+    "input": "",
+    "output": "Today = 3"
+  },
+  {
+    "title": "Command Line Arguments Count",
+    "code": "#include <stdio.h>\nint main(int argc, char *argv[]) {\n  printf(\"Argument count = %d\", argc);\n  return 0;\n}",
+    "input": "Run with: ./a.out one two",
+    "output": "Argument count = 3"
+  },
+  {
+    "title": "Static Variable Demo",
+    "code": "#include <stdio.h>\nvoid fun() {\n  static int x = 0;\n  x++;\n  printf(\"x = %d\\n\", x);\n}\nint main() {\n  fun();\n  fun();\n  fun();\n  return 0;\n}",
+    "input": "",
+    "output": "x = 1\nx = 2\nx = 3"
+  },
+  {
+    "title": "Global vs Local Variable Demo",
+    "code": "#include <stdio.h>\nint x = 10; // global\nvoid fun() {\n  int x = 20; // local\n  printf(\"Inside fun x = %d\\n\", x);\n}\nint main() {\n  printf(\"Global x = %d\\n\", x);\n  fun();\n  printf(\"Global x again = %d\\n\", x);\n  return 0;\n}",
+    "input": "",
+    "output": "Global x = 10\nInside fun x = 20\nGlobal x again = 10"
+  },
+  {
+    "title": "Stack Implementation Using Array",
+    "code": "#include <stdio.h>\n#define MAX 5\nint stack[MAX];\nint top = -1;\nvoid push(int x) {\n  if (top == MAX - 1) {\n    printf(\"Stack overflow\\n\");\n    return;\n  }\n  stack[++top] = x;\n}\nint pop() {\n  if (top == -1) {\n    printf(\"Stack underflow\\n\");\n    return -1;\n  }\n  return stack[top--];\n}\nint main() {\n  push(10);\n  push(20);\n  push(30);\n  printf(\"Popped: %d\\n\", pop());\n  printf(\"Popped: %d\\n\", pop());\n  return 0;\n}",
+    "input": "",
+    "output": "Popped: 30\nPopped: 20"
+  },
+  {
+    "title": "Queue Implementation Using Array",
+    "code": "#include <stdio.h>\n#define MAX 5\nint queue[MAX];\nint front = 0, rear = -1;\nvoid enqueue(int x) {\n  if (rear == MAX - 1) {\n    printf(\"Queue full\\n\");\n    return;\n  }\n  queue[++rear] = x;\n}\nint dequeue() {\n  if (front > rear) {\n    printf(\"Queue empty\\n\");\n    return -1;\n  }\n  return queue[front++];\n}\nint main() {\n  enqueue(5);\n  enqueue(10);\n  enqueue(15);\n  printf(\"Dequeued: %d\\n\", dequeue());\n  printf(\"Dequeued: %d\\n\", dequeue());\n  return 0;\n}",
+    "input": "",
+    "output": "Dequeued: 5\nDequeued: 10"
+  },
+  {
+    "title": "Simple Calculator (Menu Driven)",
+    "code": "#include <stdio.h>\nint main() {\n  char op;\n  double a, b, result;\n  scanf(\"%c\", &op);\n  scanf(\"%lf %lf\", &a, &b);\n  switch (op) {\n    case '+': result = a + b; break;\n    case '-': result = a - b; break;\n    case '*': result = a * b; break;\n    case '/': result = b != 0 ? a / b : 0; break;\n    default: printf(\"Invalid operator\"); return 0;\n  }\n  printf(\"Result = %.2lf\", result);\n  return 0;\n}",
+    "input": "+\n5 3",
+    "output": "Result = 8.00"
+  },
+  {
+    "title": "Power of a Number (Loop)",
+    "code": "#include <stdio.h>\nint main() {\n  int base, exp;\n  long long result = 1;\n  scanf(\"%d %d\", &base, &exp);\n  while (exp > 0) {\n    result *= base;\n    exp--;\n  }\n  printf(\"Power = %lld\", result);\n  return 0;\n}",
+    "input": "2 5",
+    "output": "Power = 32"
+  },
+  {
+    "title": "Power of a Number Using pow()",
+    "code": "#include <stdio.h>\n#include <math.h>\nint main() {\n  double base, exp;\n  scanf(\"%lf %lf\", &base, &exp);\n  printf(\"Power = %.2f\", pow(base, exp));\n  return 0;\n}",
+    "input": "3 4",
+    "output": "Power = 81.00"
+  },
+  {
+    "title": "Check Perfect Number",
+    "code": "#include <stdio.h>\nint main() {\n  int n, i, sum = 0;\n  scanf(\"%d\", &n);\n  for (i = 1; i <= n/2; i++) {\n    if (n % i == 0) sum += i;\n  }\n  if (sum == n) printf(\"Perfect number\");\n  else printf(\"Not perfect\");\n  return 0;\n}",
+    "input": "28",
+    "output": "Perfect number"
+  },
+  {
+    "title": "Check Strong Number",
+    "code": "#include <stdio.h>\nint fact(int n) {\n  int i, f = 1;\n  for (i = 1; i <= n; i++) f *= i;\n  return f;\n}\nint main() {\n  int n, temp, sum = 0, rem;\n  scanf(\"%d\", &n);\n  temp = n;\n  while (temp != 0) {\n    rem = temp % 10;\n    sum += fact(rem);\n    temp /= 10;\n  }\n  if (sum == n) printf(\"Strong number\");\n  else printf(\"Not strong\");\n  return 0;\n}",
+    "input": "145",
+    "output": "Strong number"
+  },
+  {
+    "title": "HCF and LCM of Two Numbers",
+    "code": "#include <stdio.h>\nint main() {\n  int a, b, x, y, temp, hcf, lcm;\n  scanf(\"%d %d\", &a, &b);\n  x = a; y = b;\n  while (y != 0) {\n    temp = y;\n    y = x % y;\n    x = temp;\n  }\n  hcf = x;\n  lcm = (a * b) / hcf;\n  printf(\"HCF = %d\\nLCM = %d\", hcf, lcm);\n  return 0;\n}",
+    "input": "12 18",
+    "output": "HCF = 6\nLCM = 36"
+  },
+  {
+    "title": "Decimal to Binary",
+    "code": "#include <stdio.h>\nint main() {\n  int n, i = 0, bin[32];\n  scanf(\"%d\", &n);\n  if (n == 0) {\n    printf(\"0\");\n    return 0;\n  }\n  while (n > 0) {\n    bin[i++] = n % 2;\n    n /= 2;\n  }\n  for (i = i - 1; i >= 0; i--)\n    printf(\"%d\", bin[i]);\n  return 0;\n}",
+    "input": "10",
+    "output": "1010"
+  },
+  {
+    "title": "Binary to Decimal",
+    "code": "#include <stdio.h>\nint main() {\n  long long bin;\n  int base = 1, rem, dec = 0;\n  scanf(\"%lld\", &bin);\n  while (bin > 0) {\n    rem = bin % 10;\n    dec += rem * base;\n    base *= 2;\n    bin /= 10;\n  }\n  printf(\"Decimal = %d\", dec);\n  return 0;\n}",
+    "input": "1010",
+    "output": "Decimal = 10"
+  },
+  {
+    "title": "Decimal to Octal",
+    "code": "#include <stdio.h>\nint main() {\n  int n, oct[32], i = 0;\n  scanf(\"%d\", &n);\n  if (n == 0) { printf(\"0\"); return 0; }\n  while (n > 0) {\n    oct[i++] = n % 8;\n    n /= 8;\n  }\n  for (i = i - 1; i >= 0; i--)\n    printf(\"%d\", oct[i]);\n  return 0;\n}",
+    "input": "25",
+    "output": "31"
+  },
+  {
+    "title": "Decimal to Hexadecimal",
+    "code": "#include <stdio.h>\nint main() {\n  int n, i = 0;\n  char hex[32];\n  scanf(\"%d\", &n);\n  if (n == 0) { printf(\"0\"); return 0; }\n  while (n > 0) {\n    int rem = n % 16;\n    if (rem < 10) hex[i++] = rem + '0';\n    else hex[i++] = rem - 10 + 'A';\n    n /= 16;\n  }\n  for (i = i - 1; i >= 0; i--)\n    printf(\"%c\", hex[i]);\n  return 0;\n}",
+    "input": "255",
+    "output": "FF"
+  },
+  {
+    "title": "Area Calculator (Circle, Rectangle, Triangle)",
+    "code": "#include <stdio.h>\n#define PI 3.14\nint main() {\n  int choice;\n  scanf(\"%d\", &choice);\n  if (choice == 1) {\n    float r; scanf(\"%f\", &r);\n    printf(\"Area = %.2f\", PI * r * r);\n  } else if (choice == 2) {\n    float l, b; scanf(\"%f %f\", &l, &b);\n    printf(\"Area = %.2f\", l * b);\n  } else if (choice == 3) {\n    float b, h; scanf(\"%f %f\", &b, &h);\n    printf(\"Area = %.2f\", 0.5f * b * h);\n  } else {\n    printf(\"Invalid choice\");\n  }\n  return 0;\n}",
+    "input": "1\n5",
+    "output": "Area = 78.50"
+  },
+  {
+    "title": "Student Grade Using If Else",
+    "code": "#include <stdio.h>\nint main() {\n  int marks;\n  scanf(\"%d\", &marks);\n  if (marks >= 90) printf(\"Grade A\");\n  else if (marks >= 75) printf(\"Grade B\");\n  else if (marks >= 60) printf(\"Grade C\");\n  else if (marks >= 40) printf(\"Grade D\");\n  else printf(\"Fail\");\n  return 0;\n}",
+    "input": "82",
+    "output": "Grade B"
+  },
+  {
+    "title": "Sum of First N Natural Numbers",
+    "code": "#include <stdio.h>\nint main() {\n  int n, i, sum = 0;\n  scanf(\"%d\", &n);\n  for (i = 1; i <= n; i++) sum += i;\n  printf(\"Sum = %d\", sum);\n  return 0;\n}",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Sum of Squares 1^2 + 2^2 + ... + N^2",
+    "code": "#include <stdio.h>\nint main() {\n  int n, i, sum = 0;\n  scanf(\"%d\", &n);\n  for (i = 1; i <= n; i++) sum += i * i;\n  printf(\"Sum = %d\", sum);\n  return 0;\n}",
+    "input": "5",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Sum of Cubes 1^3 + 2^3 + ... + N^3",
+    "code": "#include <stdio.h>\nint main() {\n  int n, i;\n  long long sum = 0;\n  scanf(\"%d\", &n);\n  for (i = 1; i <= n; i++) sum += (long long)i * i * i;\n  printf(\"Sum = %lld\", sum);\n  return 0;\n}",
+    "input": "3",
+    "output": "Sum = 36"
+  },
+  {
+    "title": "Add Two Complex Numbers (Using Structure)",
+    "code": "#include <stdio.h>\nstruct Complex { float real, imag; };\nint main() {\n  struct Complex c1, c2, sum;\n  scanf(\"%f %f\", &c1.real, &c1.imag);\n  scanf(\"%f %f\", &c2.real, &c2.imag);\n  sum.real = c1.real + c2.real;\n  sum.imag = c1.imag + c2.imag;\n  printf(\"Sum = %.1f + %.1fi\", sum.real, sum.imag);\n  return 0;\n}",
+    "input": "2 3\n4 5",
+    "output": "Sum = 6.0 + 8.0i"
+  },
+  {
+    "title": "Concatenate First Name and Last Name",
+    "code": "#include <stdio.h>\n#include <string.h>\nint main() {\n  char first[50], last[50], full[120];\n  gets(first);\n  gets(last);\n  strcpy(full, first);\n  strcat(full, \" \");\n  strcat(full, last);\n  printf(\"Full name: %s\", full);\n  return 0;\n}",
+    "input": "Sumit\nSonar",
+    "output": "Full name: Sumit Sonar"
+  },
+  {
+    "title": "Convert Numeric String to Integer",
+    "code": "#include <stdio.h>\nint main() {\n  char s[20];\n  int i = 0, num = 0;\n  gets(s);\n  while (s[i] != '\\0') {\n    if (s[i] < '0' || s[i] > '9') break;\n    num = num * 10 + (s[i] - '0');\n    i++;\n  }\n  printf(\"Number = %d\", num);\n  return 0;\n}",
+    "input": "1234",
+    "output": "Number = 1234"
+  },
+  {
+    "title": "Add Integer and Numeric String",
+    "code": "#include <stdio.h>\nint main() {\n  char s[20];\n  int x, i = 0, num = 0;\n  gets(s);\n  scanf(\"%d\", &x);\n  while (s[i] != '\\0') {\n    num = num * 10 + (s[i] - '0');\n    i++;\n  }\n  printf(\"Sum = %d\", num + x);\n  return 0;\n}",
+    "input": "50\n25",
+    "output": "Sum = 75"
+  },
+  {
+    "title": "Count Words in a String",
+    "code": "#include <stdio.h>\nint main() {\n  char str[200];\n  int i = 0, words = 0, inWord = 0;\n  gets(str);\n  while (str[i] != '\\0') {\n    if (str[i] != ' ' && str[i] != '\\t' && str[i] != '\\n') {\n      if (!inWord) { words++; inWord = 1; }\n    } else {\n      inWord = 0;\n    }\n    i++;\n  }\n  printf(\"Words = %d\", words);\n  return 0;\n}",
+    "input": "Hello this is C",
+    "output": "Words = 4"
+  },
+  {
+    "title": "Remove Spaces from a String",
+    "code": "#include <stdio.h>\nint main() {\n  char str[200], out[200];\n  int i = 0, j = 0;\n  gets(str);\n  while (str[i] != '\\0') {\n    if (str[i] != ' ') {\n      out[j++] = str[i];\n    }\n    i++;\n  }\n  out[j] = '\\0';\n  printf(\"%s\", out);\n  return 0;\n}",
+    "input": "Hello World in C",
+    "output": "HelloWorldinC"
+  },
+  {
+    "title": "Check Palindrome String",
+    "code": "#include <stdio.h>\n#include <string.h>\nint main() {\n  char s[100];\n  int i, j, flag = 1;\n  gets(s);\n  i = 0; j = strlen(s) - 1;\n  while (i < j) {\n    if (s[i] != s[j]) { flag = 0; break; }\n    i++; j--;\n  }\n  if (flag) printf(\"Palindrome string\");\n  else printf(\"Not palindrome\");\n  return 0;\n}",
+    "input": "level",
+    "output": "Palindrome string"
+  },
+  {
+    "title": "Count Frequency of a Character",
+    "code": "#include <stdio.h>\nint main() {\n  char s[200], ch;\n  int i = 0, count = 0;\n  gets(s);\n  scanf(\"%c\", &ch);\n  while (s[i] != '\\0') {\n    if (s[i] == ch) count++;\n    i++;\n  }\n  printf(\"Frequency = %d\", count);\n  return 0;\n}",
+    "input": "hello world\no",
+    "output": "Frequency = 2"
+  },
+  {
+    "title": "Find Smallest Element in Array",
+    "code": "#include <stdio.h>\nint main() {\n  int n, i, min;\n  int arr[50];\n  scanf(\"%d\", &n);\n  for (i = 0; i < n; i++) scanf(\"%d\", &arr[i]);\n  min = arr[0];\n  for (i = 1; i < n; i++)\n    if (arr[i] < min) min = arr[i];\n  printf(\"Smallest = %d\", min);\n  return 0;\n}",
+    "input": "5\n3 9 1 6 4",
+    "output": "Smallest = 1"
+  },
+  {
+    "title": "Count Even and Odd Elements in Array",
+    "code": "#include <stdio.h>\nint main() {\n  int n, i, even = 0, odd = 0;\n  int arr[50];\n  scanf(\"%d\", &n);\n  for (i = 0; i < n; i++) scanf(\"%d\", &arr[i]);\n  for (i = 0; i < n; i++) {\n    if (arr[i] % 2 == 0) even++; else odd++;\n  }\n  printf(\"Even = %d, Odd = %d\", even, odd);\n  return 0;\n}",
+    "input": "6\n1 2 3 4 5 6",
+    "output": "Even = 3, Odd = 3"
+  },
+  {
+    "title": "Merge Two Arrays",
+    "code": "#include <stdio.h>\nint main() {\n  int n1, n2, i, j, k = 0;\n  int a[50], b[50], c[100];\n  scanf(\"%d\", &n1);\n  for (i = 0; i < n1; i++) scanf(\"%d\", &a[i]);\n  scanf(\"%d\", &n2);\n  for (i = 0; i < n2; i++) scanf(\"%d\", &b[i]);\n  for (i = 0; i < n1; i++) c[k++] = a[i];\n  for (i = 0; i < n2; i++) c[k++] = b[i];\n  for (i = 0; i < k; i++) printf(\"%d \", c[i]);\n  return 0;\n}",
+    "input": "3\n1 2 3\n2\n4 5",
+    "output": "1 2 3 4 5 "
+  },
+  {
+    "title": "Second Largest Element in Array",
+    "code": "#include <stdio.h>\nint main() {\n  int n, i, largest, second;\n  int arr[50];\n  scanf(\"%d\", &n);\n  for (i = 0; i < n; i++) scanf(\"%d\", &arr[i]);\n  largest = second = arr[0];\n  for (i = 1; i < n; i++) {\n    if (arr[i] > largest) {\n      second = largest;\n      largest = arr[i];\n    } else if (arr[i] > second && arr[i] != largest) {\n      second = arr[i];\n    }\n  }\n  printf(\"Second largest = %d\", second);\n  return 0;\n}",
+    "input": "5\n3 9 1 6 4",
+    "output": "Second largest = 6"
+  },
+  {
+    "title": "Insert Element at Given Position",
+    "code": "#include <stdio.h>\nint main() {\n  int n, pos, x, i;\n  int arr[100];\n  scanf(\"%d\", &n);\n  for (i = 0; i < n; i++) scanf(\"%d\", &arr[i]);\n  scanf(\"%d %d\", &pos, &x);\n  for (i = n; i >= pos; i--) arr[i] = arr[i-1];\n  arr[pos] = x;\n  n++;\n  for (i = 0; i < n; i++) printf(\"%d \", arr[i]);\n  return 0;\n}",
+    "input": "5\n1 2 3 4 5\n2 99",
+    "output": "1 2 99 3 4 5 "
+  },
+  {
+    "title": "Delete Element from Given Position",
+    "code": "#include <stdio.h>\nint main() {\n  int n, pos, i;\n  int arr[100];\n  scanf(\"%d\", &n);\n  for (i = 0; i < n; i++) scanf(\"%d\", &arr[i]);\n  scanf(\"%d\", &pos);\n  for (i = pos; i < n - 1; i++) arr[i] = arr[i+1];\n  n--;\n  for (i = 0; i < n; i++) printf(\"%d \", arr[i]);\n  return 0;\n}",
+    "input": "5\n1 2 3 4 5\n2",
+    "output": "1 2 4 5 "
+  },
+  {
+    "title": "Sort Array in Descending Order",
+    "code": "#include <stdio.h>\nint main() {\n  int n, i, j, temp;\n  int arr[50];\n  scanf(\"%d\", &n);\n  for (i = 0; i < n; i++) scanf(\"%d\", &arr[i]);\n  for (i = 0; i < n - 1; i++) {\n    for (j = i + 1; j < n; j++) {\n      if (arr[i] < arr[j]) {\n        temp = arr[i];\n        arr[i] = arr[j];\n        arr[j] = temp;\n      }\n    }\n  }\n  for (i = 0; i < n; i++) printf(\"%d \", arr[i]);\n  return 0;\n}",
+    "input": "5\n3 9 1 6 4",
+    "output": "9 6 4 3 1 "
+  },
+  {
+    "title": "Trace of a 3x3 Matrix",
+    "code": "#include <stdio.h>\nint main() {\n  int a[3][3], i, j, trace = 0;\n  for (i = 0; i < 3; i++)\n    for (j = 0; j < 3; j++)\n      scanf(\"%d\", &a[i][j]);\n  for (i = 0; i < 3; i++) trace += a[i][i];\n  printf(\"Trace = %d\", trace);\n  return 0;\n}",
+    "input": "1 2 3\n4 5 6\n7 8 9",
+    "output": "Trace = 15"
+  },
+  {
+    "title": "Check Symmetric Matrix (3x3)",
+    "code": "#include <stdio.h>\nint main() {\n  int a[3][3], i, j, flag = 1;\n  for (i = 0; i < 3; i++)\n    for (j = 0; j < 3; j++)\n      scanf(\"%d\", &a[i][j]);\n  for (i = 0; i < 3; i++) {\n    for (j = 0; j < 3; j++) {\n      if (a[i][j] != a[j][i]) {\n        flag = 0; break;\n      }\n    }\n  }\n  if (flag) printf(\"Symmetric matrix\");\n  else printf(\"Not symmetric\");\n  return 0;\n}",
+    "input": "1 2 3\n2 4 5\n3 5 6",
+    "output": "Symmetric matrix"
+  },
+  {
+    "title": "Pointer to Function (Add and Subtract)",
+    "code": "#include <stdio.h>\nint add(int a, int b) { return a + b; }\nint sub(int a, int b) { return a - b; }\nint main() {\n  int (*op)(int,int);\n  int a = 10, b = 3;\n  op = add;\n  printf(\"Add = %d\\n\", op(a,b));\n  op = sub;\n  printf(\"Sub = %d\", op(a,b));\n  return 0;\n}",
+    "input": "",
+    "output": "Add = 13\nSub = 7"
+  },
+  {
+    "title": "Array of Pointers to Strings",
+    "code": "#include <stdio.h>\nint main() {\n  char *names[] = {\"C\", \"C++\", \"Java\", \"Python\"};\n  int i;\n  for (i = 0; i < 4; i++)\n    printf(\"%s\\n\", names[i]);\n  return 0;\n}",
+    "input": "",
+    "output": "C\nC++\nJava\nPython"
+  },
+  {
+    "title": "Dynamic 2D Array Using malloc",
+    "code": "#include <stdio.h>\n#include <stdlib.h>\nint main() {\n  int rows, cols, i, j;\n  int **mat;\n  scanf(\"%d %d\", &rows, &cols);\n  mat = (int**)malloc(rows * sizeof(int*));\n  for (i = 0; i < rows; i++)\n    mat[i] = (int*)malloc(cols * sizeof(int));\n  for (i = 0; i < rows; i++)\n    for (j = 0; j < cols; j++)\n      scanf(\"%d\", &mat[i][j]);\n  for (i = 0; i < rows; i++) {\n    for (j = 0; j < cols; j++)\n      printf(\"%d \", mat[i][j]);\n    printf(\"\\n\");\n  }\n  for (i = 0; i < rows; i++) free(mat[i]);\n  free(mat);\n  return 0;\n}",
+    "input": "2 3\n1 2 3\n4 5 6",
+    "output": "1 2 3 \n4 5 6 "
+  },
+  {
+    "title": "Write Array of Structures to File",
+    "code": "#include <stdio.h>\nstruct Student { int id; char name[20]; };\nint main() {\n  struct Student s[2] = {{1, \"A\"}, {2, \"B\"}};\n  FILE *f = fopen(\"stud.bin\", \"wb\");\n  fwrite(s, sizeof(struct Student), 2, f);\n  fclose(f);\n  printf(\"Written\");\n  return 0;\n}",
+    "input": "",
+    "output": "Written"
+  },
+  {
+    "title": "Read Array of Structures from File",
+    "code": "#include <stdio.h>\nstruct Student { int id; char name[20]; };\nint main() {\n  struct Student s[2];\n  FILE *f = fopen(\"stud.bin\", \"rb\");\n  fread(s, sizeof(struct Student), 2, f);\n  fclose(f);\n  printf(\"%d %s\\n\", s[0].id, s[0].name);\n  printf(\"%d %s\", s[1].id, s[1].name);\n  return 0;\n}",
+    "input": "",
+    "output": "1 A\n2 B"
+  },
+  {
+    "title": "Count Lines in a Text File",
+    "code": "#include <stdio.h>\nint main() {\n  FILE *f = fopen(\"text.txt\", \"r\");\n  int lines = 0;\n  int ch;\n  if (!f) { printf(\"Cannot open file\"); return 0; }\n  while ((ch = fgetc(f)) != EOF) {\n    if (ch == '\\n') lines++;\n  }\n  fclose(f);\n  printf(\"Lines = %d\", lines + 1);\n  return 0;\n}",
+    "input": "",
+    "output": "Lines = (depends on file)"
+  },
+  {
+    "title": "Copy One File to Another",
+    "code": "#include <stdio.h>\nint main() {\n  FILE *src = fopen(\"a.txt\", \"r\");\n  FILE *dest = fopen(\"b.txt\", \"w\");\n  int ch;\n  if (!src || !dest) { printf(\"File error\"); return 0; }\n  while ((ch = fgetc(src)) != EOF)\n    fputc(ch, dest);\n  fclose(src);\n  fclose(dest);\n  printf(\"Copied\");\n  return 0;\n}",
+    "input": "",
+    "output": "Copied"
+  },
+  {
+    "title": "Count Characters Words and Lines in File",
+    "code": "#include <stdio.h>\nint main() {\n  FILE *f = fopen(\"text.txt\", \"r\");\n  int ch, chars = 0, words = 0, lines = 0, inWord = 0;\n  if (!f) { printf(\"Error\"); return 0; }\n  while ((ch = fgetc(f)) != EOF) {\n    chars++;\n    if (ch == '\\n') lines++;\n    if (ch == ' ' || ch == '\\n' || ch == '\\t') inWord = 0;\n    else if (!inWord) { inWord = 1; words++; }\n  }\n  fclose(f);\n  printf(\"Chars = %d Words = %d Lines = %d\", chars, words, lines + 1);\n  return 0;\n}",
+    "input": "",
+    "output": "Chars = ... Words = ... Lines = ..."
+  },
+  {
+    "title": "Recursive Binary Search",
+    "code": "#include <stdio.h>\nint binSearch(int a[], int low, int high, int key) {\n  if (low > high) return -1;\n  int mid = (low + high) / 2;\n  if (a[mid] == key) return mid;\n  else if (a[mid] > key) return binSearch(a, low, mid - 1, key);\n  else return binSearch(a, mid + 1, high, key);\n}\nint main() {\n  int n, i, key, idx;\n  int a[50];\n  scanf(\"%d\", &n);\n  for (i = 0; i < n; i++) scanf(\"%d\", &a[i]);\n  scanf(\"%d\", &key);\n  idx = binSearch(a, 0, n - 1, key);\n  if (idx == -1) printf(\"Not found\");\n  else printf(\"Found at index %d\", idx);\n  return 0;\n}",
+    "input": "5\n1 2 3 4 5\n3",
+    "output": "Found at index 2"
+  },
+  {
+    "title": "Tower of Hanoi (Print Moves)",
+    "code": "#include <stdio.h>\nvoid hanoi(int n, char from, char aux, char to) {\n  if (n == 0) return;\n  hanoi(n - 1, from, to, aux);\n  printf(\"Move disk %d from %c to %c\\n\", n, from, to);\n  hanoi(n - 1, aux, from, to);\n}\nint main() {\n  int n;\n  scanf(\"%d\", &n);\n  hanoi(n, 'A', 'B', 'C');\n  return 0;\n}",
+    "input": "3",
+    "output": "Move disk 1 from A to C\nMove disk 2 from A to B\n..."
+  },
+  {
+    "title": "Nth Fibonacci Using Recursion",
+    "code": "#include <stdio.h>\nint fib(int n) {\n  if (n == 0) return 0;\n  if (n == 1) return 1;\n  return fib(n-1) + fib(n-2);\n}\nint main() {\n  int n;\n  scanf(\"%d\", &n);\n  printf(\"%d\", fib(n));\n  return 0;\n}",
+    "input": "7",
+    "output": "13"
+  }
+]

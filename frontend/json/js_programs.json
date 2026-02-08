@@ -1,0 +1,1298 @@
+[
+  {
+    "title": "Alert Box",
+    "code": "alert('Hello JavaScript');",
+    "output": "Shows alert box with message 'Hello JavaScript'.",
+    "input": ""
+  },
+  {
+    "title": "Sum of Two Numbers",
+    "code": "let a=5,b=4;\nconsole.log('Sum:',a+b);",
+    "output": "Sum: 9",
+    "input": "a=5, b=4"
+  },
+  {
+    "title": "Subtract Numbers",
+    "code": "let x=10,y=3;\nconsole.log(x-y);",
+    "output": "7",
+    "input": "x=10, y=3"
+  },
+  {
+    "title": "Multiply Numbers",
+    "code": "console.log(6*7);",
+    "output": "42",
+    "input": "6, 7"
+  },
+  {
+    "title": "Divide Numbers",
+    "code": "console.log(20/4);",
+    "output": "5",
+    "input": "20, 4"
+  },
+  {
+    "title": "Check Even Number",
+    "code": "let n=8;\nconsole.log(n%2===0);",
+    "output": "true",
+    "input": "n=8"
+  },
+  {
+    "title": "String Concatenation",
+    "code": "let s='Hello'+' World';\nconsole.log(s);",
+    "output": "Hello World",
+    "input": "'Hello', ' World'"
+  },
+  {
+    "title": "Array Length",
+    "code": "let arr=[1,2,3,4];\nconsole.log(arr.length);",
+    "output": "4",
+    "input": "[1,2,3,4]"
+  },
+  {
+    "title": "Push to Array",
+    "code": "let arr=[1,2];\narr.push(3);\nconsole.log(arr);",
+    "output": "[1,2,3]",
+    "input": "Push 3"
+  },
+  {
+    "title": "Pop from Array",
+    "code": "let arr=[1,2,3];\narr.pop();\nconsole.log(arr);",
+    "output": "[1,2]",
+    "input": "Pop last element"
+  },
+  {
+    "title": "For Loop",
+    "code": "for(let i=1;i<=5;i++){console.log(i);}",
+    "output": "1 2 3 4 5",
+    "input": "Range 1 to 5"
+  },
+  {
+    "title": "While Loop",
+    "code": "let i=1;\nwhile(i<=3){console.log(i);i++;}",
+    "output": "1 2 3",
+    "input": "Range 1 to 3"
+  },
+  {
+    "title": "If Condition",
+    "code": "let a=10;\nif(a>5){console.log('Greater');}",
+    "output": "Greater",
+    "input": "a=10"
+  },
+  {
+    "title": "Else Condition",
+    "code": "let age=15;\nif(age>=18){console.log('Adult');}else{console.log('Minor');}",
+    "output": "Minor",
+    "input": "age=15"
+  },
+  {
+    "title": "Switch Case",
+    "code": "let day=1;\nswitch(day){case 1:console.log('Mon');}",
+    "output": "Mon",
+    "input": "day=1"
+  },
+  {
+    "title": "Function Example",
+    "code": "function greet(){return 'Hello';}\nconsole.log(greet());",
+    "output": "Hello",
+    "input": ""
+  },
+  {
+    "title": "Function with Args",
+    "code": "function add(a,b){return a+b;}\nconsole.log(add(3,4));",
+    "output": "7",
+    "input": "3, 4"
+  },
+  {
+    "title": "Arrow Function",
+    "code": "let add=(a,b)=>a+b;\nconsole.log(add(2,5));",
+    "output": "7",
+    "input": "2, 5"
+  },
+  {
+    "title": "Objects Example",
+    "code": "let s={name:'Amit',age:22};\nconsole.log(s.name);",
+    "output": "Amit",
+    "input": "Access 'name'"
+  },
+  {
+    "title": "JSON Parse",
+    "code": "let x='{\"a\":1}';\nconsole.log(JSON.parse(x));",
+    "output": "{a:1}",
+    "input": "String '{\"a\":1}'"
+  },
+  {
+    "title": "JSON Stringify",
+    "code": "let obj={a:1};\nconsole.log(JSON.stringify(obj));",
+    "output": "{\"a\":1}",
+    "input": "Object {a:1}"
+  },
+  {
+    "title": "Set Timeout",
+    "code": "setTimeout(()=>console.log('Late'),1000);",
+    "output": "Prints 'Late' after 1 sec",
+    "input": "1000ms delay"
+  },
+  {
+    "title": "Set Interval",
+    "code": "setInterval(()=>console.log('Tick'),1000);",
+    "output": "Prints 'Tick' every sec",
+    "input": "1000ms interval"
+  },
+  {
+    "title": "Date Example",
+    "code": "let d=new Date();\nconsole.log(d.getFullYear());",
+    "output": "Current year",
+    "input": "Current Date"
+  },
+  {
+    "title": "Math Random",
+    "code": "console.log(Math.random());",
+    "output": "Random number 0–1",
+    "input": ""
+  },
+  {
+    "title": "Math Round",
+    "code": "console.log(Math.round(4.6));",
+    "output": "5",
+    "input": "4.6"
+  },
+  {
+    "title": "Square Root",
+    "code": "console.log(Math.sqrt(25));",
+    "output": "5",
+    "input": "25"
+  },
+  {
+    "title": "Uppercase String",
+    "code": "console.log('hello'.toUpperCase());",
+    "output": "HELLO",
+    "input": "'hello'"
+  },
+  {
+    "title": "Lowercase String",
+    "code": "console.log('HELLO'.toLowerCase());",
+    "output": "hello",
+    "input": "'HELLO'"
+  },
+  {
+    "title": "String Length",
+    "code": "console.log('JavaScript'.length);",
+    "output": "10",
+    "input": "'JavaScript'"
+  },
+  {
+    "title": "Replace String",
+    "code": "console.log('Hi World'.replace('Hi','Hello'));",
+    "output": "Hello World",
+    "input": "'Hi' -> 'Hello'"
+  },
+  {
+    "title": "Trim String",
+    "code": "console.log('  hi  '.trim());",
+    "output": "hi",
+    "input": "'  hi  '"
+  },
+  {
+    "title": "Check Includes",
+    "code": "console.log('Hello'.includes('el'));",
+    "output": "true",
+    "input": "Search 'el'"
+  },
+  {
+    "title": "Array Map",
+    "code": "[1,2,3].map(x=>x*2);",
+    "output": "[2,4,6]",
+    "input": "[1,2,3]"
+  },
+  {
+    "title": "Array Filter",
+    "code": "[1,2,3,4].filter(x=>x%2==0);",
+    "output": "[2,4]",
+    "input": "[1,2,3,4]"
+  },
+  {
+    "title": "Array Reduce",
+    "code": "[1,2,3].reduce((a,b)=>a+b);",
+    "output": "6",
+    "input": "[1,2,3]"
+  },
+  {
+    "title": "Find Element",
+    "code": "[10,20,30].find(x=>x>15);",
+    "output": "20",
+    "input": "> 15"
+  },
+  {
+    "title": "Find Index",
+    "code": "[10,20,30].findIndex(x=>x>15);",
+    "output": "1",
+    "input": "> 15"
+  },
+  {
+    "title": "Sort Array",
+    "code": "[3,1,2].sort();",
+    "output": "[1,2,3]",
+    "input": "[3,1,2]"
+  },
+  {
+    "title": "Reverse Array",
+    "code": "[1,2,3].reverse();",
+    "output": "[3,2,1]",
+    "input": "[1,2,3]"
+  },
+  {
+    "title": "Check NaN",
+    "code": "console.log(isNaN('abc'));",
+    "output": "true",
+    "input": "'abc'"
+  },
+  {
+    "title": "Parse Int",
+    "code": "console.log(parseInt('20'));",
+    "output": "20",
+    "input": "'20'"
+  },
+  {
+    "title": "Parse Float",
+    "code": "console.log(parseFloat('3.14'));",
+    "output": "3.14",
+    "input": "'3.14'"
+  },
+  {
+    "title": "Template Literal",
+    "code": "let name='Sam';\nconsole.log(`Hi ${name}`);",
+    "output": "Hi Sam",
+    "input": "name='Sam'"
+  },
+  {
+    "title": "Create Element",
+    "code": "let p=document.createElement('p');",
+    "output": "Creates a <p> element",
+    "input": "'p' tag"
+  },
+  {
+    "title": "Append Element",
+    "code": "document.body.append('Hello');",
+    "output": "Adds text to page",
+    "input": "'Hello' text"
+  },
+  {
+    "title": "Change HTML Content",
+    "code": "document.getElementById('demo').innerHTML='Updated';",
+    "output": "Updates the element text",
+    "input": "ID 'demo'"
+  },
+  {
+    "title": "Simple Calculator Function",
+    "code": "function calc(n1, n2, op) { if(op=='+') return n1+n2; if(op=='-') return n1-n2; return 0; } console.log(calc(5,2,'+'));",
+    "output": "7",
+    "input": "5, 2, '+'"
+  },
+  {
+    "title": "Factorial using Recursion",
+    "code": "function factorial(n) { if (n === 0) return 1; return n * factorial(n - 1); } console.log(factorial(5));",
+    "output": "120",
+    "input": "5"
+  },
+  {
+    "title": "Fibonacci Sequence Loop",
+    "code": "let n1=0, n2=1, next; console.log(n1); console.log(n2); for(let i=1; i<=5; i++) { next = n1 + n2; console.log(next); n1 = n2; n2 = next; }",
+    "output": "0 1 1 2 3 5 8",
+    "input": "7 terms"
+  },
+  {
+    "title": "Check Prime Number",
+    "code": "function isPrime(num) { for(let i=2; i<num; i++) if(num%i === 0) return false; return num > 1; } console.log(isPrime(7));",
+    "output": "true",
+    "input": "7"
+  },
+  {
+    "title": "Check Palindrome String",
+    "code": "function checkPal(str) { let rev = str.split('').reverse().join(''); return str === rev; } console.log(checkPal('madam'));",
+    "output": "true",
+    "input": "'madam'"
+  },
+  {
+    "title": "Reverse a String",
+    "code": "let str = 'Hello'; let rev = ''; for(let i=str.length-1; i>=0; i--) rev += str[i]; console.log(rev);",
+    "output": "olleH",
+    "input": "'Hello'"
+  },
+  {
+    "title": "Find Maximum in Array",
+    "code": "let arr = [10, 5, 20, 8]; let max = arr[0]; for(let i=1; i<arr.length; i++) { if(arr[i] > max) max = arr[i]; } console.log(max);",
+    "output": "20",
+    "input": "[10, 5, 20, 8]"
+  },
+  {
+    "title": "Count Vowels",
+    "code": "let s='apple'; let count=0; for(let c of s) { if('aeiou'.includes(c)) count++; } console.log(count);",
+    "output": "2",
+    "input": "'apple'"
+  },
+  {
+    "title": "Swap Variables without Temp",
+    "code": "let a=5, b=10; a=a+b; b=a-b; a=a-b; console.log(a, b);",
+    "output": "10 5",
+    "input": "a=5, b=10"
+  },
+  {
+    "title": "Leap Year Checker",
+    "code": "function isLeap(y) { return (y%4==0 && y%100!=0) || (y%400==0); } console.log(isLeap(2024));",
+    "output": "true",
+    "input": "2024"
+  },
+  {
+    "title": "Celsius to Fahrenheit",
+    "code": "function toF(c) { return (c * 9/5) + 32; } console.log(toF(0));",
+    "output": "32",
+    "input": "0"
+  },
+  {
+    "title": "Fahrenheit to Celsius",
+    "code": "function toC(f) { return (f - 32) * 5/9; } console.log(toC(32));",
+    "output": "0",
+    "input": "32"
+  },
+  {
+    "title": "Generate Random Integer",
+    "code": "function randInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; } console.log(randInt(1, 10));",
+    "output": "Random 1-10",
+    "input": "Min 1, Max 10"
+  },
+  {
+    "title": "Sum of Array Elements",
+    "code": "let arr=[1, 2, 3, 4]; let sum=0; for(let x of arr) sum+=x; console.log(sum);",
+    "output": "10",
+    "input": "[1, 2, 3, 4]"
+  },
+  {
+    "title": "Remove Duplicates from Array",
+    "code": "let arr=[1, 2, 2, 3]; let unique = [...new Set(arr)]; console.log(unique);",
+    "output": "[1, 2, 3]",
+    "input": "[1, 2, 2, 3]"
+  },
+  {
+    "title": "Convert String to Array",
+    "code": "let s = 'hello'; console.log(s.split(''));",
+    "output": "['h', 'e', 'l', 'l', 'o']",
+    "input": "'hello'"
+  },
+  {
+    "title": "Check Positive or Negative",
+    "code": "let n = -5; console.log(n >= 0 ? 'Positive' : 'Negative');",
+    "output": "Negative",
+    "input": "-5"
+  },
+  {
+    "title": "Print Star Pattern",
+    "code": "let s=''; for(let i=1; i<=3; i++){ s+='*'; console.log(s); }",
+    "output": "*\n**\n***",
+    "input": "3 lines"
+  },
+  {
+    "title": "Square a Number",
+    "code": "let sq = (n) => n*n; console.log(sq(5));",
+    "output": "25",
+    "input": "5"
+  },
+  {
+    "title": "Cube a Number",
+    "code": "let cube = (n) => n*n*n; console.log(cube(3));",
+    "output": "27",
+    "input": "3"
+  },
+  {
+    "title": "Calculate Area of Circle",
+    "code": "let r=7; console.log(Math.PI * r * r);",
+    "output": "153.93...",
+    "input": "Radius 7"
+  },
+  {
+    "title": "Calculate Area of Rectangle",
+    "code": "let l=10, w=5; console.log(l*w);",
+    "output": "50",
+    "input": "10, 5"
+  },
+  {
+    "title": "Calculate Area of Triangle",
+    "code": "let b=10, h=5; console.log(0.5 * b * h);",
+    "output": "25",
+    "input": "Base 10, Height 5"
+  },
+  {
+    "title": "Simple Interest",
+    "code": "let p=1000, r=5, t=2; console.log((p*r*t)/100);",
+    "output": "100",
+    "input": "P=1000, R=5, T=2"
+  },
+  {
+    "title": "Power of Number (Loop)",
+    "code": "let base=2, exp=3, res=1; for(let i=0; i<exp; i++) res*=base; console.log(res);",
+    "output": "8",
+    "input": "2^3"
+  },
+  {
+    "title": "Check Armstrong Number",
+    "code": "let n=153, sum=0, temp=n; while(temp>0){ let d=temp%10; sum+=d*d*d; temp=Math.floor(temp/10); } console.log(sum===n);",
+    "output": "true",
+    "input": "153"
+  },
+  {
+    "title": "Count Digits in Number",
+    "code": "let n=12345; console.log(n.toString().length);",
+    "output": "5",
+    "input": "12345"
+  },
+  {
+    "title": "Sum of Digits",
+    "code": "let n=123, sum=0; while(n){ sum+=n%10; n=Math.floor(n/10); } console.log(sum);",
+    "output": "6",
+    "input": "123"
+  },
+  {
+    "title": "Find Minimum in Array",
+    "code": "let arr=[5, 2, 9]; console.log(Math.min(...arr));",
+    "output": "2",
+    "input": "[5, 2, 9]"
+  },
+  {
+    "title": "Sort Array Descending",
+    "code": "let arr=[1, 3, 2]; arr.sort((a,b)=>b-a); console.log(arr);",
+    "output": "[3, 2, 1]",
+    "input": "[1, 3, 2]"
+  },
+  {
+    "title": "Flatten Nested Array",
+    "code": "let arr=[[1,2], [3,4]]; console.log(arr.flat());",
+    "output": "[1, 2, 3, 4]",
+    "input": "[[1,2], [3,4]]"
+  },
+  {
+    "title": "Merge Two Arrays",
+    "code": "let a=[1,2], b=[3,4]; console.log([...a, ...b]);",
+    "output": "[1, 2, 3, 4]",
+    "input": "[1,2], [3,4]"
+  },
+  {
+    "title": "Object Keys",
+    "code": "let obj={a:1, b:2}; console.log(Object.keys(obj));",
+    "output": "['a', 'b']",
+    "input": "{a:1, b:2}"
+  },
+  {
+    "title": "Object Values",
+    "code": "let obj={a:1, b:2}; console.log(Object.values(obj));",
+    "output": "[1, 2]",
+    "input": "{a:1, b:2}"
+  },
+  {
+    "title": "Current Time",
+    "code": "console.log(new Date().toLocaleTimeString());",
+    "output": "Current Time (HH:MM:SS)",
+    "input": ""
+  },
+  {
+    "title": "Current Date",
+    "code": "console.log(new Date().toLocaleDateString());",
+    "output": "Current Date (MM/DD/YYYY)",
+    "input": ""
+  },
+  {
+    "title": "Get Day of Week",
+    "code": "let days=['Sun','Mon','Tue']; console.log(days[new Date().getDay()]);",
+    "output": "Today's Day",
+    "input": ""
+  },
+  {
+    "title": "Check if Array",
+    "code": "console.log(Array.isArray([1,2]));",
+    "output": "true",
+    "input": "[1,2]"
+  },
+  {
+    "title": "Absolute Value",
+    "code": "console.log(Math.abs(-10));",
+    "output": "10",
+    "input": "-10"
+  },
+  {
+    "title": "Ceiling Value",
+    "code": "console.log(Math.ceil(4.1));",
+    "output": "5",
+    "input": "4.1"
+  },
+  {
+    "title": "Floor Value",
+    "code": "console.log(Math.floor(4.9));",
+    "output": "4",
+    "input": "4.9"
+  },
+  {
+    "title": "Power (Math.pow)",
+    "code": "console.log(Math.pow(2, 3));",
+    "output": "8",
+    "input": "2, 3"
+  },
+  {
+    "title": "Max of Two Numbers",
+    "code": "console.log(Math.max(10, 20));",
+    "output": "20",
+    "input": "10, 20"
+  },
+  {
+    "title": "Min of Two Numbers",
+    "code": "console.log(Math.min(10, 20));",
+    "output": "10",
+    "input": "10, 20"
+  },
+  {
+    "title": "Truncate String",
+    "code": "function trunc(s, n){ return s.length>n ? s.substr(0,n)+'...' : s; } console.log(trunc('Hello World', 5));",
+    "output": "Hello...",
+    "input": "'Hello World', 5"
+  },
+  {
+    "title": "Capitalize First Letter",
+    "code": "let s='hello'; console.log(s.charAt(0).toUpperCase() + s.slice(1));",
+    "output": "Hello",
+    "input": "'hello'"
+  },
+  {
+    "title": "Repeat String",
+    "code": "console.log('Hi'.repeat(3));",
+    "output": "HiHiHi",
+    "input": "'Hi', 3"
+  },
+  {
+    "title": "Convert String to Number",
+    "code": "let s='123'; console.log(Number(s));",
+    "output": "123",
+    "input": "'123'"
+  },
+  {
+    "title": "Convert Number to String",
+    "code": "let n=123; console.log(n.toString());",
+    "output": "'123'",
+    "input": "123"
+  },
+  {
+    "title": "Check Data Type",
+    "code": "console.log(typeof 'Hello');",
+    "output": "string",
+    "input": "'Hello'"
+  },
+  {
+    "title": "Check Boolean",
+    "code": "console.log(Boolean(1));",
+    "output": "true",
+    "input": "1"
+  },
+  {
+    "title": "Strict Equality",
+    "code": "console.log(5 === '5');",
+    "output": "false",
+    "input": "5, '5'"
+  },
+  {
+    "title": "Loose Equality",
+    "code": "console.log(5 == '5');",
+    "output": "true",
+    "input": "5, '5'"
+  },
+  {
+    "title": "Logical AND",
+    "code": "console.log(true && false);",
+    "output": "false",
+    "input": "true, false"
+  },
+  {
+    "title": "Logical OR",
+    "code": "console.log(true || false);",
+    "output": "true",
+    "input": "true, false"
+  },
+  {
+    "title": "Logical NOT",
+    "code": "console.log(!true);",
+    "output": "false",
+    "input": "true"
+  },
+  {
+    "title": "Increment Operator",
+    "code": "let i=0; i++; console.log(i);",
+    "output": "1",
+    "input": "0"
+  },
+  {
+    "title": "Decrement Operator",
+    "code": "let i=1; i--; console.log(i);",
+    "output": "0",
+    "input": "1"
+  },
+  {
+    "title": "Assignment Operator",
+    "code": "let x=10; x+=5; console.log(x);",
+    "output": "15",
+    "input": "10, add 5"
+  },
+  {
+    "title": "Ternary Operator",
+    "code": "let age=20; console.log(age>=18 ? 'Vote' : 'No Vote');",
+    "output": "Vote",
+    "input": "20"
+  },
+  {
+    "title": "Nullish Coalescing",
+    "code": "let user; console.log(user ?? 'Guest');",
+    "output": "Guest",
+    "input": "undefined"
+  },
+  {
+    "title": "Optional Chaining",
+    "code": "let user={}; console.log(user?.address?.city);",
+    "output": "undefined",
+    "input": "Empty Object"
+  },
+  {
+    "title": "For...of Loop",
+    "code": "let arr=[1,2]; for(let x of arr) console.log(x);",
+    "output": "1 2",
+    "input": "[1,2]"
+  },
+  {
+    "title": "For...in Loop",
+    "code": "let obj={a:1}; for(let k in obj) console.log(k);",
+    "output": "a",
+    "input": "{a:1}"
+  },
+  {
+    "title": "Do...While Loop",
+    "code": "let i=0; do{ console.log(i); i++; }while(i<2);",
+    "output": "0 1",
+    "input": "Range 0 to 1"
+  },
+  {
+    "title": "Break Statement",
+    "code": "for(let i=0;i<5;i++){ if(i==2) break; console.log(i); }",
+    "output": "0 1",
+    "input": "Break at 2"
+  },
+  {
+    "title": "Continue Statement",
+    "code": "for(let i=0;i<3;i++){ if(i==1) continue; console.log(i); }",
+    "output": "0 2",
+    "input": "Skip 1"
+  },
+  {
+    "title": "Default Parameters",
+    "code": "function greet(name='User'){ return 'Hi '+name; } console.log(greet());",
+    "output": "Hi User",
+    "input": "None"
+  },
+  {
+    "title": "Rest Parameters",
+    "code": "function sum(...args){ return args.reduce((a,b)=>a+b); } console.log(sum(1,2,3));",
+    "output": "6",
+    "input": "1, 2, 3"
+  },
+  {
+    "title": "Spread Syntax (Array)",
+    "code": "let arr=[1,2]; console.log([...arr, 3]);",
+    "output": "[1, 2, 3]",
+    "input": "[1, 2]"
+  },
+  {
+    "title": "Destructuring Array",
+    "code": "let [x, y] = [10, 20]; console.log(x);",
+    "output": "10",
+    "input": "[10, 20]"
+  },
+  {
+    "title": "Destructuring Object",
+    "code": "let {name} = {name:'John', age:25}; console.log(name);",
+    "output": "John",
+    "input": "{name:'John'}"
+  },
+  {
+    "title": "Class Definition",
+    "code": "class Car { constructor(brand){ this.brand=brand; } } let c=new Car('Ford'); console.log(c.brand);",
+    "output": "Ford",
+    "input": "'Ford'"
+  },
+  {
+    "title": "Class Inheritance",
+    "code": "class A { show(){return 'A';} } class B extends A {} console.log(new B().show());",
+    "output": "A",
+    "input": "None"
+  },
+  {
+    "title": "Static Method",
+    "code": "class MathUtil { static add(a,b){ return a+b; } } console.log(MathUtil.add(1,1));",
+    "output": "2",
+    "input": "1, 1"
+  },
+  {
+    "title": "Getter Method",
+    "code": "let obj={ get p(){ return 1; } }; console.log(obj.p);",
+    "output": "1",
+    "input": "None"
+  },
+  {
+    "title": "Setter Method",
+    "code": "let obj={ log:[], set curr(x){ this.log.push(x); } }; obj.curr='a'; console.log(obj.log);",
+    "output": "['a']",
+    "input": "'a'"
+  },
+  {
+    "title": "Promise Example",
+    "code": "let p=new Promise(res => res('Success')); p.then(console.log);",
+    "output": "Success",
+    "input": "None"
+  },
+  {
+    "title": "Async/Await",
+    "code": "async function f() { return 'Done'; } f().then(console.log);",
+    "output": "Done",
+    "input": "None"
+  },
+  {
+    "title": "Try...Catch",
+    "code": "try { throw 'Error'; } catch(e) { console.log(e); }",
+    "output": "Error",
+    "input": "None"
+  },
+  {
+    "title": "Throw Error",
+    "code": "function check(x) { if(x<0) throw 'Negative'; } try{ check(-1); }catch(e){ console.log(e); }",
+    "output": "Negative",
+    "input": "-1"
+  },
+  {
+    "title": "Regular Expression Test",
+    "code": "let re = /hello/i; console.log(re.test('Hello World'));",
+    "output": "true",
+    "input": "'Hello World'"
+  },
+  {
+    "title": "Regex Match",
+    "code": "let s = 'a1b2'; console.log(s.match(/\\d/g));",
+    "output": "['1', '2']",
+    "input": "'a1b2'"
+  },
+  {
+    "title": "Factorial Recursive",
+    "code": "const fact = n => n<=1 ? 1 : n*fact(n-1); console.log(fact(5));",
+    "output": "120",
+    "input": "5"
+  },
+  {
+    "title": "Recursive Sum of Array",
+    "code": "function sum(arr, n) { if(n<=0) return 0; return sum(arr, n-1) + arr[n-1]; } console.log(sum([1,2,3], 3));",
+    "output": "6",
+    "input": "[1,2,3]"
+  },
+  {
+    "title": "Recursive Countdown",
+    "code": "function count(n){ console.log(n); if(n>1) count(n-1); } count(3);",
+    "output": "3 2 1",
+    "input": "3"
+  },
+  {
+    "title": "Fibonacci Recursive",
+    "code": "function fib(n){ if(n<=1) return n; return fib(n-1)+fib(n-2); } console.log(fib(6));",
+    "output": "8",
+    "input": "6"
+  },
+  {
+    "title": "Calculator Switch",
+    "code": "let op='+', a=5, b=3; switch(op){ case '+': console.log(a+b); break; case '-': console.log(a-b); break; }",
+    "output": "8",
+    "input": "5, 3, '+'"
+  },
+  {
+    "title": "Modulus Operator",
+    "code": "console.log(10 % 3);",
+    "output": "1",
+    "input": "10, 3"
+  },
+  {
+    "title": "Increment in Loop",
+    "code": "let x=0; for(let i=0;i<3;i++) x+=i; console.log(x);",
+    "output": "3",
+    "input": "Range 0-2"
+  },
+  {
+    "title": "Check Undefined",
+    "code": "let x; console.log(x === undefined);",
+    "output": "true",
+    "input": "None"
+  },
+  {
+    "title": "Join Array",
+    "code": "let arr=['a','b']; console.log(arr.join('-'));",
+    "output": "a-b",
+    "input": "['a','b']"
+  },
+  {
+    "title": "Slice Array",
+    "code": "let arr=[1,2,3,4]; console.log(arr.slice(1,3));",
+    "output": "[2, 3]",
+    "input": "[1,2,3,4]"
+  },
+  {
+    "title": "Splice Array",
+    "code": "let arr=[1,2,3]; arr.splice(1,1); console.log(arr);",
+    "output": "[1, 3]",
+    "input": "[1,2,3]"
+  },
+  {
+    "title": "Includes in Array",
+    "code": "console.log([1,2,3].includes(2));",
+    "output": "true",
+    "input": "Search 2"
+  },
+  {
+    "title": "Index Of",
+    "code": "console.log([1,2,3].indexOf(2));",
+    "output": "1",
+    "input": "Search 2"
+  },
+  {
+    "title": "Last Index Of",
+    "code": "console.log([1,2,1].lastIndexOf(1));",
+    "output": "2",
+    "input": "Search 1"
+  },
+  {
+    "title": "Every Element Check",
+    "code": "console.log([2,4].every(x => x%2==0));",
+    "output": "true",
+    "input": "[2,4]"
+  },
+  {
+    "title": "Some Element Check",
+    "code": "console.log([1,2].some(x => x%2==0));",
+    "output": "true",
+    "input": "[1,2]"
+  },
+  {
+    "title": "Fill Array",
+    "code": "let arr=new Array(3).fill(0); console.log(arr);",
+    "output": "[0, 0, 0]",
+    "input": "Size 3"
+  },
+  {
+    "title": "From Array-like",
+    "code": "console.log(Array.from('hi'));",
+    "output": "['h', 'i']",
+    "input": "'hi'"
+  },
+  {
+    "title": "Key-Value Pairs",
+    "code": "console.log(Object.entries({a:1}));",
+    "output": "[['a', 1]]",
+    "input": "{a:1}"
+  },
+  {
+    "title": "Freeze Object",
+    "code": "let o={a:1}; Object.freeze(o); o.a=2; console.log(o.a);",
+    "output": "1",
+    "input": "{a:1}"
+  },
+  {
+    "title": "Seal Object",
+    "code": "let o={a:1}; Object.seal(o); delete o.a; console.log(o.a);",
+    "output": "1",
+    "input": "{a:1}"
+  },
+  {
+    "title": "Local Storage Set",
+    "code": "localStorage.setItem('k', 'v'); console.log('Saved');",
+    "output": "Saved",
+    "input": "'k', 'v'"
+  },
+  {
+    "title": "Local Storage Get",
+    "code": "console.log(localStorage.getItem('k'));",
+    "output": "v",
+    "input": "Key 'k'"
+  },
+  {
+    "title": "Console Error",
+    "code": "console.error('Err');",
+    "output": "Shows Error in console",
+    "input": "'Err'"
+  },
+  {
+    "title": "Console Warn",
+    "code": "console.warn('Warning');",
+    "output": "Shows Warning in console",
+    "input": "'Warning'"
+  },
+  {
+    "title": "Console Table",
+    "code": "console.table({a:1, b:2});",
+    "output": "Table view of object",
+    "input": "{a:1, b:2}"
+  },
+  {
+    "title": "Bitwise AND",
+    "code": "console.log(5 & 1);",
+    "output": "1",
+    "input": "5, 1"
+  },
+  {
+    "title": "Bitwise OR",
+    "code": "console.log(5 | 1);",
+    "output": "5",
+    "input": "5, 1"
+  },
+  {
+    "title": "Bitwise XOR",
+    "code": "console.log(5 ^ 1);",
+    "output": "4",
+    "input": "5, 1"
+  },
+  {
+    "title": "Left Shift",
+    "code": "console.log(5 << 1);",
+    "output": "10",
+    "input": "5"
+  },
+  {
+    "title": "Right Shift",
+    "code": "console.log(5 >> 1);",
+    "output": "2",
+    "input": "5"
+  },
+  {
+    "title": "Infinity Check",
+    "code": "console.log(1/0);",
+    "output": "Infinity",
+    "input": "1/0"
+  },
+  {
+    "title": "Number to Fixed",
+    "code": "console.log((3.14159).toFixed(2));",
+    "output": "3.14",
+    "input": "3.14159"
+  },
+  {
+    "title": "Number to Precision",
+    "code": "console.log((123.456).toPrecision(4));",
+    "output": "123.5",
+    "input": "123.456"
+  },
+  {
+    "title": "Window Alert",
+    "code": "window.alert('Hi');",
+    "output": "Alert Box",
+    "input": "'Hi'"
+  },
+  {
+    "title": "Window Confirm",
+    "code": "let c = confirm('Sure?'); console.log(c);",
+    "output": "true/false",
+    "input": "User Action"
+  },
+  {
+    "title": "Window Prompt",
+    "code": "let p = prompt('Name?'); console.log(p);",
+    "output": "User Input",
+    "input": "User Type"
+  },
+  {
+    "title": "Open Window",
+    "code": "window.open('https://google.com');",
+    "output": "Opens Google",
+    "input": "URL"
+  },
+  {
+    "title": "Document Title",
+    "code": "console.log(document.title);",
+    "output": "Page Title",
+    "input": ""
+  },
+  {
+    "title": "Document URL",
+    "code": "console.log(document.URL);",
+    "output": "Page URL",
+    "input": ""
+  },
+  {
+    "title": "Get Element by Class",
+    "code": "let els = document.getElementsByClassName('test');",
+    "output": "HTMLCollection",
+    "input": "Class 'test'"
+  },
+  {
+    "title": "Query Selector",
+    "code": "let el = document.querySelector('.test');",
+    "output": "First matching element",
+    "input": "Class .test"
+  },
+  {
+    "title": "Query Selector All",
+    "code": "let els = document.querySelectorAll('p');",
+    "output": "NodeList of p tags",
+    "input": "Tag 'p'"
+  },
+  {
+    "title": "Set Attribute",
+    "code": "document.body.setAttribute('id', 'main');",
+    "output": "Body ID = main",
+    "input": "'id', 'main'"
+  },
+  {
+    "title": "Get Attribute",
+    "code": "console.log(document.body.getAttribute('id'));",
+    "output": "main",
+    "input": "'id'"
+  },
+  {
+    "title": "Remove Attribute",
+    "code": "document.body.removeAttribute('id');",
+    "output": "ID removed",
+    "input": "'id'"
+  },
+  {
+    "title": "Class List Add",
+    "code": "document.body.classList.add('dark');",
+    "output": "Adds class 'dark'",
+    "input": "'dark'"
+  },
+  {
+    "title": "Class List Toggle",
+    "code": "document.body.classList.toggle('dark');",
+    "output": "Toggles class",
+    "input": "'dark'"
+  },
+  {
+    "title": "Event Listener",
+    "code": "document.addEventListener('click', ()=>console.log('Clicked'));",
+    "output": "Log on click",
+    "input": "User Click"
+  },
+  {
+    "title": "Prevent Default",
+    "code": "document.querySelector('a').onclick = e => e.preventDefault();",
+    "output": "Stops link",
+    "input": "Click Link"
+  },
+  {
+    "title": "Stop Propagation",
+    "code": "el.onclick = e => e.stopPropagation();",
+    "output": "Stops bubbling",
+    "input": "Click"
+  },
+  {
+    "title": "JSON Parse Error Handling",
+    "code": "try{ JSON.parse('bad'); }catch(e){ console.log('Invalid JSON'); }",
+    "output": "Invalid JSON",
+    "input": "'bad'"
+  },
+  {
+    "title": "Generate UUID (Simple)",
+    "code": "let id = Date.now().toString(36); console.log(id);",
+    "output": "Unique ID",
+    "input": ""
+  },
+  {
+    "title": "Swap Array Elements",
+    "code": "let arr=[1,2]; [arr[0], arr[1]] = [arr[1], arr[0]]; console.log(arr);",
+    "output": "[2, 1]",
+    "input": "[1,2]"
+  },
+  {
+    "title": "Remove Array Item by Value",
+    "code": "let arr=[1,2,3]; arr=arr.filter(i=>i!==2); console.log(arr);",
+    "output": "[1, 3]",
+    "input": "Remove 2"
+  },
+  {
+    "title": "Check if Object is Empty",
+    "code": "let o={}; console.log(Object.keys(o).length===0);",
+    "output": "true",
+    "input": "{}"
+  },
+  {
+    "title": "Deep Copy Object",
+    "code": "let a={x:1}; let b=JSON.parse(JSON.stringify(a)); console.log(b);",
+    "output": "{x:1}",
+    "input": "{x:1}"
+  },
+  {
+    "title": "Format Currency",
+    "code": "let nf = new Intl.NumberFormat('en-US', {style:'currency', currency:'USD'}); console.log(nf.format(100));",
+    "output": "$100.00",
+    "input": "100"
+  },
+  {
+    "title": "Pad Start",
+    "code": "console.log('5'.padStart(2, '0'));",
+    "output": "05",
+    "input": "'5'"
+  },
+  {
+    "title": "Pad End",
+    "code": "console.log('5'.padEnd(2, '0'));",
+    "output": "50",
+    "input": "'5'"
+  },
+  {
+    "title": "Is Integer",
+    "code": "console.log(Number.isInteger(1.5));",
+    "output": "false",
+    "input": "1.5"
+  },
+  {
+    "title": "Is Finite",
+    "code": "console.log(Number.isFinite(100));",
+    "output": "true",
+    "input": "100"
+  },
+  {
+    "title": "Object Assign",
+    "code": "let t={a:1}, s={b:2}; Object.assign(t, s); console.log(t);",
+    "output": "{a:1, b:2}",
+    "input": "{a:1}, {b:2}"
+  },
+  {
+    "title": "Clear Console",
+    "code": "console.clear();",
+    "output": "Clears output",
+    "input": ""
+  },
+  {
+    "title": "Time Execution",
+    "code": "console.time('loop'); for(let i=0;i<1000;i++); console.timeEnd('loop');",
+    "output": "loop: X ms",
+    "input": "Loop 1000"
+  },
+  {
+    "title": "Navigator User Agent",
+    "code": "console.log(navigator.userAgent);",
+    "output": "Browser Info",
+    "input": ""
+  },
+  {
+    "title": "Navigator Language",
+    "code": "console.log(navigator.language);",
+    "output": "en-US",
+    "input": ""
+  },
+  {
+    "title": "Navigator Online",
+    "code": "console.log(navigator.onLine);",
+    "output": "true/false",
+    "input": ""
+  },
+  {
+    "title": "Screen Width",
+    "code": "console.log(screen.width);",
+    "output": "Screen Width px",
+    "input": ""
+  },
+  {
+    "title": "Screen Height",
+    "code": "console.log(screen.height);",
+    "output": "Screen Height px",
+    "input": ""
+  },
+  {
+    "title": "History Back",
+    "code": "history.back();",
+    "output": "Goes to prev page",
+    "input": ""
+  },
+  {
+    "title": "History Forward",
+    "code": "history.forward();",
+    "output": "Goes to next page",
+    "input": ""
+  },
+  {
+    "title": "Location Reload",
+    "code": "location.reload();",
+    "output": "Reloads page",
+    "input": ""
+  },
+  {
+    "title": "Location Href",
+    "code": "console.log(location.href);",
+    "output": "Current URL",
+    "input": ""
+  },
+  {
+    "title": "Location Hostname",
+    "code": "console.log(location.hostname);",
+    "output": "Domain name",
+    "input": ""
+  },
+  {
+    "title": "Convert Set to Array",
+    "code": "let s=new Set([1,2]); console.log(Array.from(s));",
+    "output": "[1, 2]",
+    "input": "Set {1, 2}"
+  },
+  {
+    "title": "Map Object Basic",
+    "code": "let m=new Map(); m.set('k', 'v'); console.log(m.get('k'));",
+    "output": "v",
+    "input": "'k', 'v'"
+  },
+  {
+    "title": "Map Size",
+    "code": "let m=new Map([['a',1]]); console.log(m.size);",
+    "output": "1",
+    "input": "Map {a:1}"
+  },
+  {
+    "title": "Symbol Type",
+    "code": "let sym=Symbol('id'); console.log(typeof sym);",
+    "output": "symbol",
+    "input": "Symbol('id')"
+  },
+  {
+    "title": "Generator Function",
+    "code": "function* gen(){ yield 1; yield 2; } let g=gen(); console.log(g.next().value);",
+    "output": "1",
+    "input": ""
+  },
+  {
+    "title": "Proxy Object",
+    "code": "let t={}; let p=new Proxy(t, {get: ()=> 'Access'}); console.log(p.a);",
+    "output": "Access",
+    "input": "Access 'a'"
+  },
+  {
+    "title": "GlobalThis",
+    "code": "console.log(globalThis === window);",
+    "output": "true",
+    "input": ""
+  },
+  {
+    "title": "BigInt Type",
+    "code": "let b=9007199254740991n; console.log(typeof b);",
+    "output": "bigint",
+    "input": "BigInt"
+  },
+  {
+    "title": "Dynamic Import",
+    "code": "import('./mod.js').then(m => console.log('Loaded'));",
+    "output": "Loaded",
+    "input": "Module path"
+  },
+  {
+    "title": "WeakMap Example",
+    "code": "let wm=new WeakMap(); let o={}; wm.set(o, 1); console.log(wm.has(o));",
+    "output": "true",
+    "input": "Object Key"
+  },
+  {
+    "title": "WeakSet Example",
+    "code": "let ws=new WeakSet(); let o={}; ws.add(o); console.log(ws.has(o));",
+    "output": "true",
+    "input": "Object Value"
+  }
+]

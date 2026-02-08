@@ -1,0 +1,1627 @@
+[
+  {
+    "title": "Basic Structure",
+    "code": "<!DOCTYPE html>\n<html>\n<head><title>My Page</title></head>\n<body>\n<h1>Hello HTML</h1>\n</body>\n</html>",
+    "output": "Sets up a basic HTML document structure with a title and heading."
+  },
+  {
+    "title": "Paragraph Example",
+    "code": "<p>This is a paragraph in HTML.</p>",
+    "output": "Displays a block of text separated from other blocks."
+  },
+  {
+    "title": "Headings Example",
+    "code": "<h1>Main Heading</h1>\n<h2>Subheading</h2>\n<h3>Smaller Heading</h3>",
+    "output": "Displays hierarchical headings from largest (h1) to smaller (h3)."
+  },
+  {
+    "title": "Bold Text",
+    "code": "<b>Bold Text</b>",
+    "output": "Makes the text appear bold (visual only)."
+  },
+  {
+    "title": "Strong Text",
+    "code": "<strong>Important Text</strong>",
+    "output": "Makes text bold with semantic importance."
+  },
+  {
+    "title": "Italic Text",
+    "code": "<i>Italic Text</i>",
+    "output": "Makes the text appear italicized (visual only)."
+  },
+  {
+    "title": "Emphasized Text",
+    "code": "<em>Emphasized Text</em>",
+    "output": "Italicizes text indicating stress emphasis."
+  },
+  {
+    "title": "Underline Text",
+    "code": "<u>Underlined Text</u>",
+    "output": "Draws a line beneath the text."
+  },
+  {
+    "title": "Strikethrough",
+    "code": "<s>Wrong Text</s>",
+    "output": "Draws a line through the text to indicate it is no longer accurate."
+  },
+  {
+    "title": "Deleted Text",
+    "code": "<del>Deleted content</del>",
+    "output": "Represents text that has been removed from the document."
+  },
+  {
+    "title": "Inserted Text",
+    "code": "<ins>New content</ins>",
+    "output": "Represents text that has been added (usually underlined)."
+  },
+  {
+    "title": "Small Text",
+    "code": "<small>Fine print text</small>",
+    "output": "Displays text in a smaller font size."
+  },
+  {
+    "title": "Marked Text",
+    "code": "<mark>Highlighted</mark>",
+    "output": "Highlights the text with a yellow background."
+  },
+  {
+    "title": "Superscript",
+    "code": "X<sup>2</sup>",
+    "output": "Raises text slightly above the normal line (e.g., exponents)."
+  },
+  {
+    "title": "Subscript",
+    "code": "H<sub>2</sub>O",
+    "output": "Lowers text slightly below the normal line (e.g., chemical formulas)."
+  },
+  {
+    "title": "Line Break",
+    "code": "Line 1<br>Line 2",
+    "output": "Forces a line break without starting a new paragraph."
+  },
+  {
+    "title": "Horizontal Rule",
+    "code": "<hr>",
+    "output": "Draws a horizontal line to separate content."
+  },
+  {
+    "title": "Unordered List",
+    "code": "<ul><li>Item A</li><li>Item B</li></ul>",
+    "output": "Creates a bulleted list of items."
+  },
+  {
+    "title": "Ordered List",
+    "code": "<ol><li>Step 1</li><li>Step 2</li></ol>",
+    "output": "Creates a numbered list (1, 2, 3...)."
+  },
+  {
+    "title": "Description List",
+    "code": "<dl><dt>Term</dt><dd>Description</dd></dl>",
+    "output": "Creates a list of terms and their descriptions."
+  },
+  {
+    "title": "Image",
+    "code": "<img src='pic.jpg' alt='Description'>",
+    "output": "Embeds an image into the page."
+  },
+  {
+    "title": "Hyperlink",
+    "code": "<a href='https://google.com'>Go to Google</a>",
+    "output": "Creates a clickable link to another page."
+  },
+  {
+    "title": "Link Open New Tab",
+    "code": "<a href='page.html' target='_blank'>Open in New Tab</a>",
+    "output": "Opens the link in a new browser tab/window."
+  },
+  {
+    "title": "Email Link",
+    "code": "<a href='mailto:user@example.com'>Email Me</a>",
+    "output": "Opens the default email client with the address pre-filled."
+  },
+  {
+    "title": "Telephone Link",
+    "code": "<a href='tel:+1234567890'>Call Me</a>",
+    "output": "Initiates a phone call on mobile devices."
+  },
+  {
+    "title": "Button",
+    "code": "<button type='button'>Click Me</button>",
+    "output": "Renders a clickable button."
+  },
+  {
+    "title": "Input Text",
+    "code": "<input type='text' placeholder='Name'>",
+    "output": "Single-line text field."
+  },
+  {
+    "title": "Input Password",
+    "code": "<input type='password'>",
+    "output": "Text field that masks characters (dots/asterisks)."
+  },
+  {
+    "title": "Input Checkbox",
+    "code": "<input type='checkbox' id='c1'><label for='c1'>Agree</label>",
+    "output": "A square box that can be checked or unchecked."
+  },
+  {
+    "title": "Input Radio",
+    "code": "<input type='radio' name='g' value='m'> Male",
+    "output": "A round button for selecting one option from a group."
+  },
+  {
+    "title": "Textarea",
+    "code": "<textarea rows='4'>Multi-line text</textarea>",
+    "output": "A large box for multiple lines of text input."
+  },
+  {
+    "title": "Dropdown Select",
+    "code": "<select><option>A</option><option>B</option></select>",
+    "output": "A drop-down menu to pick one option."
+  },
+  {
+    "title": "Option Group",
+    "code": "<select><optgroup label='Fruits'><option>Apple</option></optgroup></select>",
+    "output": "Groups related options within a dropdown."
+  },
+  {
+    "title": "Datalist (Autocomplete)",
+    "code": "<input list='browsers'><datalist id='browsers'><option value='Chrome'></datalist>",
+    "output": "Input field with a dropdown of suggested values."
+  },
+  {
+    "title": "Input Color",
+    "code": "<input type='color'>",
+    "output": "Displays a color picker dialog."
+  },
+  {
+    "title": "Input Date",
+    "code": "<input type='date'>",
+    "output": "Displays a calendar date picker."
+  },
+  {
+    "title": "Input DateTime-Local",
+    "code": "<input type='datetime-local'>",
+    "output": "Picker for both date and time (no timezone)."
+  },
+  {
+    "title": "Input Email",
+    "code": "<input type='email'>",
+    "output": "Text field validated for email format on mobile/submit."
+  },
+  {
+    "title": "Input File",
+    "code": "<input type='file'>",
+    "output": "Button to upload a file from the device."
+  },
+  {
+    "title": "Input Hidden",
+    "code": "<input type='hidden' value='123'>",
+    "output": "Invisible input used to send data to server."
+  },
+  {
+    "title": "Input Image",
+    "code": "<input type='image' src='submit.png' alt='Submit'>",
+    "output": "Graphical submit button using an image."
+  },
+  {
+    "title": "Input Month",
+    "code": "<input type='month'>",
+    "output": "Picker for selecting a month and year."
+  },
+  {
+    "title": "Input Number",
+    "code": "<input type='number' min='1' max='10'>",
+    "output": "Field for numeric input with spinner arrows."
+  },
+  {
+    "title": "Input Range",
+    "code": "<input type='range' min='0' max='100'>",
+    "output": "Slider control for selecting a number."
+  },
+  {
+    "title": "Input Reset",
+    "code": "<input type='reset'>",
+    "output": "Button that clears all form data."
+  },
+  {
+    "title": "Input Search",
+    "code": "<input type='search'>",
+    "output": "Text field optimized for search queries (often with X to clear)."
+  },
+  {
+    "title": "Input Submit",
+    "code": "<input type='submit' value='Send'>",
+    "output": "Button to submit the form data."
+  },
+  {
+    "title": "Input Tel",
+    "code": "<input type='tel'>",
+    "output": "Text field optimized for phone numbers (triggers numpad)."
+  },
+  {
+    "title": "Input Time",
+    "code": "<input type='time'>",
+    "output": "Picker for selecting a time (hours/minutes)."
+  },
+  {
+    "title": "Input URL",
+    "code": "<input type='url'>",
+    "output": "Text field validated for URL format."
+  },
+  {
+    "title": "Input Week",
+    "code": "<input type='week'>",
+    "output": "Picker for selecting a specific week of the year."
+  },
+  {
+    "title": "Form Tag",
+    "code": "<form action='/submit' method='post'>...</form>",
+    "output": "Container for user input controls."
+  },
+  {
+    "title": "Fieldset & Legend",
+    "code": "<fieldset><legend>Personal Info</legend>...</fieldset>",
+    "output": "Groups related form elements with a bordered box and title."
+  },
+  {
+    "title": "Label",
+    "code": "<label for='user'>Username:</label>",
+    "output": "Text label associated with an input for better accessibility."
+  },
+  {
+    "title": "Output Tag",
+    "code": "<output name='result'>0</output>",
+    "output": "Container for calculation results."
+  },
+  {
+    "title": "Table Basic",
+    "code": "<table><tr><td>Data</td></tr></table>",
+    "output": "Creates a data table structure."
+  },
+  {
+    "title": "Table Header",
+    "code": "<th>Header Name</th>",
+    "output": "Bold, centered table cell used for headers."
+  },
+  {
+    "title": "Table Row",
+    "code": "<tr>...</tr>",
+    "output": "Defines a row of cells in a table."
+  },
+  {
+    "title": "Table Data",
+    "code": "<td>Cell Content</td>",
+    "output": "Standard cell in a table."
+  },
+  {
+    "title": "Table Caption",
+    "code": "<caption>Monthly Savings</caption>",
+    "output": "Adds a title/caption above the table."
+  },
+  {
+    "title": "Table Head Section",
+    "code": "<thead>...</thead>",
+    "output": "Groups the header content of a table."
+  },
+  {
+    "title": "Table Body Section",
+    "code": "<tbody>...</tbody>",
+    "output": "Groups the body content of a table."
+  },
+  {
+    "title": "Table Foot Section",
+    "code": "<tfoot>...</tfoot>",
+    "output": "Groups the footer content (totals) of a table."
+  },
+  {
+    "title": "Colspan",
+    "code": "<td colspan='2'>Merges 2 Cols</td>",
+    "output": "Cell spanning across two columns."
+  },
+  {
+    "title": "Rowspan",
+    "code": "<td rowspan='2'>Merges 2 Rows</td>",
+    "output": "Cell spanning vertically across two rows."
+  },
+  {
+    "title": "Colgroup",
+    "code": "<colgroup><col span='2' style='background:red'></colgroup>",
+    "output": "Specifies column properties for formatting."
+  },
+  {
+    "title": "Div Container",
+    "code": "<div>Block Content</div>",
+    "output": "Generic block-level container for grouping elements."
+  },
+  {
+    "title": "Span Container",
+    "code": "<span>Inline Content</span>",
+    "output": "Generic inline container for styling text parts."
+  },
+  {
+    "title": "Header Element",
+    "code": "<header>Logo & Nav</header>",
+    "output": "Semantic container for introductory content or nav links."
+  },
+  {
+    "title": "Nav Element",
+    "code": "<nav><a href='#'>Link</a></nav>",
+    "output": "Semantic container for navigation links."
+  },
+  {
+    "title": "Main Element",
+    "code": "<main>Primary Content</main>",
+    "output": "Specifies the main content of the document."
+  },
+  {
+    "title": "Section Element",
+    "code": "<section><h2>Title</h2><p>...</p></section>",
+    "output": "Thematic grouping of content (chapter, section)."
+  },
+  {
+    "title": "Article Element",
+    "code": "<article>Blog Post Content</article>",
+    "output": "Self-contained content (blog post, news story)."
+  },
+  {
+    "title": "Aside Element",
+    "code": "<aside>Sidebar Content</aside>",
+    "output": "Content aside from the main content (sidebar)."
+  },
+  {
+    "title": "Footer Element",
+    "code": "<footer>&copy; 2025</footer>",
+    "output": "Semantic container for footer info."
+  },
+  {
+    "title": "Address Element",
+    "code": "<address>Contact Info</address>",
+    "output": "Italicized block for contact information."
+  },
+  {
+    "title": "Blockquote",
+    "code": "<blockquote>Quoted text...</blockquote>",
+    "output": "Indented block for long quotations."
+  },
+  {
+    "title": "Quote",
+    "code": "<q>Short quote</q>",
+    "output": "Inline short quotation (adds quote marks)."
+  },
+  {
+    "title": "Abbreviation",
+    "code": "<abbr title='HyperText Markup Language'>HTML</abbr>",
+    "output": "Defines an abbreviation; title shows on hover."
+  },
+  {
+    "title": "Bi-Directional Override",
+    "code": "<bdo dir='rtl'>Text</bdo>",
+    "output": "Overrides text direction (e.g., right-to-left)."
+  },
+  {
+    "title": "Cite",
+    "code": "<cite>Book Title</cite>",
+    "output": "Italicized title of a work."
+  },
+  {
+    "title": "Code",
+    "code": "<code>console.log()</code>",
+    "output": "Monospaced font for code snippets."
+  },
+  {
+    "title": "Preformatted Text",
+    "code": "<pre>Line 1\n  Line 2</pre>",
+    "output": "Preserves spaces and line breaks (monospaced)."
+  },
+  {
+    "title": "Keyboard Input",
+    "code": "<kbd>Ctrl</kbd> + <kbd>C</kbd>",
+    "output": "Monospaced font indicating user keyboard input."
+  },
+  {
+    "title": "Sample Output",
+    "code": "<samp>Error 404</samp>",
+    "output": "Monospaced font for program output."
+  },
+  {
+    "title": "Variable",
+    "code": "<var>x</var>",
+    "output": "Italicized font for mathematical/programming variables."
+  },
+  {
+    "title": "Time",
+    "code": "<time datetime='2025-01-01'>Jan 1</time>",
+    "output": "Semantic markup for dates/times."
+  },
+  {
+    "title": "Data",
+    "code": "<data value='2025'>Next Year</data>",
+    "output": "Links content with a machine-readable translation."
+  },
+  {
+    "title": "Figure",
+    "code": "<figure><img src='a.jpg'></figure>",
+    "output": "Self-contained content like images/diagrams."
+  },
+  {
+    "title": "Figcaption",
+    "code": "<figcaption>Fig 1. View</figcaption>",
+    "output": "Caption text for a <figure> element."
+  },
+  {
+    "title": "Video",
+    "code": "<video controls><source src='mov.mp4'></video>",
+    "output": "Embeds a video player with controls."
+  },
+  {
+    "title": "Audio",
+    "code": "<audio controls><source src='song.mp3'></audio>",
+    "output": "Embeds an audio player with controls."
+  },
+  {
+    "title": "Source",
+    "code": "<source src='video.mp4' type='video/mp4'>",
+    "output": "Defines media resources for video/audio."
+  },
+  {
+    "title": "Track",
+    "code": "<track src='sub.vtt' kind='subtitles'>",
+    "output": "Adds subtitles/captions to media."
+  },
+  {
+    "title": "Map (Image Map)",
+    "code": "<map name='workmap'>...</map>",
+    "output": "Defines a client-side image map."
+  },
+  {
+    "title": "Area (Image Map)",
+    "code": "<area shape='rect' coords='34,44,270,350' href='page.htm'>",
+    "output": "Clickable area inside an image map."
+  },
+  {
+    "title": "Embed",
+    "code": "<embed src='game.swf'>",
+    "output": "Container for external application/plugin."
+  },
+  {
+    "title": "Object",
+    "code": "<object data='data.pdf'></object>",
+    "output": "Container for external resource (PDF, etc)."
+  },
+  {
+    "title": "Iframe",
+    "code": "<iframe src='https://example.com'></iframe>",
+    "output": "Embeds another HTML page within the current page."
+  },
+  {
+    "title": "Canvas",
+    "code": "<canvas id='myCanvas'></canvas>",
+    "output": "Area for drawing graphics via JavaScript."
+  },
+  {
+    "title": "SVG",
+    "code": "<svg width='100' height='100'><circle cx='50' cy='50' r='40'/></svg>",
+    "output": "Container for Scalable Vector Graphics."
+  },
+  {
+    "title": "Math (MathML)",
+    "code": "<math><msqrt><mn>4</mn></msqrt></math>",
+    "output": "Displays mathematical formulas."
+  },
+  {
+    "title": "Details",
+    "code": "<details><summary>Click to show</summary>Hidden text</details>",
+    "output": "Interactive widget that user can open/close."
+  },
+  {
+    "title": "Summary",
+    "code": "<summary>Title</summary>",
+    "output": "Visible heading for the <details> tag."
+  },
+  {
+    "title": "Dialog",
+    "code": "<dialog open>This is a modal</dialog>",
+    "output": "Displays a popup dialog box or window."
+  },
+  {
+    "title": "Style Tag",
+    "code": "<style>body {color: red;}</style>",
+    "output": "Defines CSS styles internally."
+  },
+  {
+    "title": "Link Tag",
+    "code": "<link rel='stylesheet' href='style.css'>",
+    "output": "Links to external resources (CSS, Favicon)."
+  },
+  {
+    "title": "Meta Tag",
+    "code": "<meta charset='UTF-8'>",
+    "output": "Metadata about the document (no visual output)."
+  },
+  {
+    "title": "Meta Viewport",
+    "code": "<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
+    "output": "Optimizes page scaling for mobile devices."
+  },
+  {
+    "title": "Meta Description",
+    "code": "<meta name='description' content='Page summary'>",
+    "output": "Description used by search engines."
+  },
+  {
+    "title": "Script Tag",
+    "code": "<script>alert('Hi')</script>",
+    "output": "Embeds or references JavaScript code."
+  },
+  {
+    "title": "Noscript Tag",
+    "code": "<noscript>Please enable JS</noscript>",
+    "output": "Displayed only if JavaScript is disabled."
+  },
+  {
+    "title": "Base Tag",
+    "code": "<base href='https://www.example.com/'>",
+    "output": "Sets base URL for all relative URLs in document."
+  },
+  {
+    "title": "Head Tag",
+    "code": "<head>...</head>",
+    "output": "Container for metadata (title, scripts, styles)."
+  },
+  {
+    "title": "Body Tag",
+    "code": "<body>...</body>",
+    "output": "Container for all visible content."
+  },
+  {
+    "title": "Title Tag",
+    "code": "<title>Page Title</title>",
+    "output": "Sets the title in the browser tab."
+  },
+  {
+    "title": "Html Tag",
+    "code": "<html>...</html>",
+    "output": "Root element of the HTML page."
+  },
+  {
+    "title": "Doctype",
+    "code": "<!DOCTYPE html>",
+    "output": "Tells browser this is an HTML5 document."
+  },
+  {
+    "title": "Global Attribute: ID",
+    "code": "<div id='header'>",
+    "output": "Assigns a unique identifier to the element."
+  },
+  {
+    "title": "Global Attribute: Class",
+    "code": "<div class='container'>",
+    "output": "Assigns one or more class names for CSS/JS."
+  },
+  {
+    "title": "Global Attribute: Style",
+    "code": "<p style='color:red'>",
+    "output": "Applies inline CSS styles."
+  },
+  {
+    "title": "Global Attribute: Title",
+    "code": "<p title='Tooltip'>Hover me</p>",
+    "output": "Shows text as a tooltip on hover."
+  },
+  {
+    "title": "Global Attribute: Hidden",
+    "code": "<p hidden>Invisible</p>",
+    "output": "Hides the element from view."
+  },
+  {
+    "title": "Global Attribute: ContentEditable",
+    "code": "<div contenteditable='true'>Edit me</div>",
+    "output": "Makes the element text editable by the user."
+  },
+  {
+    "title": "Global Attribute: Tabindex",
+    "code": "<div tabindex='0'>Focusable</div>",
+    "output": "Makes non-inputs focusable via keyboard tab."
+  },
+  {
+    "title": "Global Attribute: Draggable",
+    "code": "<img draggable='true'>",
+    "output": "Specifies if an element can be dragged."
+  },
+  {
+    "title": "Global Attribute: Spellcheck",
+    "code": "<input spellcheck='true'>",
+    "output": "Enables grammar/spelling check on input."
+  },
+  {
+    "title": "Global Attribute: Data-*",
+    "code": "<div data-id='123'>",
+    "output": "Stores custom data private to the page/app."
+  },
+  {
+    "title": "Global Attribute: Dir",
+    "code": "<p dir='rtl'>Right to Left</p>",
+    "output": "Sets text direction (ltr or rtl)."
+  },
+  {
+    "title": "Global Attribute: Lang",
+    "code": "<html lang='en'>",
+    "output": "Specifies language of content (e.g., English)."
+  },
+  {
+    "title": "Anchor Download",
+    "code": "<a href='file.pdf' download>Download</a>",
+    "output": "Forces the browser to download the linked file."
+  },
+  {
+    "title": "Image Map Shape Circle",
+    "code": "<area shape='circle' coords='50,50,40'>",
+    "output": "Circular clickable area in map."
+  },
+  {
+    "title": "Input Pattern",
+    "code": "<input pattern='[0-9]{3}'>",
+    "output": "Validates input against Regex (only 3 digits)."
+  },
+  {
+    "title": "Input Required",
+    "code": "<input required>",
+    "output": "Prevents form submission if empty."
+  },
+  {
+    "title": "Input Readonly",
+    "code": "<input value='Can read' readonly>",
+    "output": "User cannot modify value, but it is sent."
+  },
+  {
+    "title": "Input Disabled",
+    "code": "<input disabled>",
+    "output": "Unusable input, value not sent."
+  },
+  {
+    "title": "Input Autofocus",
+    "code": "<input autofocus>",
+    "output": "Automatically focuses input on page load."
+  },
+  {
+    "title": "Input Autocomplete",
+    "code": "<input autocomplete='on'>",
+    "output": "Browser suggests past values."
+  },
+  {
+    "title": "Input Step",
+    "code": "<input type='number' step='5'>",
+    "output": "Allows numbers in increments of 5."
+  },
+  {
+    "title": "Input Multiple",
+    "code": "<input type='file' multiple>",
+    "output": "Allows selecting multiple files."
+  },
+  {
+    "title": "Input Placeholder",
+    "code": "<input placeholder='Type here...'>",
+    "output": "Gray hint text inside empty input."
+  },
+  {
+    "title": "Meter Tag",
+    "code": "<meter value='0.6'>60%</meter>",
+    "output": "Displays a scalar measurement within a known range."
+  },
+  {
+    "title": "Progress Tag",
+    "code": "<progress value='70' max='100'></progress>",
+    "output": "Displays a progress bar (70%)."
+  },
+  {
+    "title": "Ruby Annotation",
+    "code": "<ruby>漢<rt>kan</rt></ruby>",
+    "output": "Shows pronunciation guide for East Asian characters."
+  },
+  {
+    "title": "WBR (Word Break)",
+    "code": "LongWord<wbr>Break",
+    "output": "Specifies where a line break is allowed."
+  },
+  {
+    "title": "Template Tag",
+    "code": "<template>Hidden Content</template>",
+    "output": "Content hidden until activated by JavaScript."
+  },
+  {
+    "title": "Slot Tag",
+    "code": "<slot name='header'></slot>",
+    "output": "Placeholder for shadow DOM content."
+  },
+  {
+    "title": "Picture Tag",
+    "code": "<picture><source...><img...></picture>",
+    "output": "Allows multiple image sources for responsiveness."
+  },
+  {
+    "title": "Entity: Copyright",
+    "code": "&copy;",
+    "output": "Displays © symbol."
+  },
+  {
+    "title": "Entity: Less Than",
+    "code": "&lt;",
+    "output": "Displays < symbol."
+  },
+  {
+    "title": "Entity: Greater Than",
+    "code": "&gt;",
+    "output": "Displays > symbol."
+  },
+  {
+    "title": "Entity: Ampersand",
+    "code": "&amp;",
+    "output": "Displays & symbol."
+  },
+  {
+    "title": "Entity: Space",
+    "code": "&nbsp;",
+    "output": "Non-breaking space (prevents line break)."
+  },
+  {
+    "title": "Entity: Quote",
+    "code": "&quot;",
+    "output": "Displays \" symbol."
+  },
+  {
+    "title": "Entity: Euro",
+    "code": "&euro;",
+    "output": "Displays € symbol."
+  },
+  {
+    "title": "Comment",
+    "code": "",
+    "output": "Not displayed in browser, for developers only."
+  },
+  {
+    "title": "Input MaxLength",
+    "code": "<input maxlength='10'>",
+    "output": "Limits input to 10 characters."
+  },
+  {
+    "title": "Form Target",
+    "code": "<form target='_blank'>",
+    "output": "Submits form response to a new tab."
+  },
+  {
+    "title": "Form Enctype",
+    "code": "<form enctype='multipart/form-data'>",
+    "output": "Required for forms with file uploads."
+  },
+  {
+    "title": "Form Method GET",
+    "code": "<form method='get'>",
+    "output": "Appends form data to URL (visible)."
+  },
+  {
+    "title": "Form Method POST",
+    "code": "<form method='post'>",
+    "output": "Sends form data in body (hidden/secure)."
+  },
+  {
+    "title": "Input FormAttribute",
+    "code": "<input form='form1'>",
+    "output": "Links input to a form outside its container."
+  },
+  {
+    "title": "Video Autoplay",
+    "code": "<video autoplay muted>",
+    "output": "Starts video automatically (muted required usually)."
+  },
+  {
+    "title": "Video Loop",
+    "code": "<video loop>",
+    "output": "Replays video automatically when finished."
+  },
+  {
+    "title": "Video Poster",
+    "code": "<video poster='img.jpg'>",
+    "output": "Shows image before video plays."
+  },
+  {
+    "title": "Table Cellpadding",
+    "code": "<table cellpadding='10'>",
+    "output": "Adds space inside cells (Legacy attribute)."
+  },
+  {
+    "title": "Table Cellspacing",
+    "code": "<table cellspacing='5'>",
+    "output": "Adds space between cells (Legacy attribute)."
+  },
+  {
+    "title": "Link Favicon",
+    "code": "<link rel='icon' href='favicon.ico'>",
+    "output": "Sets the small icon in the browser tab."
+  },
+  {
+    "title": "Script Defer",
+    "code": "<script defer src='app.js'></script>",
+    "output": "Executes script after HTML parsing is complete."
+  },
+  {
+    "title": "Script Async",
+    "code": "<script async src='ads.js'></script>",
+    "output": "Downloads script in parallel and runs immediately."
+  },
+  {
+    "title": "Meta Keywords",
+    "code": "<meta name='keywords' content='HTML, code'>",
+    "output": "Keywords for search engines (less used now)."
+  },
+  {
+    "title": "Meta Author",
+    "code": "<meta name='author' content='John Doe'>",
+    "output": "Defines the author of the page."
+  },
+  {
+    "title": "Meta Refresh",
+    "code": "<meta http-equiv='refresh' content='30'>",
+    "output": "Reloads the page every 30 seconds."
+  },
+  {
+    "title": "Iframe Sandbox",
+    "code": "<iframe sandbox>",
+    "output": "Enables extra security restrictions on iframe."
+  },
+  {
+    "title": "Marquee (Deprecated)",
+    "code": "<marquee>Moving Text</marquee>",
+    "output": "Scrolls text (Avoid in modern sites)."
+  },
+  {
+    "title": "Center (Deprecated)",
+    "code": "<center>Centered</center>",
+    "output": "Centers content (Use CSS instead)."
+  },
+  {
+    "title": "Font (Deprecated)",
+    "code": "<font color='red'>Text</font>",
+    "output": "Colors text (Use CSS instead)."
+  },
+  {
+    "title": "BDI (Bi-Di Isolation)",
+    "code": "<bdi>User123</bdi>: Hello",
+    "output": "Isolates text direction from surroundings."
+  },
+  {
+    "title": "Legend Tag",
+    "code": "<legend>Details</legend>",
+    "output": "Caption for a fieldset element."
+  },
+  {
+    "title": "Hgroup (Heading Group)",
+    "code": "<hgroup><h1>Title</h1><h2>Sub</h2></hgroup>",
+    "output": "Groups multi-level headings."
+  },
+  {
+    "title": "Dialog Modal",
+    "code": "<dialog>Modal Content</dialog>",
+    "output": "Native HTML popup/modal window."
+  },
+  {
+    "title": "Slot with Name",
+    "code": "<slot name='footer'></slot>",
+    "output": "Named placeholder in Web Components."
+  },
+  {
+    "title": "Table Border",
+    "code": "<table border='1'>",
+    "output": "Adds borders to table and cells."
+  },
+  {
+    "title": "Table Width",
+    "code": "<table width='100%'>",
+    "output": "Sets table width relative to container."
+  },
+  {
+    "title": "Input Size",
+    "code": "<input size='50'>",
+    "output": "Sets visible width of text input (in chars)."
+  },
+  {
+    "title": "Input Min/Max",
+    "code": "<input type='number' min='1' max='5'>",
+    "output": "Restricts numeric input range."
+  },
+  {
+    "title": "Link CSS",
+    "code": "<link rel='stylesheet' href='style.css'>",
+    "output": "Connects an external CSS file."
+  },
+  {
+    "title": "Link Preload",
+    "code": "<link rel='preload' href='font.woff2' as='font'>",
+    "output": "Tells browser to fetch resource early."
+  },
+  {
+    "title": "Area Shape Poly",
+    "code": "<area shape='poly' coords='...'>",
+    "output": "Polygon clickable area in image map."
+  },
+  {
+    "title": "Param Tag",
+    "code": "<param name='autoplay' value='true'>",
+    "output": "Parameters for Object elements."
+  },
+  {
+    "title": "Div Class",
+    "code": "<div class='box'></div>",
+    "output": "Div with class for styling."
+  },
+  {
+    "title": "Div ID",
+    "code": "<div id='main'></div>",
+    "output": "Div with unique ID."
+  },
+  {
+    "title": "Span Style",
+    "code": "<span style='color:blue'>Blue</span>",
+    "output": "Inline styled text."
+  },
+  {
+    "title": "Input Button",
+    "code": "<input type='button' value='Click'>",
+    "output": "Button created with input tag."
+  },
+  {
+    "title": "Select Multiple",
+    "code": "<select multiple><option>A</option></select>",
+    "output": "Dropdown allowing multiple selections."
+  },
+  {
+    "title": "Textarea Cols/Rows",
+    "code": "<textarea cols='30' rows='5'></textarea>",
+    "output": "Sets size of text area."
+  },
+  {
+    "title": "Button Submit",
+    "code": "<button type='submit'>Go</button>",
+    "output": "Button that submits the form."
+  },
+  {
+    "title": "Button Reset",
+    "code": "<button type='reset'>Clear</button>",
+    "output": "Button that clears the form."
+  },
+  {
+    "title": "Pre Code Block",
+    "code": "<pre><code>var x = 1;</code></pre>",
+    "output": "Standard way to display code blocks."
+  },
+  {
+    "title": "Nav Links",
+    "code": "<nav><a>1</a><a>2</a></nav>",
+    "output": "Semantic navigation block."
+  },
+  {
+    "title": "Footer Copyright",
+    "code": "<footer>&copy; 2024</footer>",
+    "output": "Standard footer content."
+  },
+  {
+    "title": "Header Logo",
+    "code": "<header><img src='logo.png'></header>",
+    "output": "Header containing a logo."
+  },
+  {
+    "title": "Main Content",
+    "code": "<main role='main'>...</main>",
+    "output": "Explicit ARIA role for main content."
+  },
+  {
+    "title": "Meta Charset",
+    "code": "<meta charset='utf-8'>",
+    "output": "Specifies character encoding."
+  },
+  {
+    "title": "Meta Compatibility",
+    "code": "<meta http-equiv='X-UA-Compatible' content='IE=edge'>",
+    "output": "Forces latest rendering engine in IE."
+  },
+  {
+    "title": "Base Target",
+    "code": "<base target='_blank'>",
+    "output": "Opens all links in new tab by default."
+  },
+  {
+    "title": "Script Module",
+    "code": "<script type='module' src='main.js'></script>",
+    "output": "Loads JS as an ES6 module."
+  },
+  {
+    "title": "Video Preload",
+    "code": "<video preload='none'>",
+    "output": "Prevents video loading until played."
+  },
+  {
+    "title": "Track Captions",
+    "code": "<track kind='captions' src='cap.vtt'>",
+    "output": "Adds captions for deaf users."
+  },
+  {
+    "title": "Img Lazy Load",
+    "code": "<img src='large.jpg' loading='lazy'>",
+    "output": "Delays image loading until scrolled to."
+  },
+  {
+    "title": "Iframe AllowFullScreen",
+    "code": "<iframe allowfullscreen>",
+    "output": "Allows iframe to go full screen."
+  },
+  {
+    "title": "A Href Tel",
+    "code": "<a href='tel:5551234'>Call</a>",
+    "output": "Phone link."
+  },
+  {
+    "title": "A Href Mailto",
+    "code": "<a href='mailto:a@b.com'>Mail</a>",
+    "output": "Email link."
+  },
+  {
+    "title": "A Href SMS",
+    "code": "<a href='sms:12345'>Text</a>",
+    "output": "SMS link."
+  },
+  {
+    "title": "A Href Skype",
+    "code": "<a href='skype:user?call'>Call</a>",
+    "output": "Skype link."
+  },
+  {
+    "title": "Details Open",
+    "code": "<details open><summary>Title</summary>...</details>",
+    "output": "Details widget expanded by default."
+  },
+  {
+    "title": "Dialog ShowModal",
+    "code": "document.getElementById('d').showModal()",
+    "output": "Opens dialog as a modal via JS."
+  },
+  {
+    "title": "Html Lang",
+    "code": "<html lang='fr'>",
+    "output": "Sets page language to French."
+  },
+  {
+    "title": "Body Background (Deprecated)",
+    "code": "<body background='bg.jpg'>",
+    "output": "Sets background image (Legacy)."
+  },
+  {
+    "title": "Body BgColor (Deprecated)",
+    "code": "<body bgcolor='black'>",
+    "output": "Sets background color (Legacy)."
+  },
+  {
+    "title": "Table Align (Deprecated)",
+    "code": "<table align='center'>",
+    "output": "Centers the table (Legacy)."
+  },
+  {
+    "title": "Img Align (Deprecated)",
+    "code": "<img align='right'>",
+    "output": "Floats image right (Legacy)."
+  },
+  {
+    "title": "Br Clear (Deprecated)",
+    "code": "<br clear='all'>",
+    "output": "Clears floats (Legacy)."
+  },
+  {
+    "title": "Noframes (Deprecated)",
+    "code": "<noframes>No frames support</noframes>",
+    "output": "Fallback for frames."
+  },
+  {
+    "title": "Frameset (Deprecated)",
+    "code": "<frameset cols='50%,50%'>",
+    "output": "Defines frame layout (Obsolete)."
+  },
+  {
+    "title": "Frame (Deprecated)",
+    "code": "<frame src='page.html'>",
+    "output": "Defines a single frame (Obsolete)."
+  },
+  {
+    "title": "Big Tag (Deprecated)",
+    "code": "<big>Large Text</big>",
+    "output": "Makes text bigger (Legacy)."
+  },
+  {
+    "title": "Tt Tag (Deprecated)",
+    "code": "<tt>Teletype Text</tt>",
+    "output": "Monospace text (Legacy)."
+  },
+  {
+    "title": "Acronym (Deprecated)",
+    "code": "<acronym title='NASA'>NASA</acronym>",
+    "output": "Defines acronym (Use <abbr> now)."
+  },
+  {
+    "title": "Dir Tag (Deprecated)",
+    "code": "<dir><li>List</li></dir>",
+    "output": "Directory list (Obsolete)."
+  },
+  {
+    "title": "Isindex (Deprecated)",
+    "code": "<isindex>",
+    "output": "Search prompt (Obsolete)."
+  },
+  {
+    "title": "Plaintext (Deprecated)",
+    "code": "<plaintext>Code...",
+    "output": "Renders rest of page as text."
+  },
+  {
+    "title": "XMP (Deprecated)",
+    "code": "<xmp>HTML inside</xmp>",
+    "output": "Renders HTML tags as text."
+  },
+  {
+    "title": "Listing (Deprecated)",
+    "code": "<listing>Code...</listing>",
+    "output": "Old code listing tag."
+  },
+  {
+    "title": "Address Block",
+    "code": "<address>123 Street<br>City</address>",
+    "output": "Contact information block."
+  },
+  {
+    "title": "Blockquote Cite",
+    "code": "<blockquote cite='url'>Quote</blockquote>",
+    "output": "Quote with source URL."
+  },
+  {
+    "title": "Q Cite",
+    "code": "<q cite='url'>Quote</q>",
+    "output": "Inline quote with source."
+  },
+  {
+    "title": "Del Cite",
+    "code": "<del cite='url'>Deleted</del>",
+    "output": "Deleted text with reason URL."
+  },
+  {
+    "title": "Ins Cite",
+    "code": "<ins cite='url'>Inserted</ins>",
+    "output": "Inserted text with reason URL."
+  },
+  {
+    "title": "Time Pubdate",
+    "code": "<time datetime='2024' pubdate>",
+    "output": "Publication date."
+  },
+  {
+    "title": "Img Alt",
+    "code": "<img alt='Text'>",
+    "output": "Alternative text if image fails."
+  },
+  {
+    "title": "Img Title",
+    "code": "<img title='Hover Text'>",
+    "output": "Tooltip on image hover."
+  },
+  {
+    "title": "Img Width/Height",
+    "code": "<img width='100' height='100'>",
+    "output": "Forces image dimensions."
+  },
+  {
+    "title": "Iframe Srcdoc",
+    "code": "<iframe srcdoc='<p>Hi</p>'>",
+    "output": "Embeds HTML code directly."
+  },
+  {
+    "title": "Map Name",
+    "code": "<map name='x'>",
+    "output": "Names the map for reference."
+  },
+  {
+    "title": "Object Type",
+    "code": "<object type='application/pdf'>",
+    "output": "Specifies media type."
+  },
+  {
+    "title": "Embed Type",
+    "code": "<embed type='video/webm'>",
+    "output": "Specifies embedded media type."
+  },
+  {
+    "title": "Canvas Context",
+    "code": "canvas.getContext('2d')",
+    "output": "JS method to draw on canvas."
+  },
+  {
+    "title": "Script Type",
+    "code": "<script type='text/javascript'>",
+    "output": "Legacy MIME type specifier."
+  },
+  {
+    "title": "Style Media",
+    "code": "<style media='print'>",
+    "output": "Styles apply only when printing."
+  },
+  {
+    "title": "Link Media",
+    "code": "<link media='screen' href='s.css'>",
+    "output": "Styles for screen only."
+  },
+  {
+    "title": "Meta HttpEquiv",
+    "code": "<meta http-equiv='refresh'>",
+    "output": "Simulates HTTP response header."
+  },
+  {
+    "title": "Body OnLoad",
+    "code": "<body onload='init()'>",
+    "output": "Runs JS when page finishes loading."
+  },
+  {
+    "title": "Input OnChange",
+    "code": "<input onchange='validate()'>",
+    "output": "Runs JS when value changes."
+  },
+  {
+    "title": "Form OnSubmit",
+    "code": "<form onsubmit='return check()'>",
+    "output": "Runs JS before submission."
+  },
+  {
+    "title": "Img OnError",
+    "code": "<img onerror='this.hide()'>",
+    "output": "Runs JS if image fails to load."
+  },
+  {
+    "title": "Div OnClick",
+    "code": "<div onclick='act()'>",
+    "output": "Runs JS on click."
+  },
+  {
+    "title": "Div OnMouseOver",
+    "code": "<div onmouseover='hover()'>",
+    "output": "Runs JS on hover."
+  },
+  {
+    "title": "Input OnFocus",
+    "code": "<input onfocus='highlight()'>",
+    "output": "Runs JS when input gets focus."
+  },
+  {
+    "title": "Input OnBlur",
+    "code": "<input onblur='validate()'>",
+    "output": "Runs JS when focus is lost."
+  },
+  {
+    "title": "Window OnResize",
+    "code": "<body onresize='adjust()'>",
+    "output": "Runs JS when window size changes."
+  },
+  {
+    "title": "Window OnScroll",
+    "code": "<body onscroll='track()'>",
+    "output": "Runs JS when page scrolls."
+  },
+  {
+    "title": "Entity: TradeMark",
+    "code": "&trade;",
+    "output": "Displays ™ symbol."
+  },
+  {
+    "title": "Entity: Registered",
+    "code": "&reg;",
+    "output": "Displays ® symbol."
+  },
+  {
+    "title": "Entity: Heart",
+    "code": "&hearts;",
+    "output": "Displays ♥ symbol."
+  },
+  {
+    "title": "Entity: Arrow Right",
+    "code": "&rarr;",
+    "output": "Displays → symbol."
+  },
+  {
+    "title": "Entity: Arrow Left",
+    "code": "&larr;",
+    "output": "Displays ← symbol."
+  },
+  {
+    "title": "Entity: Bull",
+    "code": "&bull;",
+    "output": "Displays • (bullet) symbol."
+  },
+  {
+    "title": "Entity: Pi",
+    "code": "&pi;",
+    "output": "Displays π symbol."
+  },
+  {
+    "title": "Entity: Infinity",
+    "code": "&infin;",
+    "output": "Displays ∞ symbol."
+  },
+  {
+    "title": "Global Attribute: Accesskey",
+    "code": "<a accesskey='h'>Home</a>",
+    "output": "Shortcut key to activate element."
+  },
+  {
+    "title": "Global Attribute: Translate",
+    "code": "<p translate='no'>BrandName</p>",
+    "output": "Prevents translation tools from changing text."
+  },
+  {
+    "title": "WAI-ARIA Role",
+    "code": "<div role='alert'>Error</div>",
+    "output": "Accessibility role definition."
+  },
+  {
+    "title": "ARIA Label",
+    "code": "<button aria-label='Close'>X</button>",
+    "output": "Screen reader label for icon-only buttons."
+  },
+  {
+    "title": "ARIA Hidden",
+    "code": "<div aria-hidden='true'>Deco</div>",
+    "output": "Hides element from screen readers."
+  },
+  {
+    "title": "Ruby Parentheses",
+    "code": "<rp>(</rp><rt>pronounce</rt><rp>)</rp>",
+    "output": "Fallback for browsers without ruby support."
+  },
+  {
+    "title": "Video CrossOrigin",
+    "code": "<video crossorigin='anonymous'>",
+    "output": "CORS settings for media."
+  },
+  {
+    "title": "Img CrossOrigin",
+    "code": "<img crossorigin='use-credentials'>",
+    "output": "CORS settings for images."
+  },
+  {
+    "title": "Link Integrity",
+    "code": "<link integrity='sha384-...'>",
+    "output": "Subresource Integrity (SRI) security check."
+  },
+  {
+    "title": "Script Integrity",
+    "code": "<script integrity='sha384-...'></script>",
+    "output": "Ensures script hasn't been tampered with."
+  },
+  {
+    "title": "Input Capture",
+    "code": "<input type='file' capture='user'>",
+    "output": "Opens camera on mobile devices."
+  },
+  {
+    "title": "Input Accept",
+    "code": "<input type='file' accept='image/*'>",
+    "output": "Restricts file upload to images."
+  },
+  {
+    "title": "Form NoValidate",
+    "code": "<form novalidate>",
+    "output": "Disables built-in browser validation."
+  },
+  {
+    "title": "Textarea Wrap",
+    "code": "<textarea wrap='hard'>",
+    "output": "Inserts line breaks in submitted text."
+  },
+  {
+    "title": "Track Default",
+    "code": "<track default>",
+    "output": "Sets default subtitle track."
+  },
+  {
+    "title": "Source Media",
+    "code": "<source media='(min-width:600px)'>",
+    "output": "Responsive media source selection."
+  },
+  {
+    "title": "Meta Theme Color",
+    "code": "<meta name='theme-color' content='#000'>",
+    "output": "Sets mobile browser toolbar color."
+  },
+  {
+    "title": "Link Alternate",
+    "code": "<link rel='alternate' href='fr/'>",
+    "output": "Link to translated version."
+  },
+  {
+    "title": "Link Canonical",
+    "code": "<link rel='canonical' href='url'>",
+    "output": "Defines preferred URL for SEO."
+  },
+  {
+    "title": "Html Xmlns",
+    "code": "<html xmlns='http://www.w3.org/1999/xhtml'>",
+    "output": "XML namespace for XHTML."
+  },
+  {
+    "title": "Svg Path",
+    "code": "<path d='M 10 10 H 90 V 90 H 10 L 10 10'/>",
+    "output": "Draws complex shapes in SVG."
+  },
+  {
+    "title": "Svg Rect",
+    "code": "<rect width='30' height='30'/>",
+    "output": "Draws a rectangle in SVG."
+  },
+  {
+    "title": "Svg Circle",
+    "code": "<circle r='20'/>",
+    "output": "Draws a circle in SVG."
+  },
+  {
+    "title": "Svg Text",
+    "code": "<text x='0' y='15'>SVG</text>",
+    "output": "Renders text inside SVG."
+  },
+  {
+    "title": "Math Frac",
+    "code": "<mfrac><mn>1</mn><mn>2</mn></mfrac>",
+    "output": "Displays a fraction (1/2)."
+  },
+  {
+    "title": "Math Sup",
+    "code": "<msup><mi>x</mi><mn>2</mn></msup>",
+    "output": "Displays exponent (x²)."
+  },
+  {
+    "title": "Iframe Sandbox Allow",
+    "code": "<iframe sandbox='allow-scripts'>",
+    "output": "Relaxes specific sandbox restrictions."
+  },
+  {
+    "title": "Meta Robots",
+    "code": "<meta name='robots' content='noindex'>",
+    "output": "Tells search engines not to index page."
+  },
+  {
+    "title": "Noscript Image",
+    "code": "<noscript><img src='track.png'></noscript>",
+    "output": "Image loads only if JS is off."
+  },
+  {
+    "title": "Details Toggle Event",
+    "code": "<details ontoggle='check()'>",
+    "output": "Fires event when opened/closed."
+  },
+  {
+    "title": "Dialog Close",
+    "code": "dialog.close()",
+    "output": "Closes the modal via JS."
+  },
+  {
+    "title": "Data List Option",
+    "code": "<option value='Chocolate'>",
+    "output": "Option inside a datalist."
+  },
+  {
+    "title": "Keygen (Deprecated)",
+    "code": "<keygen name='security'>",
+    "output": "Key pair generator (Obsolete)."
+  },
+  {
+    "title": "Spacer (Netscape)",
+    "code": "<spacer type='block' height='10'>",
+    "output": "Old spacing tag (Obsolete)."
+  },
+  {
+    "title": "Blink (Netscape)",
+    "code": "<blink>Flashing</blink>",
+    "output": "Flashing text (Obsolete/Annoying)."
+  },
+  {
+    "title": "Table Rules",
+    "code": "<table rules='rows'>",
+    "output": "Borders between rows only (Legacy)."
+  },
+  {
+    "title": "Table Summary",
+    "code": "<table summary='Data'>",
+    "output": "Accessibility description (Legacy)."
+  },
+  {
+    "title": "Body Alink",
+    "code": "<body alink='red'>",
+    "output": "Active link color (Legacy)."
+  },
+  {
+    "title": "Body Vlink",
+    "code": "<body vlink='purple'>",
+    "output": "Visited link color (Legacy)."
+  },
+  {
+    "title": "Head Profile",
+    "code": "<head profile='url'>",
+    "output": "Metadata profile (Legacy)."
+  },
+  {
+    "title": "Meta Scheme",
+    "code": "<meta scheme='ISBN'>",
+    "output": "Metadata scheme (Legacy)."
+  },
+  {
+    "title": "Object ClassID",
+    "code": "<object classid='clsid:...'>",
+    "output": "ActiveX control ID (Legacy)."
+  },
+  {
+    "title": "Applet (Deprecated)",
+    "code": "<applet code='game.class'>",
+    "output": "Java Applet (Obsolete)."
+  },
+  {
+    "title": "Menu (Context)",
+    "code": "<menu type='context'>",
+    "output": "Right-click menu (Limited support)."
+  },
+  {
+    "title": "Menuitem (Deprecated)",
+    "code": "<menuitem label='Save'>",
+    "output": "Menu item (Obsolete)."
+  },
+  {
+    "title": "Content Security Policy",
+    "code": "<meta http-equiv='Content-Security-Policy'>",
+    "output": "Security settings against XSS."
+  },
+  {
+    "title": "Meta Google",
+    "code": "<meta name='google' content='notranslate'>",
+    "output": "Stops Google Translate popup."
+  },
+  {
+    "title": "Link Next",
+    "code": "<link rel='next' href='p2.html'>",
+    "output": "Indicates next page in series."
+  },
+  {
+    "title": "Link Prev",
+    "code": "<link rel='prev' href='p1.html'>",
+    "output": "Indicates previous page."
+  },
+  {
+    "title": "Link Author",
+    "code": "<link rel='author' href='me.html'>",
+    "output": "Link to author profile."
+  },
+  {
+    "title": "Link License",
+    "code": "<link rel='license' href='copy.html'>",
+    "output": "Link to copyright license."
+  },
+  {
+    "title": "Link Help",
+    "code": "<link rel='help' href='faq.html'>",
+    "output": "Link to help document."
+  },
+  {
+    "title": "Link Search",
+    "code": "<link rel='search' href='s.xml'>",
+    "output": "Link to OpenSearch description."
+  },
+  {
+    "title": "Input DirName",
+    "code": "<input name='user' dirname='user.dir'>",
+    "output": "Submits text direction of input."
+  },
+  {
+    "title": "Area NoHref",
+    "code": "<area nohref>",
+    "output": "Non-clickable area (Legacy)."
+  }
+]

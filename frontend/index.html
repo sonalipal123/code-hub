@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <title>Programming Codes Library</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg" style="background-color: #0000ff;">
+  <div class="container-fluid">
+    
+    <!-- Brand -->
+    <a href="#" class="navbar-brand text-white fw-bold">Coding Hub</a>
+
+    <!-- Toggler Button (shows in mobile view) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Menu -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-white mx-2" href="#how">How it Works</a>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link authBtn text-white mx-2">Sign up / Login</button>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link text-white mx-2" href="#about">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white mx-2" href="#contact">Contact us</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <div id="authFormsContainer">
+        <!-- Tabs -->
+        <ul class="nav nav-tabs mb-3" id="authTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button">Login</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button">Sign up</button>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <!-- LOGIN -->
+          <div class="tab-pane fade show active" id="login">
+            <form id="loginForm">
+              <div class="mb-2">
+                <label class="form-label">Email</label>
+                <input name="email" type="email" class="form-control" required>
+              </div>
+              <div class="mb-2">
+                <label class="form-label">Password</label>
+                <input name="password" type="password" class="form-control" required>
+              </div>
+              <!-- Forgot Password -->
+              <div class="mb-3 text-end">
+                  <a href="#" id="forgotLink" class="text-decoration-none small">Forgot Password?</a>
+                </div>
+              <div id="loginMsg" class="text-danger signupMss small mb-2"></div>
+              <button class="btn btn-primary w-100" type="submit">Login</button>
+            </form>
+          </div>
+
+          <!-- SIGNUP -->
+          <div class="tab-pane fade" id="signup">
+            <form id="signupForm">
+              <div class="mb-2">
+                <label class="form-label">Name</label>
+                <input name="name" type="text" class="form-control" required>
+              </div>
+              <div class="mb-2">
+                <label class="form-label">Email</label>
+                <input name="email" type="email" class="form-control" required>
+              </div>
+              <div class="mb-2">
+                <label class="form-label">Password</label>
+                <input name="password" type="password" class="form-control" required>
+              </div>
+              <div id="signupMsg" class="text-danger signupMss small mb-2"></div>
+              <button class="btn btn-success w-100" type="submit">Create account</button>
+            </form>
+          </div>
+        </div>
+        </div>
+        <!-- RESET PASSWORD -->
+      <div id="resetContainer" style="display: none;">
+          <div class="text-center mb-4">
+            <h4>Reset Password</h4>
+            <p class="text-muted small">Enter your email and a new password.</p>
+          </div>
+          <form id="resetForm">
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input name="email" type="email" class="form-control" placeholder="Enter email" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">New Password</label>
+              <input name="newPassword" type="password" class="form-control" placeholder="Enter new password" required>
+            </div>
+            
+            <div id="resetMsg" class="text-danger small mb-2" style="display:none;"></div>
+            <div id="resetSuccessMsg" class="text-success small mb-2" style="display:none;"></div>
+
+            <button class="btn btn-success w-50 mb-3" type="submit">Update Password</button>
+            <button type="button" id="backToLoginBtn" class="btn btn-primary w-50 text-decoration-none text-muted">Back to Login</button>
+          </form>
+        </div>
+      </div>
+
+      
+
+    </div>
+  </div>
+</div>
+
+
+<!-- header -->
+<header class="hero">
+    <h1>Empowering Talent with Career Tools, Training & Opportunity</h1>
+    <p>Create free CVs, cover letters, and job-readiness resources designed for students and professionals.</p>
+    <button class="btn authBtn">Get Started</button>
+  </header>
+
+<section class="container">
+    <h2 class="text-center mt-4 mb-4 text-primary" id="how">How It Works</h2>
+
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <h4 class="text-dark">Step 1: Browse codes</h4>
+          <p class="mt-4">Explore a wide range of programming examples across different languages.</p>
+        </div>
+      </div>
+
+            <div class="col-md-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <h4 class="text-dark">Step 2: Learn & Understand</h4>
+          <p class="mt-4">Open any code snippet to understand how it works.</p>
+        </div>
+      </div>
+
+            <div class="col-md-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <h4 class="text-dark">Step 3: Share & Build</h4>
+          <p class="mt-4">Save your favorite programs and use them to build your own projects.</p>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="container">
+  <h2 class="text-primary mt-4 mb-4 text-center" id="tips"> Tips for Job</h2>
+
+  <div class="row text-center">
+    <div class="col-md-4">
+      <div class="p-4 bg-white rounded shadow-sm h-100">
+        <h4 class="text-dark">Step 1: Build Strong Skills</h4>
+        <p>Focus on learning practical skills. Work on real projects, practice daily, and keep improving.</p>
+      </div>
+    </div>
+
+
+    <div class="col-md-4">
+      <div class="p-4 bg-white rounded shadow-sm h-100">
+        <h4 class="text-dark">Step 2: Create a Smart Resume</h4>
+        <p>Prepare a clean and professional resume that highlights your strengths, projects, and achievements clearly.</p>
+      </div>
+    </div>
+
+
+    <div class="col-md-4">
+      <div class="p-4 bg-white rounded shadow-sm h-100">
+        <h4 class="text-dark">Step 3: Prepare for Interviews</h4>
+        <p>Practice common interview questions, improve communication skills, and stay confident during the conversation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Interview Section -->
+<section id="interview" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-primary text-center mb-5">Interview Questions & Answers</h2>
+
+    <div class="row">
+      <!-- HR Questions -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <h4 class="text-dark mb-3">General HR Questions</h4>
+          <ul class="text-start">
+            <li>Tell me about your background in coding.</li>
+            <li>Why are you interested in this developer role?</li>
+            <li>What are your key strengths as a programmer?</li>
+            <li>Where do you see yourself in the next few years?</li>
+            <li>What motivates you to write clean and efficient code?</li>
+          </ul>
+          <p><b>Tip:</b> Be confident and align your answers with the company’s tech culture.</p>
+        </div>
+      </div>
+
+      <!-- Technical Questions -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <h4 class="text-dark mb-3">Technical Questions</h4>
+          <ul class="text-start">
+            <li>What is the difference between frontend and backend development?</li>
+            <li>Explain how databases and APIs work together.</li>
+            <li>How do you debug and test your code effectively?</li>
+            <li>Describe key principles of Object-Oriented Programming (OOP).</li>
+            <li>Which programming language do you prefer and why?</li>
+          </ul>
+          <p><b>Tip:</b> Mention real examples or mini-projects that showcase your coding skills.</p>
+        </div>
+      </div>
+
+      <!-- Behavioral Questions -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <h4 class="text-dark mb-3">Behavioral Questions</h4>
+          <ul class="text-start">
+            <li>Describe a coding challenge you solved under pressure.</li>
+            <li>Tell me about a time you collaborated on a software project.</li>
+            <li>Share an instance where you optimized code performance.</li>
+            <li>How do you handle tight deadlines or bugs before release?</li>
+            <li>Talk about a project where you took the lead in development.</li>
+          </ul>
+          <p><b>Tip:</b> Use the <b>STAR method</b> — Situation, Task, Action, Result — for structured answers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="container py-5">
+  <div class="row g-4">
+
+    <!-- About Us -->
+    <div class="col-sm-12 col-md-6">
+      <div class="p-4 bg-white shadow-sm rounded h-100 text-center">
+        <h2 class="text-primary mb-3" id="about">About Us</h2>
+        <p>
+          Code Program Hub is a platform for learners and developers to explore, understand, 
+          and share coding examples and projects across multiple programming languages.
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="col-sm-12 col-md-6">
+      <div class="p-4 bg-white shadow-sm rounded h-100 text-center">
+        <h2 class="text-primary mb-3" id="contact">Contact Us</h2>
+        <p>
+          Have questions or suggestions? Reach out to us at 
+          <a href="mailto:support@codehub.com" class="text-decoration-none text-primary">support@codehub.com</a> 
+          or use our contact form for quick responses.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center text-md-start">
+    <div class="row gy-4">
+      <!-- Logo / About -->
+      <div class="col-12 col-md-4">
+        <h4 class="text-primary mb-2">Coding Hub</h4>
+        <p class="small mb-0">
+          A simple and free platform to explore, learn, and share coding projects and resources.  
+          Helping learners build logic, one code at a time.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-6 col-md-4">
+        <h5 class="mb-2">Quick Links</h5>
+        <ul class="list-unstyled small mb-0">
+          <li><a href="#about" class="text-white text-decoration-none">About Us</a></li>
+          <li><a href="#interview" class="text-white text-decoration-none">Interview Tips</a></li>
+          <li><a href="code.html" class="text-white text-decoration-none">Code Library</a></li>
+          <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-6 col-md-4">
+        <h5 class="mb-2">Contact</h5>
+        <p class="small mb-1">Email: <a href="mailto:info@codehub.com" class="text-white text-decoration-none">info@codehub.com</a></p> <hr>
+        <p class="small mb-0">© 2025 Coding hub</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+
+</body>
+</html>

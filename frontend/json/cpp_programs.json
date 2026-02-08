@@ -1,0 +1,1214 @@
+[
+  {
+    "title": "Simple Hello Program",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  cout << \"Hello C++\";\n  return 0;\n}",
+    "output": "Hello C++",
+    "input": ""
+  },
+  {
+    "title": "For Loop Example",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  for(int i = 1; i <= 5; i++) cout << i << \" \";\n}",
+    "output": "1 2 3 4 5",
+    "input": ""
+  },
+  {
+    "title": "Read and Print Integer",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter a number: \";\n  cin >> n;\n  cout << \"You entered: \" << n;\n}",
+    "output": "Input: 10 \u2192 You entered: 10",
+    "input": "10"
+  },
+  {
+    "title": "Sum of Two Numbers",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n}",
+    "output": "Input: 5 7 \u2192 Sum = 12",
+    "input": "5 7"
+  },
+  {
+    "title": "Check Even or Odd",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cin >> n;\n  if(n % 2 == 0) cout << \"Even\";\n  else cout << \"Odd\";\n}",
+    "output": "Input: 4 \u2192 Even",
+    "input": "4"
+  },
+  {
+    "title": "Simple Calculator",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  char op;\n  cin >> a >> op >> b;\n  switch(op) {\n    case '+': cout << a + b; break;\n    case '-': cout << a - b; break;\n    case '*': cout << a * b; break;\n    case '/': cout << a / b; break;\n  }\n}",
+    "output": "Input: 5 + 3 \u2192 8",
+    "input": "5 + 3"
+  },
+  {
+    "title": "Factorial of a Number",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n, fact = 1;\n  cin >> n;\n  for(int i = 1; i <= n; i++) fact *= i;\n  cout << fact;\n}",
+    "output": "Input: 5 \u2192 120",
+    "input": "5"
+  },
+  {
+    "title": "Print Array Elements",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int arr[5] = {1,2,3,4,5};\n  for(int i=0;i<5;i++) cout<<arr[i]<<\" \";\n}",
+    "output": "1 2 3 4 5",
+    "input": ""
+  },
+  {
+    "title": "Find Largest of Three Numbers",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b, c;\n  cin >> a >> b >> c;\n  if(a>b && a>c) cout << a;\n  else if(b>c) cout << b;\n  else cout << c;\n}",
+    "output": "Largest number printed",
+    "input": ""
+  },
+  {
+    "title": "Swap Two Numbers (Temp Variable)",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a = 5, b = 10, temp;\n  temp = a;\n  a = b;\n  b = temp;\n  cout << a << \" \" << b;\n}",
+    "output": "10 5",
+    "input": ""
+  },
+  {
+    "title": "Swap Without Temp",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a = 3, b = 7;\n  a = a + b;\n  b = a - b;\n  a = a - b;\n  cout << a << \" \" << b;\n}",
+    "output": "7 3",
+    "input": ""
+  },
+  {
+    "title": "Check Prime Number",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n, flag = 0;\n  cin >> n;\n  for(int i=2; i<=n/2; i++)\n    if(n % i == 0) flag = 1;\n  if(flag == 0) cout << \"Prime\";\n  else cout << \"Not Prime\";\n}",
+    "output": "Checks prime",
+    "input": ""
+  },
+  {
+    "title": "Reverse a Number",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n, rev = 0;\n  cin >> n;\n  while(n != 0) {\n    rev = rev * 10 + n % 10;\n    n /= 10;\n  }\n  cout << rev;\n}",
+    "output": "Input: 123 \u2192 321",
+    "input": "123"
+  },
+  {
+    "title": "Sum of Digits",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n, sum = 0;\n  cin >> n;\n  while(n > 0) {\n    sum += n % 10;\n    n /= 10;\n  }\n  cout << sum;\n}",
+    "output": "Input: 123 \u2192 6",
+    "input": "123"
+  },
+  {
+    "title": "Fibonacci Series",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n, a=0, b=1, c;\n  cin >> n;\n  cout << a << \" \" << b << \" \";\n  for(int i=2;i<n;i++){\n    c = a + b;\n    cout << c << \" \";\n    a = b;\n    b = c;\n  }\n}",
+    "output": "Fibonacci sequence printed",
+    "input": ""
+  },
+  {
+    "title": "Simple Class Example",
+    "code": "#include <iostream>\nusing namespace std;\nclass Student {\n public:\n  string name;\n  int age;\n  void show() { cout << name << \" \" << age; }\n};\nint main() {\n  Student s;\n  s.name = \"Aman\";\n  s.age = 20;\n  s.show();\n}",
+    "output": "Aman 20",
+    "input": ""
+  },
+  {
+    "title": "Constructor Example",
+    "code": "#include <iostream>\nusing namespace std;\nclass Test {\n public:\n  Test() { cout << \"Constructor Called\"; }\n};\nint main() {\n  Test t;\n}",
+    "output": "Constructor Called",
+    "input": ""
+  },
+  {
+    "title": "Function Overloading",
+    "code": "#include <iostream>\nusing namespace std;\nclass Calc {\n public:\n  int add(int a, int b) { return a+b; }\n  double add(double a, double b) { return a+b; }\n};\nint main() {\n  Calc c;\n  cout << c.add(3,5) << \" \" << c.add(2.5,3.1);\n}",
+    "output": "8 5.6",
+    "input": ""
+  },
+  {
+    "title": "Simple Inheritance",
+    "code": "#include <iostream>\nusing namespace std;\nclass A {\n public:\n  void msg() { cout << \"Hello\"; }\n};\nclass B : public A {};\nint main() {\n  B obj;\n  obj.msg();\n}",
+    "output": "Hello",
+    "input": ""
+  },
+  {
+    "title": "File Write Example",
+    "code": "#include <iostream>\n#include <fstream>\nusing namespace std;\nint main() {\n  ofstream file(\"data.txt\");\n  file << \"Hello File\";\n  file.close();\n  cout << \"Written\";\n}",
+    "output": "Writes text to file",
+    "input": ""
+  },
+  {
+    "title": "File Read Example",
+    "code": "#include <iostream>\n#include <fstream>\nusing namespace std;\nint main(){\n  string text;\n  ifstream file(\"data.txt\");\n  while(getline(file, text)) cout << text;\n}",
+    "output": "Reads from data.txt",
+    "input": ""
+  },
+  {
+    "title": "Pointer Basics",
+    "code": "#include <iostream>\nusing namespace std;\nint main(){\n  int a = 10;\n  int *p = &a;\n  cout << *p;\n}",
+    "output": "10",
+    "input": ""
+  },
+  {
+    "title": "Add Using Pointers",
+    "code": "#include <iostream>\nusing namespace std;\nint main(){\n  int a=5, b=7;\n  int *p=&a, *q=&b;\n  cout << (*p + *q);\n}",
+    "output": "12",
+    "input": ""
+  },
+  {
+    "title": "Dynamic Memory (new)",
+    "code": "#include <iostream>\nusing namespace std;\nint main(){\n  int *p = new int(20);\n  cout << *p;\n  delete p;\n}",
+    "output": "20",
+    "input": ""
+  },
+  {
+    "title": "Structure Example",
+    "code": "#include <iostream>\nusing namespace std;\nstruct Person { string name; int age; };\nint main(){\n  Person p = {\"Riya\", 22};\n  cout << p.name << \" \" << p.age;\n}",
+    "output": "Riya 22",
+    "input": ""
+  },
+  {
+    "title": "Class with Parameterized Constructor",
+    "code": "#include <iostream>\nusing namespace std;\nclass Box{\n  int l, b;\npublic:\n  Box(int x, int y){ l=x; b=y; }\n  int area(){ return l*b; }\n};\nint main(){\n  Box obj(5,4);\n  cout << obj.area();\n}",
+    "output": "20",
+    "input": ""
+  },
+  {
+    "title": "Default Arguments",
+    "code": "#include <iostream>\nusing namespace std;\nint add(int a, int b=10){ return a + b; }\nint main(){ cout << add(5); }",
+    "output": "15",
+    "input": ""
+  },
+  {
+    "title": "Inline Function Example",
+    "code": "#include <iostream>\nusing namespace std;\ninline int square(int x){ return x*x; }\nint main(){ cout << square(6); }",
+    "output": "36",
+    "input": ""
+  },
+  {
+    "title": "Static Variable Example",
+    "code": "#include <iostream>\nusing namespace std;\nvoid test(){ static int a=0; a++; cout<<a<<\" \"; }\nint main(){ test(); test(); test(); }",
+    "output": "1 2 3",
+    "input": ""
+  },
+  {
+    "title": "Friend Function Example",
+    "code": "#include <iostream>\nusing namespace std;\nclass A{\n  int x=10;\n  friend void show(A);\n};\nvoid show(A obj){ cout << obj.x; }\nint main(){ A obj; show(obj); }",
+    "output": "10",
+    "input": ""
+  },
+  {
+    "title": "Multiple Inheritance",
+    "code": "#include <iostream>\nusing namespace std;\nclass A{ public: void a(){ cout<<\"A \"; } };\nclass B{ public: void b(){ cout<<\"B \"; } };\nclass C: public A, public B{};\nint main(){ C obj; obj.a(); obj.b(); }",
+    "output": "A B",
+    "input": ""
+  },
+  {
+    "title": "Multilevel Inheritance",
+    "code": "#include <iostream>\nusing namespace std;\nclass A{ public: void a(){ cout<<\"Hello \"; } };\nclass B: public A{ public: void b(){ cout<<\"from \"; } };\nclass C: public B{ public: void c(){ cout<<\"C++\"; } };\nint main(){ C obj; obj.a(); obj.b(); obj.c(); }",
+    "output": "Hello from C++",
+    "input": ""
+  },
+  {
+    "title": "Virtual Function Example",
+    "code": "#include <iostream>\nusing namespace std;\nclass Base { public: virtual void show(){ cout<<\"Base\"; } };\nclass Derived: public Base { public: void show(){ cout<<\"Derived\"; } };\nint main(){ Base *b = new Derived(); b->show(); }",
+    "output": "Derived",
+    "input": ""
+  },
+  {
+    "title": "Pure Virtual Function",
+    "code": "#include <iostream>\nusing namespace std;\nclass Shape { public: virtual int area()=0; };\nclass Square: public Shape{ public: int area(){ return 25; } };\nint main(){ Square s; cout<<s.area(); }",
+    "output": "25",
+    "input": ""
+  },
+  {
+    "title": "Template Function",
+    "code": "#include <iostream>\nusing namespace std;\ntemplate<class T>\nT add(T a, T b){ return a+b; }\nint main(){ cout<<add(3,4); }",
+    "output": "7",
+    "input": ""
+  },
+  {
+    "title": "Template Class Example",
+    "code": "#include <iostream>\nusing namespace std;\ntemplate<class T>\nclass A{ T x; public: A(T a){ x=a; } T get(){ return x; } };\nint main(){ A<int> obj(5); cout<<obj.get(); }",
+    "output": "5",
+    "input": ""
+  },
+  {
+    "title": "Vector Example",
+    "code": "#include <iostream>\n#include <vector>\nusing namespace std;\nint main(){\n  vector<int> v = {1,2,3};\n  v.push_back(4);\n  for(int x: v) cout<<x<<\" \";\n}",
+    "output": "1 2 3 4",
+    "input": ""
+  },
+  {
+    "title": "String Reverse",
+    "code": "#include <iostream>\nusing namespace std;\nint main(){\n  string s = \"hello\";\n  for(int i=s.size()-1;i>=0;i--) cout<<s[i];\n}",
+    "output": "olleh",
+    "input": ""
+  },
+  {
+    "title": "Count Vowels in String",
+    "code": "#include <iostream>\nusing namespace std;\nint main(){\n  string s=\"umbrella\";\n  int count=0;\n  for(char c:s) if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u') count++;\n  cout<<count;\n}",
+    "output": "3",
+    "input": ""
+  },
+  {
+    "title": "Matrix Addition",
+    "code": "#include <iostream>\nusing namespace std;\nint main(){\n  int a[2][2]={{1,2},{3,4}}, b[2][2]={{5,6},{7,8}}, c[2][2];\n  for(int i=0;i<2;i++)\n    for(int j=0;j<2;j++)\n      c[i][j] = a[i][j] + b[i][j];\n  cout<<c[0][0]<<\" \"<<c[1][1];\n}",
+    "output": "6 12",
+    "input": ""
+  },
+  {
+    "title": "Matrix Multiplication",
+    "code": "#include <iostream>\nusing namespace std;\nint main(){\n  int a[2][2]={{1,2},{3,4}}, b[2][2]={{2,0},{1,2}}, c[2][2]={0};\n  for(int i=0;i<2;i++)\n    for(int j=0;j<2;j++)\n      for(int k=0;k<2;k++)\n        c[i][j]+=a[i][k]*b[k][j];\n  cout<<c[0][0]<<\" \"<<c[1][1];\n}",
+    "output": "4 14",
+    "input": ""
+  },
+  {
+    "title": "Queue Using STL",
+    "code": "#include <iostream>\n#include <queue>\nusing namespace std;\nint main(){ queue<int> q; q.push(1); q.push(2); cout<<q.front(); }",
+    "output": "1",
+    "input": ""
+  },
+  {
+    "title": "Stack Using STL",
+    "code": "#include <iostream>\n#include <stack>\nusing namespace std;\nint main(){ stack<int> s; s.push(5); s.push(10); cout<<s.top(); }",
+    "output": "10",
+    "input": ""
+  },
+  {
+    "title": "Map Example",
+    "code": "#include <iostream>\n#include <map>\nusing namespace std;\nint main(){ map<int,string> m; m[1]=\"A\"; m[2]=\"B\"; cout<<m[2]; }",
+    "output": "B",
+    "input": ""
+  },
+  {
+    "title": "Binary Search",
+    "code": "#include <iostream>\nusing namespace std;\nint main(){\n  int arr[]={1,3,5,7,9}, key=7, l=0, h=4;\n  while(l<=h){ int mid=(l+h)/2;\n    if(arr[mid]==key){ cout<<\"Found\"; return 0; }\n    else if(arr[mid]<key) l=mid+1;\n    else h=mid-1;\n  }\n  cout<<\"Not Found\";\n}",
+    "output": "Found",
+    "input": ""
+  },
+  {
+    "title": "Bubble Sort",
+    "code": "#include <iostream>\nusing namespace std;\nint main(){\n  int a[]={5,2,9,1}, n=4;\n  for(int i=0;i<n;i++)\n    for(int j=0;j<n-i-1;j++)\n      if(a[j]>a[j+1]) swap(a[j],a[j+1]);\n  for(int i:a) cout<<i<<\" \";\n}",
+    "output": "1 2 5 9",
+    "input": ""
+  },
+  {
+    "title": "Armstrong Number",
+    "code": "#include <iostream>\nusing namespace std;\nint main(){\n  int n=153, t=n, sum=0;\n  while(t){ int r=t%10; sum+=r*r*r; t/=10; }\n  cout<<(sum==n?\"Yes\":\"No\");\n}",
+    "output": "Yes",
+    "input": ""
+  },
+  {
+    "title": "Palindrome String",
+    "code": "#include <iostream>\nusing namespace std;\nint main(){ string s=\"level\"; string r=s; reverse(r.begin(),r.end()); cout<<(s==r); }",
+    "output": "1",
+    "input": ""
+  },
+  {
+    "title": "Count Words in String",
+    "code": "#include <iostream>\nusing namespace std;\nint main(){ string s=\"hello world program\"; int count=1;\n  for(char c:s) if(c==' ') count++;\n  cout<<count;\n}",
+    "output": "3",
+    "input": ""
+  },
+  {
+    "title": "Break and Continue Example",
+    "code": "#include <iostream>\nusing namespace std;\nint main(){ for(int i=1;i<=10;i++){ if(i==5) continue; if(i==9) break; cout<<i<<\" \"; } }",
+    "output": "1 2 3 4 6 7 8",
+    "input": ""
+  },
+  {
+    "title": "Do While Loop Example",
+    "code": "#include <iostream>\nusing namespace std;\nint main(){ int i=1; do{ cout<<i<<\" \"; i++; }while(i<=5); }",
+    "output": "1 2 3 4 5",
+    "input": ""
+  },
+  {
+    "title": "Ternary Operator Example",
+    "code": "#include <iostream>\nusing namespace std;\nint main(){ int n=10; cout<<(n%2==0?\"Even\":\"Odd\"); }",
+    "output": "Even",
+    "input": ""
+  },
+  {
+    "title": "Addition Calculator #1",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #1",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #1",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #1",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #1",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #1",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #2",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #2",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #2",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #2",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #2",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #2",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #3",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #3",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #3",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #3",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #3",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #3",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #4",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #4",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #4",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #4",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #4",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #4",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #5",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #5",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #5",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #5",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #5",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #5",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #6",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #6",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #6",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #6",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #6",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #6",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #7",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #7",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #7",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #7",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #7",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #7",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #8",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #8",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #8",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #8",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #8",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #8",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #9",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #9",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #9",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #9",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #9",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #9",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #10",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #10",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #10",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #10",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #10",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #10",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #11",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #11",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #11",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #11",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #11",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #11",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #12",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #12",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #12",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #12",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #12",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #12",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #13",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #13",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #13",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #13",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #13",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #13",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #14",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #14",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #14",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #14",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #14",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #14",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #15",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #15",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #15",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #15",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #15",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #15",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #16",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #16",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #16",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #16",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #16",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #16",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #17",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #17",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #17",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #17",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #17",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #17",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #18",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #18",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #18",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #18",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #18",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #18",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #19",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #19",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #19",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #19",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #19",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #19",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #20",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #20",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #20",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #20",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #20",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #20",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #21",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #21",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #21",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #21",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #21",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #21",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #22",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #22",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #22",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #22",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #22",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #22",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #23",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #23",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #23",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #23",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #23",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #23",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #24",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #24",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #24",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #24",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #24",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #24",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  },
+  {
+    "title": "Addition Calculator #25",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int a, b;\n  cout << \"Enter two numbers: \";\n  cin >> a >> b;\n  cout << \"Sum = \" << a + b;\n  return 0;\n}",
+    "input": "10 20",
+    "output": "Sum = 30"
+  },
+  {
+    "title": "Simple Interest Calculator #25",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double p, r, t;\n  cout << \"Enter principal, rate and time: \";\n  cin >> p >> r >> t;\n  double si = (p * r * t) / 100.0;\n  cout << \"Simple Interest = \" << si;\n  return 0;\n}",
+    "input": "1000 5 2",
+    "output": "Simple Interest = 100"
+  },
+  {
+    "title": "Rectangle Area and Perimeter #25",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  double length, breadth;\n  cout << \"Enter length and breadth: \";\n  cin >> length >> breadth;\n  double area = length * breadth;\n  double peri = 2 * (length + breadth);\n  cout << \"Area = \" << area << \"\\n\";\n  cout << \"Perimeter = \" << peri;\n  return 0;\n}",
+    "input": "5 3",
+    "output": "Area = 15\nPerimeter = 16"
+  },
+  {
+    "title": "Maximum of Three Numbers (Function) #25",
+    "code": "#include <iostream>\nusing namespace std;\nint max3(int a, int b, int c) {\n  int m = a;\n  if (b > m) m = b;\n  if (c > m) m = c;\n  return m;\n}\nint main() {\n  int a, b, c;\n  cout << \"Enter three integers: \";\n  cin >> a >> b >> c;\n  cout << \"Maximum = \" << max3(a, b, c);\n  return 0;\n}",
+    "input": "4 9 2",
+    "output": "Maximum = 9"
+  },
+  {
+    "title": "Reverse String Using Loop #25",
+    "code": "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n  string s;\n  cout << \"Enter a string: \";\n  getline(cin, s);\n  if (s.size() == 0) getline(cin, s); // handles leftover newline in some environments\n  string rev = \"\";\n  for (int i = s.size() - 1; i >= 0; --i) {\n    rev += s[i];\n  }\n  cout << \"Reversed: \" << rev;\n  return 0;\n}",
+    "input": "hello",
+    "output": "Reversed: olleh"
+  },
+  {
+    "title": "Linear Search in Array #25",
+    "code": "#include <iostream>\nusing namespace std;\nint main() {\n  int n;\n  cout << \"Enter size of array: \";\n  cin >> n;\n  int arr[100];\n  cout << \"Enter \" << n << \" elements: \";\n  for (int i = 0; i < n; ++i) cin >> arr[i];\n  int key;\n  cout << \"Enter element to search: \";\n  cin >> key;\n  int pos = -1;\n  for (int i = 0; i < n; ++i) {\n    if (arr[i] == key) {\n      pos = i;\n      break;\n    }\n  }\n  if (pos == -1) cout << \"Not found\";\n  else cout << \"Found at index \" << pos;\n  return 0;\n}",
+    "input": "5\n1 4 7 9 2\n9",
+    "output": "Found at index 3"
+  }
+]

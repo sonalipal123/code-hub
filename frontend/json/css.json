@@ -1,0 +1,1372 @@
+[
+  {
+    "title": "Text Color",
+    "code": "p { color: blue; }",
+    "output": "Changes the text color to blue."
+  },
+  {
+    "title": "Font Size",
+    "code": "p { font-size: 20px; }",
+    "output": "Sets the text size to 20 pixels."
+  },
+  {
+    "title": "Background Color",
+    "code": "body { background-color: #f0f0f0; }",
+    "output": "Sets the page background to a light gray."
+  },
+  {
+    "title": "Text Align Center",
+    "code": "h1 { text-align: center; }",
+    "output": "Centers the heading text horizontally."
+  },
+  {
+    "title": "Font Family",
+    "code": "body { font-family: Arial, sans-serif; }",
+    "output": "Sets the font to Arial or a fallback sans-serif."
+  },
+  {
+    "title": "Bold Text",
+    "code": "strong { font-weight: bold; }",
+    "output": "Makes the text appear bold."
+  },
+  {
+    "title": "Italic Text",
+    "code": "em { font-style: italic; }",
+    "output": "Slants the text (italicized)."
+  },
+  {
+    "title": "Underline Text",
+    "code": "a { text-decoration: underline; }",
+    "output": "Adds a line beneath the text."
+  },
+  {
+    "title": "Remove Underline",
+    "code": "a { text-decoration: none; }",
+    "output": "Removes the default underline from links."
+  },
+  {
+    "title": "Text Transform Uppercase",
+    "code": "h2 { text-transform: uppercase; }",
+    "output": "Converts all characters to uppercase."
+  },
+  {
+    "title": "Text Transform Capitalize",
+    "code": "p { text-transform: capitalize; }",
+    "output": "Capitalizes the first letter of each word."
+  },
+  {
+    "title": "Line Height",
+    "code": "p { line-height: 1.5; }",
+    "output": "Increases spacing between lines of text."
+  },
+  {
+    "title": "Letter Spacing",
+    "code": "h1 { letter-spacing: 2px; }",
+    "output": "Adds space between individual characters."
+  },
+  {
+    "title": "Word Spacing",
+    "code": "p { word-spacing: 5px; }",
+    "output": "Adds space between words."
+  },
+  {
+    "title": "Text Shadow",
+    "code": "h1 { text-shadow: 2px 2px 5px grey; }",
+    "output": "Adds a shadow behind the text."
+  },
+  {
+    "title": "Border Solid",
+    "code": "div { border: 1px solid black; }",
+    "output": "Adds a solid black border around the element."
+  },
+  {
+    "title": "Border Dotted",
+    "code": "div { border: 2px dotted red; }",
+    "output": "Adds a dotted red border."
+  },
+  {
+    "title": "Border Dashed",
+    "code": "div { border: 2px dashed blue; }",
+    "output": "Adds a dashed blue border."
+  },
+  {
+    "title": "Border Radius",
+    "code": "button { border-radius: 5px; }",
+    "output": "Rounds the corners of the element."
+  },
+  {
+    "title": "Circle Shape",
+    "code": "img { border-radius: 50%; }",
+    "output": "Makes a square element appear circular."
+  },
+  {
+    "title": "Padding All Sides",
+    "code": "div { padding: 20px; }",
+    "output": "Adds space inside the element border."
+  },
+  {
+    "title": "Padding Specific",
+    "code": "div { padding-top: 10px; padding-left: 5px; }",
+    "output": "Adds padding only to top and left sides."
+  },
+  {
+    "title": "Margin All Sides",
+    "code": "div { margin: 20px; }",
+    "output": "Adds space outside the element border."
+  },
+  {
+    "title": "Margin Center",
+    "code": "div { margin: 0 auto; width: 50%; }",
+    "output": "Centers a block element horizontally."
+  },
+  {
+    "title": "Width & Height",
+    "code": "div { width: 100px; height: 100px; }",
+    "output": "Sets specific dimensions for the element."
+  },
+  {
+    "title": "Max Width",
+    "code": "img { max-width: 100%; }",
+    "output": "Prevents image from exceeding container width."
+  },
+  {
+    "title": "Box Shadow",
+    "code": "div { box-shadow: 5px 5px 10px #888; }",
+    "output": "Adds a shadow effect to the element box."
+  },
+  {
+    "title": "Opacity",
+    "code": "div { opacity: 0.5; }",
+    "output": "Makes the element 50% transparent."
+  },
+  {
+    "title": "Display None",
+    "code": "div { display: none; }",
+    "output": "Removes the element from the document layout."
+  },
+  {
+    "title": "Visibility Hidden",
+    "code": "div { visibility: hidden; }",
+    "output": "Hides element but keeps its space."
+  },
+  {
+    "title": "Display Block",
+    "code": "span { display: block; }",
+    "output": "Makes inline element behave like a block."
+  },
+  {
+    "title": "Display Inline-Block",
+    "code": "div { display: inline-block; }",
+    "output": "Allows block element to sit inline with others."
+  },
+  {
+    "title": "Background Image",
+    "code": "body { background-image: url('bg.jpg'); }",
+    "output": "Sets an image as the background."
+  },
+  {
+    "title": "Background Repeat",
+    "code": "div { background-repeat: no-repeat; }",
+    "output": "Prevents background image from repeating."
+  },
+  {
+    "title": "Background Position",
+    "code": "div { background-position: center; }",
+    "output": "Centers the background image."
+  },
+  {
+    "title": "Background Size Cover",
+    "code": "div { background-size: cover; }",
+    "output": "Scales bg image to cover entire element."
+  },
+  {
+    "title": "Background Attachment",
+    "code": "body { background-attachment: fixed; }",
+    "output": "Keeps bg image fixed during scroll."
+  },
+  {
+    "title": "Position Relative",
+    "code": "div { position: relative; top: 10px; }",
+    "output": "Moves element relative to normal position."
+  },
+  {
+    "title": "Position Absolute",
+    "code": "div { position: absolute; top: 0; right: 0; }",
+    "output": "Positions element relative to nearest positioned ancestor."
+  },
+  {
+    "title": "Position Fixed",
+    "code": "nav { position: fixed; top: 0; width: 100%; }",
+    "output": "Fixes element to viewport (doesn't scroll)."
+  },
+  {
+    "title": "Position Sticky",
+    "code": "div { position: sticky; top: 0; }",
+    "output": "Toggles between relative and fixed based on scroll."
+  },
+  {
+    "title": "Z-Index",
+    "code": "div { z-index: 10; }",
+    "output": "Controls stack order (higher number on top)."
+  },
+  {
+    "title": "Float Left",
+    "code": "img { float: left; margin-right: 10px; }",
+    "output": "Moves element to left, text wraps around."
+  },
+  {
+    "title": "Clear Float",
+    "code": "div { clear: both; }",
+    "output": "Prevents elements from floating beside this one."
+  },
+  {
+    "title": "Overflow Hidden",
+    "code": "div { overflow: hidden; }",
+    "output": "Clips content that exceeds element size."
+  },
+  {
+    "title": "Overflow Scroll",
+    "code": "div { overflow: scroll; }",
+    "output": "Adds scrollbars if content overflows."
+  },
+  {
+    "title": "Cursor Pointer",
+    "code": "button { cursor: pointer; }",
+    "output": "Shows hand icon on hover."
+  },
+  {
+    "title": "Cursor Not Allowed",
+    "code": "div { cursor: not-allowed; }",
+    "output": "Shows 'prohibited' circle icon."
+  },
+  {
+    "title": "List Style None",
+    "code": "ul { list-style: none; }",
+    "output": "Removes bullets from unordered list."
+  },
+  {
+    "title": "List Style Type",
+    "code": "ol { list-style-type: upper-roman; }",
+    "output": "Changes list markers to I, II, III..."
+  },
+  {
+    "title": "Table Border Collapse",
+    "code": "table { border-collapse: collapse; }",
+    "output": "Merges adjacent table borders into one."
+  },
+  {
+    "title": "Flexbox Container",
+    "code": "div { display: flex; }",
+    "output": "Enables flexbox layout for children."
+  },
+  {
+    "title": "Flex Direction Column",
+    "code": "div { flex-direction: column; }",
+    "output": "Stacks flex items vertically."
+  },
+  {
+    "title": "Justify Content Center",
+    "code": "div { justify-content: center; }",
+    "output": "Aligns flex items horizontally in center."
+  },
+  {
+    "title": "Align Items Center",
+    "code": "div { align-items: center; }",
+    "output": "Aligns flex items vertically in center."
+  },
+  {
+    "title": "Flex Wrap",
+    "code": "div { flex-wrap: wrap; }",
+    "output": "Allows flex items to wrap to next line."
+  },
+  {
+    "title": "Flex Grow",
+    "code": "div { flex-grow: 1; }",
+    "output": "Item expands to fill available space."
+  },
+  {
+    "title": "Grid Container",
+    "code": "div { display: grid; }",
+    "output": "Enables grid layout system."
+  },
+  {
+    "title": "Grid Columns",
+    "code": "div { grid-template-columns: 100px 100px; }",
+    "output": "Creates two columns of 100px each."
+  },
+  {
+    "title": "Grid Gap",
+    "code": "div { gap: 10px; }",
+    "output": "Adds spacing between grid rows/cols."
+  },
+  {
+    "title": "Transition",
+    "code": "button { transition: background 0.3s; }",
+    "output": "Smoothly animates background change."
+  },
+  {
+    "title": "Transform Rotate",
+    "code": "div { transform: rotate(45deg); }",
+    "output": "Rotates element 45 degrees."
+  },
+  {
+    "title": "Transform Scale",
+    "code": "div { transform: scale(1.5); }",
+    "output": "Enlarges element by 50%."
+  },
+  {
+    "title": "Media Query",
+    "code": "@media (max-width: 600px) { body { bg: red; } }",
+    "output": "Applies styles only on small screens."
+  },
+  {
+    "title": "Box Sizing",
+    "code": "* { box-sizing: border-box; }",
+    "output": "Includes padding/border in total width."
+  },
+  {
+    "title": "Outline",
+    "code": "input:focus { outline: 2px solid blue; }",
+    "output": "Adds exterior line when focused."
+  },
+  {
+    "title": "Text Indent",
+    "code": "p { text-indent: 50px; }",
+    "output": "Indents first line of paragraph."
+  },
+  {
+    "title": "White Space Nowrap",
+    "code": "div { white-space: nowrap; }",
+    "output": "Prevents text from wrapping to new line."
+  },
+  {
+    "title": "Word Break",
+    "code": "p { word-break: break-all; }",
+    "output": "Breaks long words to fit container."
+  },
+  {
+    "title": "Linear Gradient",
+    "code": "div { background: linear-gradient(red, blue); }",
+    "output": "Creates gradient from red to blue."
+  },
+  {
+    "title": "Pseudo-class Hover",
+    "code": "button:hover { background: blue; }",
+    "output": "Changes style when mouse is over element."
+  },
+  {
+    "title": "Pseudo-class Focus",
+    "code": "input:focus { background: yellow; }",
+    "output": "Changes style when input is selected."
+  },
+  {
+    "title": "Pseudo-class First Child",
+    "code": "li:first-child { color: red; }",
+    "output": "Styles only the first item in a list."
+  },
+  {
+    "title": "Pseudo-class Nth Child",
+    "code": "tr:nth-child(even) { background: #eee; }",
+    "output": "Styles every even row (zebra striping)."
+  },
+  {
+    "title": "Pseudo-element Before",
+    "code": "h1::before { content: '★ '; }",
+    "output": "Inserts content before element text."
+  },
+  {
+    "title": "Pseudo-element After",
+    "code": "p::after { content: ' read more'; }",
+    "output": "Inserts content after element text."
+  },
+  {
+    "title": "Important",
+    "code": "p { color: red !important; }",
+    "output": "Overrides all other color rules."
+  },
+  {
+    "title": "Variable Definition",
+    "code": ":root { --main-color: blue; }",
+    "output": "Defines a global CSS variable."
+  },
+  {
+    "title": "Variable Usage",
+    "code": "p { color: var(--main-color); }",
+    "output": "Uses defined CSS variable."
+  },
+  {
+    "title": "Calc Function",
+    "code": "div { width: calc(100% - 20px); }",
+    "output": "Calculates dynamic width."
+  },
+  {
+    "title": "Filter Blur",
+    "code": "img { filter: blur(5px); }",
+    "output": "Blurs the image."
+  },
+  {
+    "title": "Filter Grayscale",
+    "code": "img { filter: grayscale(100%); }",
+    "output": "Converts image to black and white."
+  },
+  {
+    "title": "Filter Brightness",
+    "code": "img { filter: brightness(1.5); }",
+    "output": "Increases image brightness."
+  },
+  {
+    "title": "Object Fit Cover",
+    "code": "img { object-fit: cover; }",
+    "output": "Crops image to fill container without distortion."
+  },
+  {
+    "title": "User Select None",
+    "code": "div { user-select: none; }",
+    "output": "Prevents user from selecting text."
+  },
+  {
+    "title": "Pointer Events None",
+    "code": "div { pointer-events: none; }",
+    "output": "Makes element unclickable (clicks pass through)."
+  },
+  {
+    "title": "Scroll Behavior",
+    "code": "html { scroll-behavior: smooth; }",
+    "output": "Enables smooth scrolling for anchors."
+  },
+  {
+    "title": "Transform Translate",
+    "code": "div { transform: translate(10px, 20px); }",
+    "output": "Moves element X and Y pixels."
+  },
+  {
+    "title": "Transform Skew",
+    "code": "div { transform: skew(20deg); }",
+    "output": "Slants the element."
+  },
+  {
+    "title": "Animation Keyframes",
+    "code": "@keyframes slide { from{left:0} to{left:100px} }",
+    "output": "Defines animation steps."
+  },
+  {
+    "title": "Animation Property",
+    "code": "div { animation: slide 2s infinite; }",
+    "output": "Applies animation loop."
+  },
+  {
+    "title": "Aspect Ratio",
+    "code": "div { aspect-ratio: 16/9; }",
+    "output": "Maintains 16:9 width-to-height ratio."
+  },
+  {
+    "title": "Backdrop Filter",
+    "code": "div { backdrop-filter: blur(10px); }",
+    "output": "Blurs the area behind the element (glassmorphism)."
+  },
+  {
+    "title": "Clip Path",
+    "code": "div { clip-path: circle(50%); }",
+    "output": "Crops element into a circle shape."
+  },
+  {
+    "title": "Column Count",
+    "code": "p { column-count: 3; }",
+    "output": "Splits text into 3 newspaper-style columns."
+  },
+  {
+    "title": "Column Gap",
+    "code": "div { column-gap: 20px; }",
+    "output": "Sets space between text columns."
+  },
+  {
+    "title": "Content Visibility",
+    "code": ".card { content-visibility: auto; }",
+    "output": "Improves rendering performance for off-screen content."
+  },
+  {
+    "title": "Caret Color",
+    "code": "input { caret-color: red; }",
+    "output": "Changes text input cursor color."
+  },
+  {
+    "title": "Accent Color",
+    "code": "input { accent-color: purple; }",
+    "output": "Sets color for checkboxes/radios."
+  },
+  {
+    "title": "Perspective",
+    "code": "div { perspective: 1000px; }",
+    "output": "Sets 3D depth for child elements."
+  },
+  {
+    "title": "Transform Style 3D",
+    "code": "div { transform-style: preserve-3d; }",
+    "output": "Allows children to exist in 3D space."
+  },
+  {
+    "title": "Backface Visibility",
+    "code": "div { backface-visibility: hidden; }",
+    "output": "Hides the back side of a rotated element."
+  },
+  {
+    "title": "Mix Blend Mode",
+    "code": "img { mix-blend-mode: multiply; }",
+    "output": "Blends element color with background (like Photoshop)."
+  },
+  {
+    "title": "Isolation",
+    "code": "div { isolation: isolate; }",
+    "output": "Creates a new stacking context for blending."
+  },
+  {
+    "title": "Will Change",
+    "code": "div { will-change: transform; }",
+    "output": "Optimizes rendering for expected changes."
+  },
+  {
+    "title": "Resize",
+    "code": "textarea { resize: vertical; }",
+    "output": "Allows user to resize vertically only."
+  },
+  {
+    "title": "Hyphens",
+    "code": "p { hyphens: auto; }",
+    "output": "Automatically adds hyphens for line breaks."
+  },
+  {
+    "title": "Tab Size",
+    "code": "pre { tab-size: 4; }",
+    "output": "Sets width of tab character."
+  },
+  {
+    "title": "Writing Mode",
+    "code": "p { writing-mode: vertical-rl; }",
+    "output": "Changes text flow to vertical."
+  },
+  {
+    "title": "Direction RTL",
+    "code": "body { direction: rtl; }",
+    "output": "Sets text direction right-to-left."
+  },
+  {
+    "title": "Quotes",
+    "code": "q { quotes: '«' '»'; }",
+    "output": "Defines custom quotation marks."
+  },
+  {
+    "title": "Counter Reset",
+    "code": "ol { counter-reset: section; }",
+    "output": "Initializes a CSS counter."
+  },
+  {
+    "title": "Counter Increment",
+    "code": "li { counter-increment: section; }",
+    "output": "Increases CSS counter value."
+  },
+  {
+    "title": "Empty Cells",
+    "code": "table { empty-cells: hide; }",
+    "output": "Hides table cells with no content."
+  },
+  {
+    "title": "Table Layout Fixed",
+    "code": "table { table-layout: fixed; }",
+    "output": "Fixes column widths for faster rendering."
+  },
+  {
+    "title": "Caption Side",
+    "code": "caption { caption-side: bottom; }",
+    "output": "Moves table caption to bottom."
+  },
+  {
+    "title": "Grid Template Areas",
+    "code": "div { grid-template-areas: 'header header'; }",
+    "output": "Defines named grid areas."
+  },
+  {
+    "title": "Grid Area",
+    "code": "header { grid-area: header; }",
+    "output": "Assigns element to named grid area."
+  },
+  {
+    "title": "Align Self",
+    "code": "div { align-self: flex-end; }",
+    "output": "Overrides alignment for single flex item."
+  },
+  {
+    "title": "Place Items",
+    "code": "div { place-items: center; }",
+    "output": "Short for align-items + justify-items."
+  },
+  {
+    "title": "Place Content",
+    "code": "div { place-content: center; }",
+    "output": "Short for align-content + justify-content."
+  },
+  {
+    "title": "Min Width",
+    "code": "div { min-width: 200px; }",
+    "output": "Prevents element being narrower than 200px."
+  },
+  {
+    "title": "Min Height",
+    "code": "div { min-height: 100vh; }",
+    "output": "Ensures element fills at least full viewport height."
+  },
+  {
+    "title": "Max Height",
+    "code": "div { max-height: 500px; }",
+    "output": "Prevents element being taller than 500px."
+  },
+  {
+    "title": "Clamp Function",
+    "code": "h1 { font-size: clamp(1rem, 5vw, 2rem); }",
+    "output": "Responsive size with min/max limits."
+  },
+  {
+    "title": "Scroll Snap Type",
+    "code": "div { scroll-snap-type: x mandatory; }",
+    "output": "Enables snap points for scrolling."
+  },
+  {
+    "title": "Scroll Snap Align",
+    "code": "img { scroll-snap-align: center; }",
+    "output": "Aligns item to center when scrolling stops."
+  },
+  {
+    "title": "Overscroll Behavior",
+    "code": "div { overscroll-behavior: contain; }",
+    "output": "Prevents scroll chain to parent."
+  },
+  {
+    "title": "Border Image",
+    "code": "div { border-image: url(border.png) 30 round; }",
+    "output": "Uses an image as the border."
+  },
+  {
+    "title": "Mask Image",
+    "code": "div { mask-image: url(mask.png); }",
+    "output": "Masks element visibility using image."
+  },
+  {
+    "title": "Text Overflow",
+    "code": "p { text-overflow: ellipsis; }",
+    "output": "Adds '...' when text overflows."
+  },
+  {
+    "title": "Line Clamp",
+    "code": "p { -webkit-line-clamp: 3; }",
+    "output": "Limits text to 3 lines with ellipsis."
+  },
+  {
+    "title": "Font Variant",
+    "code": "p { font-variant: small-caps; }",
+    "output": "Converts lowercase to small uppercase."
+  },
+  {
+    "title": "Font Stretch",
+    "code": "p { font-stretch: expanded; }",
+    "output": "Widens the font characters."
+  },
+  {
+    "title": "Font Display",
+    "code": "@font-face { font-display: swap; }",
+    "output": "Uses fallback font until custom loads."
+  },
+  {
+    "title": "Image Rendering",
+    "code": "img { image-rendering: pixelated; }",
+    "output": "Keeps sharp edges when scaling up."
+  },
+  {
+    "title": "Shape Outside",
+    "code": "img { shape-outside: circle(50%); }",
+    "output": "Wraps text around circular image."
+  },
+  {
+    "title": "Break Inside",
+    "code": "div { break-inside: avoid; }",
+    "output": "Prevents element breaking across pages/columns."
+  },
+  {
+    "title": "Page Break After",
+    "code": "div { page-break-after: always; }",
+    "output": "Forces print page break after element."
+  },
+  {
+    "title": "Print Color Adjust",
+    "code": "div { print-color-adjust: exact; }",
+    "output": "Forces background colors in print."
+  },
+  {
+    "title": "Touch Action",
+    "code": "div { touch-action: manipulation; }",
+    "output": "Optimizes touch interactions."
+  },
+  {
+    "title": "CurrentColor",
+    "code": "div { border: 1px solid currentcolor; }",
+    "output": "Border inherits text color."
+  },
+  {
+    "title": "Inherit",
+    "code": "div { color: inherit; }",
+    "output": "Takes property value from parent."
+  },
+  {
+    "title": "Initial",
+    "code": "div { color: initial; }",
+    "output": "Resets property to default browser value."
+  },
+  {
+    "title": "Unset",
+    "code": "div { color: unset; }",
+    "output": "Resets to inherited or initial value."
+  },
+  {
+    "title": "Revert",
+    "code": "div { all: revert; }",
+    "output": "Resets to browser default style."
+  },
+  {
+    "title": "Pseudo-class Active",
+    "code": "button:active { transform: scale(0.9); }",
+    "output": "Style applied while clicking."
+  },
+  {
+    "title": "Pseudo-class Visited",
+    "code": "a:visited { color: purple; }",
+    "output": "Style for visited links."
+  },
+  {
+    "title": "Pseudo-class Disabled",
+    "code": "input:disabled { background: #eee; }",
+    "output": "Style for disabled inputs."
+  },
+  {
+    "title": "Pseudo-class Checked",
+    "code": "input:checked { accent-color: green; }",
+    "output": "Style for checked checkbox/radio."
+  },
+  {
+    "title": "Pseudo-class Invalid",
+    "code": "input:invalid { border: 1px solid red; }",
+    "output": "Style for invalid input data."
+  },
+  {
+    "title": "Pseudo-class Required",
+    "code": "input:required { border-left: 2px solid red; }",
+    "output": "Style for required fields."
+  },
+  {
+    "title": "Pseudo-class Empty",
+    "code": "div:empty { display: none; }",
+    "output": "Hides elements with no children."
+  },
+  {
+    "title": "Pseudo-class Not",
+    "code": "p:not(.intro) { color: gray; }",
+    "output": "Styles paragraphs without class 'intro'."
+  },
+  {
+    "title": "Pseudo-class Only Child",
+    "code": "p:only-child { font-weight: bold; }",
+    "output": "Styles element if it's the only child."
+  },
+  {
+    "title": "Attribute Selector",
+    "code": "input[type='text'] { width: 100%; }",
+    "output": "Selects elements by attribute value."
+  },
+  {
+    "title": "Attribute Contains",
+    "code": "a[href*='google'] { color: red; }",
+    "output": "Selects links containing 'google'."
+  },
+  {
+    "title": "Attribute Starts With",
+    "code": "a[href^='https'] { color: green; }",
+    "output": "Selects secure links."
+  },
+  {
+    "title": "Attribute Ends With",
+    "code": "a[href$='.pdf'] { icon: url(pdf.png); }",
+    "output": "Selects PDF links."
+  },
+  {
+    "title": "Universal Selector",
+    "code": "* { margin: 0; padding: 0; }",
+    "output": "Resets margin/padding for all elements."
+  },
+  {
+    "title": "Child Selector",
+    "code": "div > p { color: blue; }",
+    "output": "Selects direct children only."
+  },
+  {
+    "title": "Sibling Selector",
+    "code": "h1 + p { font-size: 1.2rem; }",
+    "output": "Selects paragraph immediately after h1."
+  },
+  {
+    "title": "General Sibling",
+    "code": "h1 ~ p { color: gray; }",
+    "output": "Selects all paragraphs after h1."
+  },
+  {
+    "title": "Root Selector",
+    "code": ":root { font-size: 16px; }",
+    "output": "Selects the highest level parent (html)."
+  },
+  {
+    "title": "Selection Pseudo-element",
+    "code": "::selection { background: yellow; }",
+    "output": "Styles user-selected text."
+  },
+  {
+    "title": "Placeholder Pseudo-element",
+    "code": "::placeholder { color: #ccc; }",
+    "output": "Styles input placeholder text."
+  },
+  {
+    "title": "Marker Pseudo-element",
+    "code": "li::marker { color: red; }",
+    "output": "Styles list bullet points."
+  },
+  {
+    "title": "Backdrop Pseudo-element",
+    "code": "::backdrop { background: rgba(0,0,0,0.8); }",
+    "output": "Styles background of full-screen dialogs."
+  },
+  {
+    "title": "Grid Auto Flow",
+    "code": "div { grid-auto-flow: dense; }",
+    "output": "Fills gaps in grid automatically."
+  },
+  {
+    "title": "Grid Auto Rows",
+    "code": "div { grid-auto-rows: minmax(100px, auto); }",
+    "output": "Sets default size for implicit rows."
+  },
+  {
+    "title": "List Style Image",
+    "code": "ul { list-style-image: url('sq.png'); }",
+    "output": "Uses image as list bullet."
+  },
+  {
+    "title": "Text Decoration Color",
+    "code": "a { text-decoration-color: red; }",
+    "output": "Changes underline color."
+  },
+  {
+    "title": "Text Decoration Style",
+    "code": "a { text-decoration-style: wavy; }",
+    "output": "Makes underline wavy."
+  },
+  {
+    "title": "Text Decoration Thickness",
+    "code": "a { text-decoration-thickness: 3px; }",
+    "output": "Makes underline thicker."
+  },
+  {
+    "title": "Text Underline Offset",
+    "code": "a { text-underline-offset: 5px; }",
+    "output": "Moves underline away from text."
+  },
+  {
+    "title": "Text Orientation",
+    "code": "p { text-orientation: upright; }",
+    "output": "Keeps characters upright in vertical mode."
+  },
+  {
+    "title": "Text Combine Upright",
+    "code": "span { text-combine-upright: all; }",
+    "output": "Combines characters into one space."
+  },
+  {
+    "title": "Font Kerning",
+    "code": "p { font-kerning: auto; }",
+    "output": "Adjusts spacing between specific char pairs."
+  },
+  {
+    "title": "Hanging Punctuation",
+    "code": "p { hanging-punctuation: first; }",
+    "output": "Moves punctuation outside text box."
+  },
+  {
+    "title": "Word Wrap",
+    "code": "p { word-wrap: break-word; }",
+    "output": "Old syntax for overflow-wrap."
+  },
+  {
+    "title": "Border Color",
+    "code": "div { border-color: red green blue yellow; }",
+    "output": "Different colors for each side."
+  },
+  {
+    "title": "Background Clip Text",
+    "code": "h1 { background-clip: text; color: transparent; }",
+    "output": "Background image visible inside text."
+  },
+  {
+    "title": "Box Decoration Break",
+    "code": "span { box-decoration-break: clone; }",
+    "output": "Styles wrapped inline elements separately."
+  },
+  {
+    "title": "Contain",
+    "code": "div { contain: content; }",
+    "output": "Isolates element for performance."
+  },
+  {
+    "title": "Display Contents",
+    "code": "div { display: contents; }",
+    "output": "Removes container, keeps children."
+  },
+  {
+    "title": "Cursor URL",
+    "code": "body { cursor: url(cursor.png), auto; }",
+    "output": "Sets a custom image cursor."
+  },
+  {
+    "title": "Fill",
+    "code": "svg { fill: orange; }",
+    "output": "Colors SVG shapes."
+  },
+  {
+    "title": "Stroke",
+    "code": "svg { stroke: black; stroke-width: 2px; }",
+    "output": "Colors SVG border."
+  },
+  {
+    "title": "Background Blend Mode",
+    "code": "div { background-blend-mode: overlay; }",
+    "output": "Blends background image with color."
+  },
+  {
+    "title": "All Property",
+    "code": "div { all: unset; }",
+    "output": "Removes all styles from element."
+  },
+  {
+    "title": "Animation Delay",
+    "code": "div { animation-delay: 2s; }",
+    "output": "Waits 2s before starting animation."
+  },
+  {
+    "title": "Animation Direction",
+    "code": "div { animation-direction: alternate; }",
+    "output": "Plays forward then backward."
+  },
+  {
+    "title": "Animation Timing Function",
+    "code": "div { animation-timing-function: ease-in-out; }",
+    "output": "Sets speed curve of animation."
+  },
+  {
+    "title": "Animation Fill Mode",
+    "code": "div { animation-fill-mode: forwards; }",
+    "output": "Keeps final state after animation."
+  },
+  {
+    "title": "Counter Set",
+    "code": "li { counter-set: section 5; }",
+    "output": "Sets specific counter value."
+  },
+  {
+    "title": "Flex Basis",
+    "code": "div { flex-basis: 200px; }",
+    "output": "Sets initial size of flex item."
+  },
+  {
+    "title": "Flex Shrink",
+    "code": "div { flex-shrink: 0; }",
+    "output": "Prevents item from shrinking."
+  },
+  {
+    "title": "Order",
+    "code": "div { order: -1; }",
+    "output": "Moves flex item to beginning."
+  },
+  {
+    "title": "Font Variant Numeric",
+    "code": "p { font-variant-numeric: tabular-nums; }",
+    "output": "Monospaced numbers for tables."
+  },
+  {
+    "title": "Font Optical Sizing",
+    "code": "p { font-optical-sizing: auto; }",
+    "output": "Optimizes font shape for size."
+  },
+  {
+    "title": "Image Orientation",
+    "code": "img { image-orientation: from-image; }",
+    "output": "Uses EXIF data to rotate image."
+  },
+  {
+    "title": "Inset",
+    "code": "div { inset: 10px; }",
+    "output": "Short for top, right, bottom, left."
+  },
+  {
+    "title": "Line Break",
+    "code": "p { line-break: loose; }",
+    "output": "Relaxed line breaking rules for Asian text."
+  },
+  {
+    "title": "Mask Size",
+    "code": "div { mask-size: contain; }",
+    "output": "Scales mask image."
+  },
+  {
+    "title": "Mask Position",
+    "code": "div { mask-position: center; }",
+    "output": "Positions mask image."
+  },
+  {
+    "title": "Offset Path",
+    "code": "div { offset-path: path('M10 10 L90 90'); }",
+    "output": "Defines motion path for animation."
+  },
+  {
+    "title": "Offset Distance",
+    "code": "div { offset-distance: 50%; }",
+    "output": "Position along offset path."
+  },
+  {
+    "title": "Overflow Anchor",
+    "code": "div { overflow-anchor: none; }",
+    "output": "Disables scroll anchoring."
+  },
+  {
+    "title": "Overscroll Behavior X",
+    "code": "body { overscroll-behavior-x: none; }",
+    "output": "Disables swipe navigation gestures."
+  },
+  {
+    "title": "Page Break Inside",
+    "code": "table { page-break-inside: avoid; }",
+    "output": "Avoids splitting table in print."
+  },
+  {
+    "title": "Paint Order",
+    "code": "svg { paint-order: stroke fill; }",
+    "output": "Draws stroke behind fill."
+  },
+  {
+    "title": "Perspective Origin",
+    "code": "div { perspective-origin: top left; }",
+    "output": "Changes 3D vanishing point."
+  },
+  {
+    "title": "Pointer Events Auto",
+    "code": "div { pointer-events: auto; }",
+    "output": "Restores clickability."
+  },
+  {
+    "title": "Quote",
+    "code": "q::before { content: open-quote; }",
+    "output": "Inserts opening quote."
+  },
+  {
+    "title": "Rotate",
+    "code": "div { rotate: 90deg; }",
+    "output": "Modern syntax for rotation."
+  },
+  {
+    "title": "Scale",
+    "code": "div { scale: 0.5; }",
+    "output": "Modern syntax for scaling."
+  },
+  {
+    "title": "Translate",
+    "code": "div { translate: 10px 10px; }",
+    "output": "Modern syntax for translation."
+  },
+  {
+    "title": "Scroll Margin",
+    "code": "h2 { scroll-margin-top: 50px; }",
+    "output": "Offset for scroll-to-anchor."
+  },
+  {
+    "title": "Scroll Padding",
+    "code": "html { scroll-padding-top: 50px; }",
+    "output": "Offset for scroll snap area."
+  },
+  {
+    "title": "Shape Margin",
+    "code": "img { shape-margin: 10px; }",
+    "output": "Space between text and shape-outside."
+  },
+  {
+    "title": "Tab Index",
+    "code": "div { tab-index: 0; }",
+    "output": "Makes element focusable via keyboard."
+  },
+  {
+    "title": "Table Layout Auto",
+    "code": "table { table-layout: auto; }",
+    "output": "Column width depends on content."
+  },
+  {
+    "title": "Text Align Last",
+    "code": "p { text-align-last: center; }",
+    "output": "Centers only the last line of paragraph."
+  },
+  {
+    "title": "Text Justify",
+    "code": "p { text-justify: inter-word; }",
+    "output": "Justifies text by spacing words."
+  },
+  {
+    "title": "Transform Origin",
+    "code": "div { transform-origin: top left; }",
+    "output": "Anchor point for transformations."
+  },
+  {
+    "title": "Transform Box",
+    "code": "svg { transform-box: fill-box; }",
+    "output": "Reference box for SVG transforms."
+  },
+  {
+    "title": "Transition Delay",
+    "code": "div { transition-delay: 1s; }",
+    "output": "Delays transition start."
+  },
+  {
+    "title": "Transition Duration",
+    "code": "div { transition-duration: 500ms; }",
+    "output": "Sets length of transition."
+  },
+  {
+    "title": "Transition Property",
+    "code": "div { transition-property: opacity; }",
+    "output": "Limits transition to specific prop."
+  },
+  {
+    "title": "Transition Timing Function",
+    "code": "div { transition-timing-function: linear; }",
+    "output": "Sets constant speed."
+  },
+  {
+    "title": "Unicode Bidi",
+    "code": "span { unicode-bidi: embed; }",
+    "output": "Handles bidirectional text."
+  },
+  {
+    "title": "Vertical Align",
+    "code": "img { vertical-align: middle; }",
+    "output": "Aligns inline element vertically."
+  },
+  {
+    "title": "Widows",
+    "code": "p { widows: 3; }",
+    "output": "Minimum lines at top of new page."
+  },
+  {
+    "title": "Orphans",
+    "code": "p { orphans: 3; }",
+    "output": "Minimum lines at bottom of page."
+  },
+  {
+    "title": "Word Spacing",
+    "code": "p { word-spacing: 10px; }",
+    "output": "Large gap between words."
+  },
+  {
+    "title": "Writing Mode Vertical",
+    "code": "div { writing-mode: vertical-lr; }",
+    "output": "Text flows vertical left-to-right."
+  },
+  {
+    "title": "Z-Index Negative",
+    "code": "div { z-index: -1; }",
+    "output": "Places element behind parent."
+  },
+  {
+    "title": "Zoom (Non-standard)",
+    "code": "div { zoom: 1.5; }",
+    "output": "Scales element (avoid using)."
+  },
+  {
+    "title": "Appearance",
+    "code": "input { appearance: none; }",
+    "output": "Removes browser default styling."
+  },
+  {
+    "title": "Backdrop Filter Blur",
+    "code": "nav { backdrop-filter: blur(5px); }",
+    "output": "Frosted glass effect."
+  },
+  {
+    "title": "Border Inline",
+    "code": "div { border-inline: 2px solid red; }",
+    "output": "Border on start and end sides."
+  },
+  {
+    "title": "Border Block",
+    "code": "div { border-block: 2px solid blue; }",
+    "output": "Border on top and bottom sides."
+  },
+  {
+    "title": "Border Start End Radius",
+    "code": "div { border-start-end-radius: 10px; }",
+    "output": "Rounds logical top-right corner."
+  },
+  {
+    "title": "Color Scheme",
+    "code": ":root { color-scheme: light dark; }",
+    "output": "Enables OS dark mode preference."
+  },
+  {
+    "title": "Forced Color Adjust",
+    "code": "div { forced-color-adjust: none; }",
+    "output": "Prevents OS high contrast override."
+  },
+  {
+    "title": "Gap",
+    "code": "div { gap: 1rem; }",
+    "output": "Spacing for flex/grid items."
+  },
+  {
+    "title": "Grid Auto Columns",
+    "code": "div { grid-auto-columns: 1fr; }",
+    "output": "Default size for new columns."
+  },
+  {
+    "title": "Grid Row",
+    "code": "div { grid-row: 1 / 3; }",
+    "output": "Spans grid item across 2 rows."
+  },
+  {
+    "title": "Grid Column",
+    "code": "div { grid-column: span 2; }",
+    "output": "Spans grid item across 2 cols."
+  },
+  {
+    "title": "Hanging Punctuation",
+    "code": "p { hanging-punctuation: last; }",
+    "output": "Punctuation hangs at end of line."
+  },
+  {
+    "title": "Image Resolution",
+    "code": "img { image-resolution: 300dpi; }",
+    "output": "Defines intrinsic resolution."
+  },
+  {
+    "title": "Initial Letter",
+    "code": "p::first-letter { initial-letter: 3; }",
+    "output": "Creates a 3-line drop cap."
+  },
+  {
+    "title": "Inline Size",
+    "code": "div { inline-size: 50%; }",
+    "output": "Logical width."
+  },
+  {
+    "title": "Block Size",
+    "code": "div { block-size: 100px; }",
+    "output": "Logical height."
+  },
+  {
+    "title": "Inset Block",
+    "code": "div { inset-block: 0; }",
+    "output": "Top and bottom 0."
+  },
+  {
+    "title": "Inset Inline",
+    "code": "div { inset-inline: 0; }",
+    "output": "Left and right 0."
+  },
+  {
+    "title": "Margin Inline",
+    "code": "div { margin-inline: auto; }",
+    "output": "Centers horizontally (logical)."
+  },
+  {
+    "title": "Margin Block",
+    "code": "div { margin-block: 20px; }",
+    "output": "Margin top and bottom (logical)."
+  },
+  {
+    "title": "Padding Inline",
+    "code": "div { padding-inline: 10px; }",
+    "output": "Padding left and right (logical)."
+  },
+  {
+    "title": "Padding Block",
+    "code": "div { padding-block: 10px; }",
+    "output": "Padding top and bottom (logical)."
+  },
+  {
+    "title": "Math Style",
+    "code": "math { math-style: compact; }",
+    "output": "Compact math layout."
+  },
+  {
+    "title": "Max Block Size",
+    "code": "div { max-block-size: 500px; }",
+    "output": "Logical max height."
+  },
+  {
+    "title": "Max Inline Size",
+    "code": "div { max-inline-size: 100%; }",
+    "output": "Logical max width."
+  },
+  {
+    "title": "Min Block Size",
+    "code": "div { min-block-size: 100vh; }",
+    "output": "Logical min height."
+  },
+  {
+    "title": "Min Inline Size",
+    "code": "div { min-inline-size: 300px; }",
+    "output": "Logical min width."
+  },
+  {
+    "title": "Ruby Position",
+    "code": "ruby { ruby-position: under; }",
+    "output": "Moves ruby text below base."
+  },
+  {
+    "title": "Scroll Padding Block",
+    "code": "html { scroll-padding-block: 50px; }",
+    "output": "Top/bottom scroll padding."
+  },
+  {
+    "title": "Scroll Padding Inline",
+    "code": "html { scroll-padding-inline: 20px; }",
+    "output": "Left/right scroll padding."
+  },
+  {
+    "title": "Scroll Snap Stop",
+    "code": "div { scroll-snap-stop: always; }",
+    "output": "Forces stopping at snap points."
+  },
+  {
+    "title": "Shape Image Threshold",
+    "code": "img { shape-image-threshold: 0.5; }",
+    "output": "Defines opacity for shape wrapping."
+  },
+  {
+    "title": "Text Combine Upright",
+    "code": "span { text-combine-upright: digits 2; }",
+    "output": "Combines 2 digits in vertical text."
+  },
+  {
+    "title": "Text Emphasis",
+    "code": "span { text-emphasis: circle red; }",
+    "output": "Adds dots above text."
+  },
+  {
+    "title": "Text Emphasis Position",
+    "code": "span { text-emphasis-position: under right; }",
+    "output": "Moves emphasis marks."
+  },
+  {
+    "title": "Text Underline Position",
+    "code": "a { text-underline-position: under; }",
+    "output": "Forces underline below descenders."
+  }
+]

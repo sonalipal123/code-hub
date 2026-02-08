@@ -1,0 +1,1202 @@
+[
+  {
+    "title": "Simple Binding",
+    "code": "<div ng-app>\n  <p>{{5 + 5}}</p>\n</div>",
+    "output": "Displays: 10",
+    "input": ""
+  },
+  {
+    "title": "ng-model Example",
+    "code": "<input ng-model='name'>\n<p>Hello {{name}}</p>",
+    "output": "Displays live typed text.",
+    "input": ""
+  },
+  {
+    "title": "ng-init Example",
+    "code": "<div ng-app ng-init='x=10'>\n<p>{{x}}</p>\n</div>",
+    "output": "Displays: 10",
+    "input": ""
+  },
+  {
+    "title": "ng-repeat List",
+    "code": "<div ng-app ng-init='items=[\"A\",\"B\",\"C\"]'>\n<p ng-repeat='i in items'>{{i}}</p>\n</div>",
+    "output": "Displays: A B C",
+    "input": ""
+  },
+  {
+    "title": "Button Click Event",
+    "code": "<div ng-app ng-init='count=0'>\n<button ng-click='count=count+1'>Add</button>\n<p>{{count}}</p>\n</div>",
+    "output": "Counts clicks.",
+    "input": ""
+  },
+  {
+    "title": "Show/Hide Div",
+    "code": "<div ng-app ng-init='show=true'>\n<button ng-click='show=!show'>Toggle</button>\n<p ng-show='show'>Visible</p>\n</div>",
+    "output": "Shows or hides text.",
+    "input": ""
+  },
+  {
+    "title": "ng-hide Example",
+    "code": "<div ng-app ng-init='hide=false'>\n<p ng-hide='hide'>Visible</p>\n</div>",
+    "output": "Hides element when true.",
+    "input": ""
+  },
+  {
+    "title": "Two Way Binding",
+    "code": "<div ng-app>\n<input ng-model='msg'>\n<p>{{msg}}</p>\n</div>",
+    "output": "Live updates.",
+    "input": ""
+  },
+  {
+    "title": "ng-controller Basic",
+    "code": "<div ng-app ng-controller='myCtrl'>\n<p>{{name}}</p>\n</div>",
+    "output": "Displays scope variable.",
+    "input": ""
+  },
+  {
+    "title": "Controller Code",
+    "code": "app.controller('myCtrl', function($scope){ $scope.name='Sonali'; });",
+    "output": "Sets name variable.",
+    "input": ""
+  },
+  {
+    "title": "Array with ng-repeat",
+    "code": "<ul ng-app ng-init='nums=[1,2,3]'>\n<li ng-repeat='n in nums'>{{n}}</li>\n</ul>",
+    "output": "Displays numbers.",
+    "input": ""
+  },
+  {
+    "title": "Object with ng-repeat",
+    "code": "<div ng-app ng-init='user={name:\"A\",age:20}'>\n<p ng-repeat='(k,v) in user'>{{k}}: {{v}}</p>\n</div>",
+    "output": "Displays key-value pairs.",
+    "input": ""
+  },
+  {
+    "title": "ng-if Example",
+    "code": "<div ng-app ng-init='isTrue=true'>\n<p ng-if='isTrue'>Shown</p>\n</div>",
+    "output": "Displays if true.",
+    "input": ""
+  },
+  {
+    "title": "ng-switch Example",
+    "code": "<div ng-app ng-init='a=2' ng-switch='a'>\n<p ng-switch-when='1'>One</p>\n<p ng-switch-when='2'>Two</p>\n</div>",
+    "output": "Displays 'Two'.",
+    "input": ""
+  },
+  {
+    "title": "ng-change Example",
+    "code": "<div ng-app>\n<input ng-model='name' ng-change='msg=\"Changed\"'>\n<p>{{msg}}</p>\n</div>",
+    "output": "Updates on change.",
+    "input": ""
+  },
+  {
+    "title": "Disable Button",
+    "code": "<button ng-disabled='true'>Click</button>",
+    "output": "Button disabled.",
+    "input": ""
+  },
+  {
+    "title": "Enable Button via Model",
+    "code": "<div ng-app ng-init='enable=false'>\n<input type='checkbox' ng-model='enable'> Enable\n<button ng-disabled='!enable'>Save</button>\n</div>",
+    "output": "Enables button.",
+    "input": ""
+  },
+  {
+    "title": "Filter Example",
+    "code": "<div ng-app ng-init='msg=\"hello\"'>\n<p>{{msg | uppercase}}</p>\n</div>",
+    "output": "Displays HELLO.",
+    "input": ""
+  },
+  {
+    "title": "Currency Filter",
+    "code": "<div ng-app ng-init='amount=500'>\n<p>{{amount | currency}}</p>\n</div>",
+    "output": "Displays \u20b9 500.00",
+    "input": ""
+  },
+  {
+    "title": "OrderBy Filter",
+    "code": "<div ng-app ng-init='arr=[3,1,2]'>\n<p ng-repeat='a in arr | orderBy'>{{a}}</p>\n</div>",
+    "output": "Displays 1 2 3",
+    "input": ""
+  },
+  {
+    "title": "LimitTo Filter",
+    "code": "<p ng-repeat='n in [1,2,3,4] | limitTo:2'>{{n}}</p>",
+    "output": "Displays only first two values.",
+    "input": ""
+  },
+  {
+    "title": "Custom Filter Definition",
+    "code": "app.filter('reverse',function(){ return function(x){ return x.split('').reverse().join(''); }});",
+    "output": "Creates custom filter.",
+    "input": ""
+  },
+  {
+    "title": "Custom Filter Usage",
+    "code": "<p>{{'hello' | reverse}}</p>",
+    "output": "Displays 'olleh'.",
+    "input": ""
+  },
+  {
+    "title": "ng-disabled Example",
+    "code": "<input ng-model='age'>\n<button ng-disabled='age<18'>Submit</button>",
+    "output": "Button enabled when age \u2265 18.",
+    "input": ""
+  },
+  {
+    "title": "Checkbox Binding",
+    "code": "<input type='checkbox' ng-model='checked'>\n<p>{{checked}}</p>",
+    "output": "Displays true/false.",
+    "input": ""
+  },
+  {
+    "title": "Radio Button Binding",
+    "code": "<input type='radio' ng-model='g' value='M'>Male\n<input type='radio' ng-model='g' value='F'>Female\n<p>{{g}}</p>",
+    "output": "Displays gender value.",
+    "input": ""
+  },
+  {
+    "title": "Select Dropdown",
+    "code": "<select ng-model='city' ng-init='city=\"Delhi\"'>\n<option>Delhi</option>\n<option>Pune</option>\n</select>\n<p>{{city}}</p>",
+    "output": "Shows selected city.",
+    "input": ""
+  },
+  {
+    "title": "ng-options Example",
+    "code": "<select ng-model='x' ng-options='n for n in [1,2,3]'></select>",
+    "output": "Creates optimized select.",
+    "input": ""
+  },
+  {
+    "title": "ng-animate Fade Example",
+    "code": "<div ng-app='myApp' ng-controller='AnimCtrl'>\n  <button ng-click='show=!show'>Toggle</button>\n  <p class='fade' ng-show='show'>Fading Text</p>\n</div>\n\n<style>\n.fade.ng-hide-add, .fade.ng-hide-remove { transition: 0.5s ease all; }\n.fade.ng-hide-add { opacity: 1; }\n.fade.ng-hide-add.ng-hide-add-active { opacity: 0; }\n.fade.ng-hide-remove { opacity: 0; }\n.fade.ng-hide-remove.ng-hide-remove-active { opacity: 1; }\n</style>\n\n<script>\nvar app = angular.module('myApp', ['ngAnimate']);\napp.controller('AnimCtrl', function($scope){ $scope.show = true; });\n</script>",
+    "output": "Text fades in and out smoothly.",
+    "input": ""
+  },
+  {
+    "title": "Sorting Table Columns",
+    "code": "<div ng-app='myApp' ng-controller='SortCtrl'>\n  <h3>Sortable Table</h3>\n  <table border='1'>\n    <tr>\n      <th ng-click='sortBy(\"name\")'>Name</th>\n      <th ng-click='sortBy(\"age\")'>Age</th>\n    </tr>\n    <tr ng-repeat='p in people | orderBy:sortColumn'>\n      <td>{{p.name}}</td>\n      <td>{{p.age}}</td>\n    </tr>\n  </table>\n</div>\n\n<script>\nvar app = angular.module('myApp', []);\napp.controller('SortCtrl', function($scope){\n  $scope.people = [\n    {name:'Aman', age:22},\n    {name:'Riya', age:21},\n    {name:'Karan', age:25}\n  ];\n  $scope.sortBy = function(col){ $scope.sortColumn = col; }\n});\n</script>",
+    "output": "Click headers to sort table.",
+    "input": ""
+  },
+  {
+    "title": "Simple To-Do App",
+    "code": "<div ng-app='myApp' ng-controller='TodoCtrl'>\n  <input ng-model='newTask' placeholder='New task'>\n  <button ng-click='add()'>Add</button>\n  <ul>\n    <li ng-repeat='t in tasks'>{{t}}</li>\n  </ul>\n</div>\n\n<script>\nvar app = angular.module('myApp', []);\napp.controller('TodoCtrl', function($scope){\n  $scope.tasks = [];\n  $scope.add = function(){ if($scope.newTask){ $scope.tasks.push($scope.newTask); $scope.newTask=''; } }\n});\n</script>",
+    "output": "Adds and displays tasks.",
+    "input": ""
+  },
+  {
+    "title": "Form Submit with ng-submit",
+    "code": "<div ng-app='myApp' ng-controller='SubmitCtrl'>\n  <form ng-submit='register()'>\n    <input ng-model='user.name' placeholder='Name'>\n    <input ng-model='user.email' placeholder='Email'>\n    <button type='submit'>Register</button>\n  </form>\n  <p>{{message}}</p>\n</div>\n<script>\nvar app = angular.module('myApp', []);\napp.controller('SubmitCtrl', function($scope){\n  $scope.register = function(){\n    $scope.message = 'User registered: ' + $scope.user.name;\n  };\n});\n</script>",
+    "output": "Form submits using ng-submit.",
+    "input": ""
+  },
+  {
+    "title": "Pagination Using LimitTo",
+    "code": "<div ng-app='myApp' ng-controller='PageCtrl'>\n  <ul>\n    <li ng-repeat='i in items | limitTo:5:page*5'>{{i}}</li>\n  </ul>\n  <button ng-click='prev()'>Prev</button>\n  <button ng-click='next()'>Next</button>\n</div>\n<script>\nvar app = angular.module('myApp', []);\napp.controller('PageCtrl', function($scope){\n  $scope.items = [1,2,3,4,5,6,7,8,9,10];\n  $scope.page = 0;\n  $scope.next = function(){ if($scope.page < 1) $scope.page++; }\n  $scope.prev = function(){ if($scope.page > 0) $scope.page--; }\n});\n</script>",
+    "output": "Shows next/previous page.",
+    "input": ""
+  },
+  {
+    "title": "Watching Variable Changes",
+    "code": "<div ng-app='myApp' ng-controller='WatchCtrl'>\n  <input ng-model='value'>\n  <p>{{output}}</p>\n</div>\n<script>\nvar app = angular.module('myApp', []);\napp.controller('WatchCtrl', function($scope){\n  $scope.$watch('value', function(newVal){\n    $scope.output = 'Changed to: ' + newVal;\n  });\n});\n</script>",
+    "output": "Detects every model change.",
+    "input": ""
+  },
+  {
+    "title": "HTTP POST Example",
+    "code": "<div ng-app='myApp' ng-controller='PostCtrl'>\n  <input ng-model='title' placeholder='Title'>\n  <button ng-click='send()'>Send</button>\n  <p>{{response}}</p>\n</div>\n<script>\nvar app = angular.module('myApp', []);\napp.controller('PostCtrl', function($scope, $http){\n  $scope.send = function(){\n    $http.post('https://jsonplaceholder.typicode.com/posts', {title:$scope.title})\n    .then(function(res){ $scope.response = 'ID: ' + res.data.id; });\n  };\n});\n</script>",
+    "output": "Sends POST request to API.",
+    "input": ""
+  },
+  {
+    "title": "Real-Time Character Counter",
+    "code": "<div ng-app='myApp' ng-controller='CharCtrl'>\n  <textarea ng-model='text'></textarea>\n  <p>Characters: {{text.length}}</p>\n</div>\n<script>\nvar app = angular.module('myApp', []);\napp.controller('CharCtrl', function($scope){ $scope.text = ''; });\n</script>",
+    "output": "Counts characters live.",
+    "input": ""
+  },
+  {
+    "title": "Basic Controller With Two-Way Binding",
+    "code": "<div ng-app='myApp' ng-controller='MainCtrl'>\n  <h3>Two-Way Binding Demo</h3>\n  <input type='text' ng-model='studentName' placeholder='Enter your name'>\n  <p>Welcome, {{studentName}}!</p>\n</div>\n\n<script>\n  var app = angular.module('myApp', []);\n  app.controller('MainCtrl', function($scope){\n    $scope.studentName = \"\";\n  });\n</script>",
+    "output": "Live update of name as you type.",
+    "input": ""
+  },
+  {
+    "title": "ng-repeat With Object List",
+    "code": "<div ng-app='myApp' ng-controller='ListCtrl'>\n  <h3>Student List</h3>\n  <ul>\n    <li ng-repeat='s in students'>{{s.name}} - Age {{s.age}}</li>\n  </ul>\n</div>\n\n<script>\nvar app = angular.module('myApp', []);\napp.controller('ListCtrl', function($scope){\n  $scope.students = [\n    {name:'Aman', age:21},\n    {name:'Priya', age:22},\n    {name:'Rohan', age:23}\n  ];\n});\n</script>",
+    "output": "Displays list of students with names and ages.",
+    "input": ""
+  },
+  {
+    "title": "Form Validation Example",
+    "code": "<div ng-app='myApp' ng-controller='FormCtrl'>\n  <form name='userForm'>\n    <label>Email:</label>\n    <input type='email' ng-model='email' name='email' required>\n    <p ng-show='userForm.email.$dirty && userForm.email.$invalid'>Invalid email format</p>\n\n    <label>Password:</label>\n    <input type='password' ng-model='password' name='password' required minlength='6'>\n    <p ng-show='userForm.password.$error.minlength'>Password too short</p>\n\n    <button ng-disabled='userForm.$invalid'>Submit</button>\n  </form>\n</div>\n<script>\nvar app = angular.module('myApp', []);\napp.controller('FormCtrl', function($scope){ });\n</script>",
+    "output": "Performs real-time email & password validation.",
+    "input": ""
+  },
+  {
+    "title": "ng-show and ng-hide Toggle Example",
+    "code": "<div ng-app='myApp' ng-controller='ToggleCtrl'>\n  <button ng-click='show=!show'>Toggle Message</button>\n  <p ng-show='show'>This message is now visible!</p>\n  <p ng-hide='show'>This message appears when hidden.</p>\n</div>\n<script>\nvar app = angular.module('myApp', []);\napp.controller('ToggleCtrl', function($scope){ $scope.show = true; });\n</script>",
+    "output": "Shows or hides text using boolean toggle.",
+    "input": ""
+  },
+  {
+    "title": "Dropdown With ng-options",
+    "code": "<div ng-app='myApp' ng-controller='CityCtrl'>\n  <h3>Select a City</h3>\n  <select ng-model='selectedCity' ng-options='c for c in cities'></select>\n  <p>You selected: {{selectedCity}}</p>\n</div>\n<script>\nvar app = angular.module('myApp', []);\napp.controller('CityCtrl', function($scope){\n  $scope.cities = ['Delhi','Mumbai','Pune','Bangalore'];\n  $scope.selectedCity = 'Delhi';\n});\n</script>",
+    "output": "Dropdown created using ng-options.",
+    "input": ""
+  },
+  {
+    "title": "Custom Filter Example",
+    "code": "<div ng-app='myApp' ng-controller='FilterCtrl'>\n  <h3>Reverse Text Filter</h3>\n  <input ng-model='text' placeholder='Type text here'>\n  <p>Reversed: {{text | reverse}}</p>\n</div>\n<script>\nvar app = angular.module('myApp', []);\napp.filter('reverse', function(){\n  return function(input){ return input.split('').reverse().join(''); };\n});\napp.controller('FilterCtrl', function($scope){ $scope.text = \"Angular\"; });\n</script>",
+    "output": "Reverses the input text instantly.",
+    "input": ""
+  },
+  {
+    "title": "HTTP GET Request Example (API)",
+    "code": "<div ng-app='myApp' ng-controller='ApiCtrl'>\n  <h3>User Data From API</h3>\n  <button ng-click='loadData()'>Load Users</button>\n  <ul>\n    <li ng-repeat='u in users'>{{u.name}} ({{u.email}})</li>\n  </ul>\n</div>\n<script>\nvar app = angular.module('myApp', []);\napp.controller('ApiCtrl', function($scope, $http){\n  $scope.users = [];\n  $scope.loadData = function(){\n    $http.get('https://jsonplaceholder.typicode.com/users')\n      .then(function(response){\n        $scope.users = response.data;\n      });\n  };\n});\n</script>",
+    "output": "Loads user list from API.",
+    "input": ""
+  },
+  {
+    "title": "ng-repeat With Search Filter",
+    "code": "<div ng-app='myApp' ng-controller='SearchCtrl'>\n  <h3>Search Students</h3>\n  <input ng-model='search' placeholder='Search by name'>\n  <ul>\n    <li ng-repeat='s in students | filter:search'>{{s}}</li>\n  </ul>\n</div>\n<script>\nvar app = angular.module('myApp', []);\napp.controller('SearchCtrl', function($scope){\n  $scope.students = ['Aman','Riya','Kunal','Pooja','Raj'];\n});\n</script>",
+    "output": "Searches through the list in real time.",
+    "input": ""
+  },
+  {
+    "title": "Custom Directive Example",
+    "code": "<div ng-app='myApp'>\n  <hello-world></hello-world>\n</div>\n<script>\nvar app = angular.module('myApp', []);\napp.directive('helloWorld', function(){\n  return {\n    template: '<h3>Hello from Custom Directive!</h3>'\n  };\n});\n</script>",
+    "output": "Displays custom directive output.",
+    "input": ""
+  },
+  {
+    "title": "ng-bind Example",
+    "code": "<div ng-app='myApp' ng-controller='BindCtrl'>\n  <h3>Using ng-bind</h3>\n  <input ng-model='message'>\n  <p ng-bind='message'></p>\n</div>\n<script>\nvar app = angular.module('myApp', []);\napp.controller('BindCtrl', function($scope){ $scope.message='Hello'; });\n</script>",
+    "output": "Displays model using ng-bind.",
+    "input": ""
+  },
+  {
+    "title": "Calculator App (Addition)",
+    "code": "<div ng-app='myApp' ng-controller='CalcCtrl'>\n  <h3>Simple Calculator</h3>\n  <input ng-model='a' type='number'> +\n  <input ng-model='b' type='number'>\n  <button ng-click='add()'>Calculate</button>\n  <p>Result: {{result}}</p>\n</div>\n<script>\nvar app = angular.module('myApp', []);\napp.controller('CalcCtrl', function($scope){\n  $scope.add = function(){ $scope.result = parseFloat($scope.a) + parseFloat($scope.b); };\n});\n</script>",
+    "output": "Adds two numbers.",
+    "input": ""
+  },
+  {
+    "title": "Show JSON Data Nicely",
+    "code": "<div ng-app='myApp' ng-controller='JsonCtrl'>\n  <h3>JSON Data</h3>\n  <pre>{{user | json}}</pre>\n</div>\n<script>\nvar app = angular.module('myApp', []);\napp.controller('JsonCtrl', function($scope){\n  $scope.user = { name:'Sonali', age:25, city:'Delhi' };\n});\n</script>",
+    "output": "Displays formatted JSON.",
+    "input": ""
+  },
+  {
+    "title": "ng-class Example",
+    "code": "<div ng-app='myApp' ng-controller='ClassCtrl'>\n  <h3>Change Color</h3>\n  <button ng-click='isRed=!isRed'>Toggle Color</button>\n  <p ng-class=\"{red:isRed, blue:!isRed}\">Color Changing Text</p>\n</div>\n<style>\n.red { color: red; }\n.blue { color: blue; }\n</style>\n<script>\nvar app = angular.module('myApp', []);\napp.controller('ClassCtrl', function($scope){ $scope.isRed = true; });\n</script>",
+    "output": "Applies color based on model value.",
+    "input": ""
+  },
+  {
+    "title": "ng-repeat With Track By",
+    "code": "<div ng-app='myApp' ng-controller='TrackCtrl'>\n  <h3>Track By Example</h3>\n  <ul>\n    <li ng-repeat='x in numbers track by $index'>{{x}}</li>\n  </ul>\n</div>\n<script>\nvar app = angular.module('myApp', []);\napp.controller('TrackCtrl', function($scope){\n  $scope.numbers = [10,20,30,40];\n});\n</script>",
+    "output": "Improves performance with track by.",
+    "input": ""
+  },
+  {
+    "title": "Addition Calculator #1",
+    "code": "<div ng-app=\"calcAppAdd1\" ng-controller=\"CalcCtrlAdd1\">\n  <h3>Addition Calculator #1</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd1 = angular.module('calcAppAdd1', []);\ncalcAppAdd1.controller('CalcCtrlAdd1', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #1",
+    "code": "<div ng-app=\"calcAppSub1\" ng-controller=\"CalcCtrlSub1\">\n  <h3>Subtraction Calculator #1</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub1 = angular.module('calcAppSub1', []);\ncalcAppSub1.controller('CalcCtrlSub1', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #1",
+    "code": "<div ng-app=\"calcAppOps1\" ng-controller=\"CalcCtrlOps1\">\n  <h3>Four Operation Calculator #1</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps1 = angular.module('calcAppOps1', []);\ncalcAppOps1.controller('CalcCtrlOps1', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #1",
+    "code": "<div ng-app=\"tempApp1\" ng-controller=\"TempCtrl1\">\n  <h3>Temperature Converter #1</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp1 = angular.module('tempApp1', []);\ntempApp1.controller('TempCtrl1', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #1",
+    "code": "<div ng-app=\"nameApp1\" ng-controller=\"NameCtrl1\">\n  <h3>Full Name Joiner #1</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp1 = angular.module('nameApp1', []);\nnameApp1.controller('NameCtrl1', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #1",
+    "code": "<div ng-app=\"textApp1\" ng-controller=\"TextCtrl1\">\n  <h3>Text Analyzer #1</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp1 = angular.module('textApp1', []);\ntextApp1.controller('TextCtrl1', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #2",
+    "code": "<div ng-app=\"calcAppAdd2\" ng-controller=\"CalcCtrlAdd2\">\n  <h3>Addition Calculator #2</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd2 = angular.module('calcAppAdd2', []);\ncalcAppAdd2.controller('CalcCtrlAdd2', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #2",
+    "code": "<div ng-app=\"calcAppSub2\" ng-controller=\"CalcCtrlSub2\">\n  <h3>Subtraction Calculator #2</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub2 = angular.module('calcAppSub2', []);\ncalcAppSub2.controller('CalcCtrlSub2', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #2",
+    "code": "<div ng-app=\"calcAppOps2\" ng-controller=\"CalcCtrlOps2\">\n  <h3>Four Operation Calculator #2</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps2 = angular.module('calcAppOps2', []);\ncalcAppOps2.controller('CalcCtrlOps2', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #2",
+    "code": "<div ng-app=\"tempApp2\" ng-controller=\"TempCtrl2\">\n  <h3>Temperature Converter #2</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp2 = angular.module('tempApp2', []);\ntempApp2.controller('TempCtrl2', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #2",
+    "code": "<div ng-app=\"nameApp2\" ng-controller=\"NameCtrl2\">\n  <h3>Full Name Joiner #2</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp2 = angular.module('nameApp2', []);\nnameApp2.controller('NameCtrl2', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #2",
+    "code": "<div ng-app=\"textApp2\" ng-controller=\"TextCtrl2\">\n  <h3>Text Analyzer #2</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp2 = angular.module('textApp2', []);\ntextApp2.controller('TextCtrl2', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #3",
+    "code": "<div ng-app=\"calcAppAdd3\" ng-controller=\"CalcCtrlAdd3\">\n  <h3>Addition Calculator #3</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd3 = angular.module('calcAppAdd3', []);\ncalcAppAdd3.controller('CalcCtrlAdd3', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #3",
+    "code": "<div ng-app=\"calcAppSub3\" ng-controller=\"CalcCtrlSub3\">\n  <h3>Subtraction Calculator #3</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub3 = angular.module('calcAppSub3', []);\ncalcAppSub3.controller('CalcCtrlSub3', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #3",
+    "code": "<div ng-app=\"calcAppOps3\" ng-controller=\"CalcCtrlOps3\">\n  <h3>Four Operation Calculator #3</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps3 = angular.module('calcAppOps3', []);\ncalcAppOps3.controller('CalcCtrlOps3', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #3",
+    "code": "<div ng-app=\"tempApp3\" ng-controller=\"TempCtrl3\">\n  <h3>Temperature Converter #3</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp3 = angular.module('tempApp3', []);\ntempApp3.controller('TempCtrl3', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #3",
+    "code": "<div ng-app=\"nameApp3\" ng-controller=\"NameCtrl3\">\n  <h3>Full Name Joiner #3</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp3 = angular.module('nameApp3', []);\nnameApp3.controller('NameCtrl3', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #3",
+    "code": "<div ng-app=\"textApp3\" ng-controller=\"TextCtrl3\">\n  <h3>Text Analyzer #3</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp3 = angular.module('textApp3', []);\ntextApp3.controller('TextCtrl3', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #4",
+    "code": "<div ng-app=\"calcAppAdd4\" ng-controller=\"CalcCtrlAdd4\">\n  <h3>Addition Calculator #4</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd4 = angular.module('calcAppAdd4', []);\ncalcAppAdd4.controller('CalcCtrlAdd4', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #4",
+    "code": "<div ng-app=\"calcAppSub4\" ng-controller=\"CalcCtrlSub4\">\n  <h3>Subtraction Calculator #4</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub4 = angular.module('calcAppSub4', []);\ncalcAppSub4.controller('CalcCtrlSub4', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #4",
+    "code": "<div ng-app=\"calcAppOps4\" ng-controller=\"CalcCtrlOps4\">\n  <h3>Four Operation Calculator #4</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps4 = angular.module('calcAppOps4', []);\ncalcAppOps4.controller('CalcCtrlOps4', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #4",
+    "code": "<div ng-app=\"tempApp4\" ng-controller=\"TempCtrl4\">\n  <h3>Temperature Converter #4</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp4 = angular.module('tempApp4', []);\ntempApp4.controller('TempCtrl4', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #4",
+    "code": "<div ng-app=\"nameApp4\" ng-controller=\"NameCtrl4\">\n  <h3>Full Name Joiner #4</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp4 = angular.module('nameApp4', []);\nnameApp4.controller('NameCtrl4', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #4",
+    "code": "<div ng-app=\"textApp4\" ng-controller=\"TextCtrl4\">\n  <h3>Text Analyzer #4</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp4 = angular.module('textApp4', []);\ntextApp4.controller('TextCtrl4', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #5",
+    "code": "<div ng-app=\"calcAppAdd5\" ng-controller=\"CalcCtrlAdd5\">\n  <h3>Addition Calculator #5</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd5 = angular.module('calcAppAdd5', []);\ncalcAppAdd5.controller('CalcCtrlAdd5', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #5",
+    "code": "<div ng-app=\"calcAppSub5\" ng-controller=\"CalcCtrlSub5\">\n  <h3>Subtraction Calculator #5</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub5 = angular.module('calcAppSub5', []);\ncalcAppSub5.controller('CalcCtrlSub5', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #5",
+    "code": "<div ng-app=\"calcAppOps5\" ng-controller=\"CalcCtrlOps5\">\n  <h3>Four Operation Calculator #5</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps5 = angular.module('calcAppOps5', []);\ncalcAppOps5.controller('CalcCtrlOps5', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #5",
+    "code": "<div ng-app=\"tempApp5\" ng-controller=\"TempCtrl5\">\n  <h3>Temperature Converter #5</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp5 = angular.module('tempApp5', []);\ntempApp5.controller('TempCtrl5', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #5",
+    "code": "<div ng-app=\"nameApp5\" ng-controller=\"NameCtrl5\">\n  <h3>Full Name Joiner #5</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp5 = angular.module('nameApp5', []);\nnameApp5.controller('NameCtrl5', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #5",
+    "code": "<div ng-app=\"textApp5\" ng-controller=\"TextCtrl5\">\n  <h3>Text Analyzer #5</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp5 = angular.module('textApp5', []);\ntextApp5.controller('TextCtrl5', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #6",
+    "code": "<div ng-app=\"calcAppAdd6\" ng-controller=\"CalcCtrlAdd6\">\n  <h3>Addition Calculator #6</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd6 = angular.module('calcAppAdd6', []);\ncalcAppAdd6.controller('CalcCtrlAdd6', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #6",
+    "code": "<div ng-app=\"calcAppSub6\" ng-controller=\"CalcCtrlSub6\">\n  <h3>Subtraction Calculator #6</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub6 = angular.module('calcAppSub6', []);\ncalcAppSub6.controller('CalcCtrlSub6', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #6",
+    "code": "<div ng-app=\"calcAppOps6\" ng-controller=\"CalcCtrlOps6\">\n  <h3>Four Operation Calculator #6</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps6 = angular.module('calcAppOps6', []);\ncalcAppOps6.controller('CalcCtrlOps6', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #6",
+    "code": "<div ng-app=\"tempApp6\" ng-controller=\"TempCtrl6\">\n  <h3>Temperature Converter #6</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp6 = angular.module('tempApp6', []);\ntempApp6.controller('TempCtrl6', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #6",
+    "code": "<div ng-app=\"nameApp6\" ng-controller=\"NameCtrl6\">\n  <h3>Full Name Joiner #6</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp6 = angular.module('nameApp6', []);\nnameApp6.controller('NameCtrl6', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #6",
+    "code": "<div ng-app=\"textApp6\" ng-controller=\"TextCtrl6\">\n  <h3>Text Analyzer #6</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp6 = angular.module('textApp6', []);\ntextApp6.controller('TextCtrl6', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #7",
+    "code": "<div ng-app=\"calcAppAdd7\" ng-controller=\"CalcCtrlAdd7\">\n  <h3>Addition Calculator #7</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd7 = angular.module('calcAppAdd7', []);\ncalcAppAdd7.controller('CalcCtrlAdd7', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #7",
+    "code": "<div ng-app=\"calcAppSub7\" ng-controller=\"CalcCtrlSub7\">\n  <h3>Subtraction Calculator #7</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub7 = angular.module('calcAppSub7', []);\ncalcAppSub7.controller('CalcCtrlSub7', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #7",
+    "code": "<div ng-app=\"calcAppOps7\" ng-controller=\"CalcCtrlOps7\">\n  <h3>Four Operation Calculator #7</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps7 = angular.module('calcAppOps7', []);\ncalcAppOps7.controller('CalcCtrlOps7', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #7",
+    "code": "<div ng-app=\"tempApp7\" ng-controller=\"TempCtrl7\">\n  <h3>Temperature Converter #7</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp7 = angular.module('tempApp7', []);\ntempApp7.controller('TempCtrl7', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #7",
+    "code": "<div ng-app=\"nameApp7\" ng-controller=\"NameCtrl7\">\n  <h3>Full Name Joiner #7</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp7 = angular.module('nameApp7', []);\nnameApp7.controller('NameCtrl7', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #7",
+    "code": "<div ng-app=\"textApp7\" ng-controller=\"TextCtrl7\">\n  <h3>Text Analyzer #7</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp7 = angular.module('textApp7', []);\ntextApp7.controller('TextCtrl7', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #8",
+    "code": "<div ng-app=\"calcAppAdd8\" ng-controller=\"CalcCtrlAdd8\">\n  <h3>Addition Calculator #8</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd8 = angular.module('calcAppAdd8', []);\ncalcAppAdd8.controller('CalcCtrlAdd8', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #8",
+    "code": "<div ng-app=\"calcAppSub8\" ng-controller=\"CalcCtrlSub8\">\n  <h3>Subtraction Calculator #8</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub8 = angular.module('calcAppSub8', []);\ncalcAppSub8.controller('CalcCtrlSub8', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #8",
+    "code": "<div ng-app=\"calcAppOps8\" ng-controller=\"CalcCtrlOps8\">\n  <h3>Four Operation Calculator #8</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps8 = angular.module('calcAppOps8', []);\ncalcAppOps8.controller('CalcCtrlOps8', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #8",
+    "code": "<div ng-app=\"tempApp8\" ng-controller=\"TempCtrl8\">\n  <h3>Temperature Converter #8</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp8 = angular.module('tempApp8', []);\ntempApp8.controller('TempCtrl8', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #8",
+    "code": "<div ng-app=\"nameApp8\" ng-controller=\"NameCtrl8\">\n  <h3>Full Name Joiner #8</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp8 = angular.module('nameApp8', []);\nnameApp8.controller('NameCtrl8', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #8",
+    "code": "<div ng-app=\"textApp8\" ng-controller=\"TextCtrl8\">\n  <h3>Text Analyzer #8</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp8 = angular.module('textApp8', []);\ntextApp8.controller('TextCtrl8', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #9",
+    "code": "<div ng-app=\"calcAppAdd9\" ng-controller=\"CalcCtrlAdd9\">\n  <h3>Addition Calculator #9</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd9 = angular.module('calcAppAdd9', []);\ncalcAppAdd9.controller('CalcCtrlAdd9', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #9",
+    "code": "<div ng-app=\"calcAppSub9\" ng-controller=\"CalcCtrlSub9\">\n  <h3>Subtraction Calculator #9</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub9 = angular.module('calcAppSub9', []);\ncalcAppSub9.controller('CalcCtrlSub9', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #9",
+    "code": "<div ng-app=\"calcAppOps9\" ng-controller=\"CalcCtrlOps9\">\n  <h3>Four Operation Calculator #9</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps9 = angular.module('calcAppOps9', []);\ncalcAppOps9.controller('CalcCtrlOps9', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #9",
+    "code": "<div ng-app=\"tempApp9\" ng-controller=\"TempCtrl9\">\n  <h3>Temperature Converter #9</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp9 = angular.module('tempApp9', []);\ntempApp9.controller('TempCtrl9', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #9",
+    "code": "<div ng-app=\"nameApp9\" ng-controller=\"NameCtrl9\">\n  <h3>Full Name Joiner #9</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp9 = angular.module('nameApp9', []);\nnameApp9.controller('NameCtrl9', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #9",
+    "code": "<div ng-app=\"textApp9\" ng-controller=\"TextCtrl9\">\n  <h3>Text Analyzer #9</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp9 = angular.module('textApp9', []);\ntextApp9.controller('TextCtrl9', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #10",
+    "code": "<div ng-app=\"calcAppAdd10\" ng-controller=\"CalcCtrlAdd10\">\n  <h3>Addition Calculator #10</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd10 = angular.module('calcAppAdd10', []);\ncalcAppAdd10.controller('CalcCtrlAdd10', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #10",
+    "code": "<div ng-app=\"calcAppSub10\" ng-controller=\"CalcCtrlSub10\">\n  <h3>Subtraction Calculator #10</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub10 = angular.module('calcAppSub10', []);\ncalcAppSub10.controller('CalcCtrlSub10', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #10",
+    "code": "<div ng-app=\"calcAppOps10\" ng-controller=\"CalcCtrlOps10\">\n  <h3>Four Operation Calculator #10</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps10 = angular.module('calcAppOps10', []);\ncalcAppOps10.controller('CalcCtrlOps10', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #10",
+    "code": "<div ng-app=\"tempApp10\" ng-controller=\"TempCtrl10\">\n  <h3>Temperature Converter #10</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp10 = angular.module('tempApp10', []);\ntempApp10.controller('TempCtrl10', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #10",
+    "code": "<div ng-app=\"nameApp10\" ng-controller=\"NameCtrl10\">\n  <h3>Full Name Joiner #10</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp10 = angular.module('nameApp10', []);\nnameApp10.controller('NameCtrl10', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #10",
+    "code": "<div ng-app=\"textApp10\" ng-controller=\"TextCtrl10\">\n  <h3>Text Analyzer #10</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp10 = angular.module('textApp10', []);\ntextApp10.controller('TextCtrl10', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #11",
+    "code": "<div ng-app=\"calcAppAdd11\" ng-controller=\"CalcCtrlAdd11\">\n  <h3>Addition Calculator #11</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd11 = angular.module('calcAppAdd11', []);\ncalcAppAdd11.controller('CalcCtrlAdd11', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #11",
+    "code": "<div ng-app=\"calcAppSub11\" ng-controller=\"CalcCtrlSub11\">\n  <h3>Subtraction Calculator #11</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub11 = angular.module('calcAppSub11', []);\ncalcAppSub11.controller('CalcCtrlSub11', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #11",
+    "code": "<div ng-app=\"calcAppOps11\" ng-controller=\"CalcCtrlOps11\">\n  <h3>Four Operation Calculator #11</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps11 = angular.module('calcAppOps11', []);\ncalcAppOps11.controller('CalcCtrlOps11', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #11",
+    "code": "<div ng-app=\"tempApp11\" ng-controller=\"TempCtrl11\">\n  <h3>Temperature Converter #11</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp11 = angular.module('tempApp11', []);\ntempApp11.controller('TempCtrl11', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #11",
+    "code": "<div ng-app=\"nameApp11\" ng-controller=\"NameCtrl11\">\n  <h3>Full Name Joiner #11</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp11 = angular.module('nameApp11', []);\nnameApp11.controller('NameCtrl11', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #11",
+    "code": "<div ng-app=\"textApp11\" ng-controller=\"TextCtrl11\">\n  <h3>Text Analyzer #11</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp11 = angular.module('textApp11', []);\ntextApp11.controller('TextCtrl11', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #12",
+    "code": "<div ng-app=\"calcAppAdd12\" ng-controller=\"CalcCtrlAdd12\">\n  <h3>Addition Calculator #12</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd12 = angular.module('calcAppAdd12', []);\ncalcAppAdd12.controller('CalcCtrlAdd12', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #12",
+    "code": "<div ng-app=\"calcAppSub12\" ng-controller=\"CalcCtrlSub12\">\n  <h3>Subtraction Calculator #12</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub12 = angular.module('calcAppSub12', []);\ncalcAppSub12.controller('CalcCtrlSub12', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #12",
+    "code": "<div ng-app=\"calcAppOps12\" ng-controller=\"CalcCtrlOps12\">\n  <h3>Four Operation Calculator #12</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps12 = angular.module('calcAppOps12', []);\ncalcAppOps12.controller('CalcCtrlOps12', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #12",
+    "code": "<div ng-app=\"tempApp12\" ng-controller=\"TempCtrl12\">\n  <h3>Temperature Converter #12</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp12 = angular.module('tempApp12', []);\ntempApp12.controller('TempCtrl12', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #12",
+    "code": "<div ng-app=\"nameApp12\" ng-controller=\"NameCtrl12\">\n  <h3>Full Name Joiner #12</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp12 = angular.module('nameApp12', []);\nnameApp12.controller('NameCtrl12', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #12",
+    "code": "<div ng-app=\"textApp12\" ng-controller=\"TextCtrl12\">\n  <h3>Text Analyzer #12</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp12 = angular.module('textApp12', []);\ntextApp12.controller('TextCtrl12', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #13",
+    "code": "<div ng-app=\"calcAppAdd13\" ng-controller=\"CalcCtrlAdd13\">\n  <h3>Addition Calculator #13</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd13 = angular.module('calcAppAdd13', []);\ncalcAppAdd13.controller('CalcCtrlAdd13', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #13",
+    "code": "<div ng-app=\"calcAppSub13\" ng-controller=\"CalcCtrlSub13\">\n  <h3>Subtraction Calculator #13</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub13 = angular.module('calcAppSub13', []);\ncalcAppSub13.controller('CalcCtrlSub13', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #13",
+    "code": "<div ng-app=\"calcAppOps13\" ng-controller=\"CalcCtrlOps13\">\n  <h3>Four Operation Calculator #13</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps13 = angular.module('calcAppOps13', []);\ncalcAppOps13.controller('CalcCtrlOps13', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #13",
+    "code": "<div ng-app=\"tempApp13\" ng-controller=\"TempCtrl13\">\n  <h3>Temperature Converter #13</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp13 = angular.module('tempApp13', []);\ntempApp13.controller('TempCtrl13', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #13",
+    "code": "<div ng-app=\"nameApp13\" ng-controller=\"NameCtrl13\">\n  <h3>Full Name Joiner #13</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp13 = angular.module('nameApp13', []);\nnameApp13.controller('NameCtrl13', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #13",
+    "code": "<div ng-app=\"textApp13\" ng-controller=\"TextCtrl13\">\n  <h3>Text Analyzer #13</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp13 = angular.module('textApp13', []);\ntextApp13.controller('TextCtrl13', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #14",
+    "code": "<div ng-app=\"calcAppAdd14\" ng-controller=\"CalcCtrlAdd14\">\n  <h3>Addition Calculator #14</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd14 = angular.module('calcAppAdd14', []);\ncalcAppAdd14.controller('CalcCtrlAdd14', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #14",
+    "code": "<div ng-app=\"calcAppSub14\" ng-controller=\"CalcCtrlSub14\">\n  <h3>Subtraction Calculator #14</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub14 = angular.module('calcAppSub14', []);\ncalcAppSub14.controller('CalcCtrlSub14', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #14",
+    "code": "<div ng-app=\"calcAppOps14\" ng-controller=\"CalcCtrlOps14\">\n  <h3>Four Operation Calculator #14</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps14 = angular.module('calcAppOps14', []);\ncalcAppOps14.controller('CalcCtrlOps14', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #14",
+    "code": "<div ng-app=\"tempApp14\" ng-controller=\"TempCtrl14\">\n  <h3>Temperature Converter #14</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp14 = angular.module('tempApp14', []);\ntempApp14.controller('TempCtrl14', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #14",
+    "code": "<div ng-app=\"nameApp14\" ng-controller=\"NameCtrl14\">\n  <h3>Full Name Joiner #14</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp14 = angular.module('nameApp14', []);\nnameApp14.controller('NameCtrl14', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #14",
+    "code": "<div ng-app=\"textApp14\" ng-controller=\"TextCtrl14\">\n  <h3>Text Analyzer #14</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp14 = angular.module('textApp14', []);\ntextApp14.controller('TextCtrl14', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #15",
+    "code": "<div ng-app=\"calcAppAdd15\" ng-controller=\"CalcCtrlAdd15\">\n  <h3>Addition Calculator #15</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd15 = angular.module('calcAppAdd15', []);\ncalcAppAdd15.controller('CalcCtrlAdd15', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #15",
+    "code": "<div ng-app=\"calcAppSub15\" ng-controller=\"CalcCtrlSub15\">\n  <h3>Subtraction Calculator #15</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub15 = angular.module('calcAppSub15', []);\ncalcAppSub15.controller('CalcCtrlSub15', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #15",
+    "code": "<div ng-app=\"calcAppOps15\" ng-controller=\"CalcCtrlOps15\">\n  <h3>Four Operation Calculator #15</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps15 = angular.module('calcAppOps15', []);\ncalcAppOps15.controller('CalcCtrlOps15', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #15",
+    "code": "<div ng-app=\"tempApp15\" ng-controller=\"TempCtrl15\">\n  <h3>Temperature Converter #15</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp15 = angular.module('tempApp15', []);\ntempApp15.controller('TempCtrl15', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #15",
+    "code": "<div ng-app=\"nameApp15\" ng-controller=\"NameCtrl15\">\n  <h3>Full Name Joiner #15</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp15 = angular.module('nameApp15', []);\nnameApp15.controller('NameCtrl15', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #15",
+    "code": "<div ng-app=\"textApp15\" ng-controller=\"TextCtrl15\">\n  <h3>Text Analyzer #15</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp15 = angular.module('textApp15', []);\ntextApp15.controller('TextCtrl15', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #16",
+    "code": "<div ng-app=\"calcAppAdd16\" ng-controller=\"CalcCtrlAdd16\">\n  <h3>Addition Calculator #16</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd16 = angular.module('calcAppAdd16', []);\ncalcAppAdd16.controller('CalcCtrlAdd16', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #16",
+    "code": "<div ng-app=\"calcAppSub16\" ng-controller=\"CalcCtrlSub16\">\n  <h3>Subtraction Calculator #16</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub16 = angular.module('calcAppSub16', []);\ncalcAppSub16.controller('CalcCtrlSub16', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #16",
+    "code": "<div ng-app=\"calcAppOps16\" ng-controller=\"CalcCtrlOps16\">\n  <h3>Four Operation Calculator #16</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps16 = angular.module('calcAppOps16', []);\ncalcAppOps16.controller('CalcCtrlOps16', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #16",
+    "code": "<div ng-app=\"tempApp16\" ng-controller=\"TempCtrl16\">\n  <h3>Temperature Converter #16</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp16 = angular.module('tempApp16', []);\ntempApp16.controller('TempCtrl16', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #16",
+    "code": "<div ng-app=\"nameApp16\" ng-controller=\"NameCtrl16\">\n  <h3>Full Name Joiner #16</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp16 = angular.module('nameApp16', []);\nnameApp16.controller('NameCtrl16', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #16",
+    "code": "<div ng-app=\"textApp16\" ng-controller=\"TextCtrl16\">\n  <h3>Text Analyzer #16</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp16 = angular.module('textApp16', []);\ntextApp16.controller('TextCtrl16', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #17",
+    "code": "<div ng-app=\"calcAppAdd17\" ng-controller=\"CalcCtrlAdd17\">\n  <h3>Addition Calculator #17</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd17 = angular.module('calcAppAdd17', []);\ncalcAppAdd17.controller('CalcCtrlAdd17', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #17",
+    "code": "<div ng-app=\"calcAppSub17\" ng-controller=\"CalcCtrlSub17\">\n  <h3>Subtraction Calculator #17</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub17 = angular.module('calcAppSub17', []);\ncalcAppSub17.controller('CalcCtrlSub17', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #17",
+    "code": "<div ng-app=\"calcAppOps17\" ng-controller=\"CalcCtrlOps17\">\n  <h3>Four Operation Calculator #17</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps17 = angular.module('calcAppOps17', []);\ncalcAppOps17.controller('CalcCtrlOps17', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #17",
+    "code": "<div ng-app=\"tempApp17\" ng-controller=\"TempCtrl17\">\n  <h3>Temperature Converter #17</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp17 = angular.module('tempApp17', []);\ntempApp17.controller('TempCtrl17', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #17",
+    "code": "<div ng-app=\"nameApp17\" ng-controller=\"NameCtrl17\">\n  <h3>Full Name Joiner #17</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp17 = angular.module('nameApp17', []);\nnameApp17.controller('NameCtrl17', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #17",
+    "code": "<div ng-app=\"textApp17\" ng-controller=\"TextCtrl17\">\n  <h3>Text Analyzer #17</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp17 = angular.module('textApp17', []);\ntextApp17.controller('TextCtrl17', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #18",
+    "code": "<div ng-app=\"calcAppAdd18\" ng-controller=\"CalcCtrlAdd18\">\n  <h3>Addition Calculator #18</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd18 = angular.module('calcAppAdd18', []);\ncalcAppAdd18.controller('CalcCtrlAdd18', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #18",
+    "code": "<div ng-app=\"calcAppSub18\" ng-controller=\"CalcCtrlSub18\">\n  <h3>Subtraction Calculator #18</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub18 = angular.module('calcAppSub18', []);\ncalcAppSub18.controller('CalcCtrlSub18', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #18",
+    "code": "<div ng-app=\"calcAppOps18\" ng-controller=\"CalcCtrlOps18\">\n  <h3>Four Operation Calculator #18</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps18 = angular.module('calcAppOps18', []);\ncalcAppOps18.controller('CalcCtrlOps18', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #18",
+    "code": "<div ng-app=\"tempApp18\" ng-controller=\"TempCtrl18\">\n  <h3>Temperature Converter #18</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp18 = angular.module('tempApp18', []);\ntempApp18.controller('TempCtrl18', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #18",
+    "code": "<div ng-app=\"nameApp18\" ng-controller=\"NameCtrl18\">\n  <h3>Full Name Joiner #18</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp18 = angular.module('nameApp18', []);\nnameApp18.controller('NameCtrl18', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #18",
+    "code": "<div ng-app=\"textApp18\" ng-controller=\"TextCtrl18\">\n  <h3>Text Analyzer #18</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp18 = angular.module('textApp18', []);\ntextApp18.controller('TextCtrl18', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #19",
+    "code": "<div ng-app=\"calcAppAdd19\" ng-controller=\"CalcCtrlAdd19\">\n  <h3>Addition Calculator #19</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd19 = angular.module('calcAppAdd19', []);\ncalcAppAdd19.controller('CalcCtrlAdd19', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #19",
+    "code": "<div ng-app=\"calcAppSub19\" ng-controller=\"CalcCtrlSub19\">\n  <h3>Subtraction Calculator #19</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub19 = angular.module('calcAppSub19', []);\ncalcAppSub19.controller('CalcCtrlSub19', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #19",
+    "code": "<div ng-app=\"calcAppOps19\" ng-controller=\"CalcCtrlOps19\">\n  <h3>Four Operation Calculator #19</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps19 = angular.module('calcAppOps19', []);\ncalcAppOps19.controller('CalcCtrlOps19', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #19",
+    "code": "<div ng-app=\"tempApp19\" ng-controller=\"TempCtrl19\">\n  <h3>Temperature Converter #19</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp19 = angular.module('tempApp19', []);\ntempApp19.controller('TempCtrl19', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #19",
+    "code": "<div ng-app=\"nameApp19\" ng-controller=\"NameCtrl19\">\n  <h3>Full Name Joiner #19</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp19 = angular.module('nameApp19', []);\nnameApp19.controller('NameCtrl19', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #19",
+    "code": "<div ng-app=\"textApp19\" ng-controller=\"TextCtrl19\">\n  <h3>Text Analyzer #19</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp19 = angular.module('textApp19', []);\ntextApp19.controller('TextCtrl19', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #20",
+    "code": "<div ng-app=\"calcAppAdd20\" ng-controller=\"CalcCtrlAdd20\">\n  <h3>Addition Calculator #20</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd20 = angular.module('calcAppAdd20', []);\ncalcAppAdd20.controller('CalcCtrlAdd20', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #20",
+    "code": "<div ng-app=\"calcAppSub20\" ng-controller=\"CalcCtrlSub20\">\n  <h3>Subtraction Calculator #20</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub20 = angular.module('calcAppSub20', []);\ncalcAppSub20.controller('CalcCtrlSub20', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #20",
+    "code": "<div ng-app=\"calcAppOps20\" ng-controller=\"CalcCtrlOps20\">\n  <h3>Four Operation Calculator #20</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps20 = angular.module('calcAppOps20', []);\ncalcAppOps20.controller('CalcCtrlOps20', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #20",
+    "code": "<div ng-app=\"tempApp20\" ng-controller=\"TempCtrl20\">\n  <h3>Temperature Converter #20</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp20 = angular.module('tempApp20', []);\ntempApp20.controller('TempCtrl20', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #20",
+    "code": "<div ng-app=\"nameApp20\" ng-controller=\"NameCtrl20\">\n  <h3>Full Name Joiner #20</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp20 = angular.module('nameApp20', []);\nnameApp20.controller('NameCtrl20', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #20",
+    "code": "<div ng-app=\"textApp20\" ng-controller=\"TextCtrl20\">\n  <h3>Text Analyzer #20</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp20 = angular.module('textApp20', []);\ntextApp20.controller('TextCtrl20', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #21",
+    "code": "<div ng-app=\"calcAppAdd21\" ng-controller=\"CalcCtrlAdd21\">\n  <h3>Addition Calculator #21</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd21 = angular.module('calcAppAdd21', []);\ncalcAppAdd21.controller('CalcCtrlAdd21', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #21",
+    "code": "<div ng-app=\"calcAppSub21\" ng-controller=\"CalcCtrlSub21\">\n  <h3>Subtraction Calculator #21</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub21 = angular.module('calcAppSub21', []);\ncalcAppSub21.controller('CalcCtrlSub21', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #21",
+    "code": "<div ng-app=\"calcAppOps21\" ng-controller=\"CalcCtrlOps21\">\n  <h3>Four Operation Calculator #21</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps21 = angular.module('calcAppOps21', []);\ncalcAppOps21.controller('CalcCtrlOps21', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #21",
+    "code": "<div ng-app=\"tempApp21\" ng-controller=\"TempCtrl21\">\n  <h3>Temperature Converter #21</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp21 = angular.module('tempApp21', []);\ntempApp21.controller('TempCtrl21', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #21",
+    "code": "<div ng-app=\"nameApp21\" ng-controller=\"NameCtrl21\">\n  <h3>Full Name Joiner #21</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp21 = angular.module('nameApp21', []);\nnameApp21.controller('NameCtrl21', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #21",
+    "code": "<div ng-app=\"textApp21\" ng-controller=\"TextCtrl21\">\n  <h3>Text Analyzer #21</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp21 = angular.module('textApp21', []);\ntextApp21.controller('TextCtrl21', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #22",
+    "code": "<div ng-app=\"calcAppAdd22\" ng-controller=\"CalcCtrlAdd22\">\n  <h3>Addition Calculator #22</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd22 = angular.module('calcAppAdd22', []);\ncalcAppAdd22.controller('CalcCtrlAdd22', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #22",
+    "code": "<div ng-app=\"calcAppSub22\" ng-controller=\"CalcCtrlSub22\">\n  <h3>Subtraction Calculator #22</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub22 = angular.module('calcAppSub22', []);\ncalcAppSub22.controller('CalcCtrlSub22', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #22",
+    "code": "<div ng-app=\"calcAppOps22\" ng-controller=\"CalcCtrlOps22\">\n  <h3>Four Operation Calculator #22</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps22 = angular.module('calcAppOps22', []);\ncalcAppOps22.controller('CalcCtrlOps22', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #22",
+    "code": "<div ng-app=\"tempApp22\" ng-controller=\"TempCtrl22\">\n  <h3>Temperature Converter #22</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp22 = angular.module('tempApp22', []);\ntempApp22.controller('TempCtrl22', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #22",
+    "code": "<div ng-app=\"nameApp22\" ng-controller=\"NameCtrl22\">\n  <h3>Full Name Joiner #22</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp22 = angular.module('nameApp22', []);\nnameApp22.controller('NameCtrl22', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #22",
+    "code": "<div ng-app=\"textApp22\" ng-controller=\"TextCtrl22\">\n  <h3>Text Analyzer #22</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp22 = angular.module('textApp22', []);\ntextApp22.controller('TextCtrl22', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #23",
+    "code": "<div ng-app=\"calcAppAdd23\" ng-controller=\"CalcCtrlAdd23\">\n  <h3>Addition Calculator #23</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd23 = angular.module('calcAppAdd23', []);\ncalcAppAdd23.controller('CalcCtrlAdd23', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #23",
+    "code": "<div ng-app=\"calcAppSub23\" ng-controller=\"CalcCtrlSub23\">\n  <h3>Subtraction Calculator #23</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub23 = angular.module('calcAppSub23', []);\ncalcAppSub23.controller('CalcCtrlSub23', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #23",
+    "code": "<div ng-app=\"calcAppOps23\" ng-controller=\"CalcCtrlOps23\">\n  <h3>Four Operation Calculator #23</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps23 = angular.module('calcAppOps23', []);\ncalcAppOps23.controller('CalcCtrlOps23', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #23",
+    "code": "<div ng-app=\"tempApp23\" ng-controller=\"TempCtrl23\">\n  <h3>Temperature Converter #23</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp23 = angular.module('tempApp23', []);\ntempApp23.controller('TempCtrl23', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #23",
+    "code": "<div ng-app=\"nameApp23\" ng-controller=\"NameCtrl23\">\n  <h3>Full Name Joiner #23</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp23 = angular.module('nameApp23', []);\nnameApp23.controller('NameCtrl23', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #23",
+    "code": "<div ng-app=\"textApp23\" ng-controller=\"TextCtrl23\">\n  <h3>Text Analyzer #23</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp23 = angular.module('textApp23', []);\ntextApp23.controller('TextCtrl23', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #24",
+    "code": "<div ng-app=\"calcAppAdd24\" ng-controller=\"CalcCtrlAdd24\">\n  <h3>Addition Calculator #24</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd24 = angular.module('calcAppAdd24', []);\ncalcAppAdd24.controller('CalcCtrlAdd24', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #24",
+    "code": "<div ng-app=\"calcAppSub24\" ng-controller=\"CalcCtrlSub24\">\n  <h3>Subtraction Calculator #24</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub24 = angular.module('calcAppSub24', []);\ncalcAppSub24.controller('CalcCtrlSub24', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #24",
+    "code": "<div ng-app=\"calcAppOps24\" ng-controller=\"CalcCtrlOps24\">\n  <h3>Four Operation Calculator #24</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps24 = angular.module('calcAppOps24', []);\ncalcAppOps24.controller('CalcCtrlOps24', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #24",
+    "code": "<div ng-app=\"tempApp24\" ng-controller=\"TempCtrl24\">\n  <h3>Temperature Converter #24</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp24 = angular.module('tempApp24', []);\ntempApp24.controller('TempCtrl24', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #24",
+    "code": "<div ng-app=\"nameApp24\" ng-controller=\"NameCtrl24\">\n  <h3>Full Name Joiner #24</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp24 = angular.module('nameApp24', []);\nnameApp24.controller('NameCtrl24', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #24",
+    "code": "<div ng-app=\"textApp24\" ng-controller=\"TextCtrl24\">\n  <h3>Text Analyzer #24</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp24 = angular.module('textApp24', []);\ntextApp24.controller('TextCtrl24', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  },
+  {
+    "title": "Addition Calculator #25",
+    "code": "<div ng-app=\"calcAppAdd25\" ng-controller=\"CalcCtrlAdd25\">\n  <h3>Addition Calculator #25</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"First number\">\n  +\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Second number\">\n  <button ng-click=\"add()\">Add</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppAdd25 = angular.module('calcAppAdd25', []);\ncalcAppAdd25.controller('CalcCtrlAdd25', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.add = function() {\n    $scope.result = Number($scope.a) + Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 10 and 20, clicks Add \u2192 Result: 30",
+    "output": "Adds two numbers entered by the user and shows the sum."
+  },
+  {
+    "title": "Subtraction Calculator #25",
+    "code": "<div ng-app=\"calcAppSub25\" ng-controller=\"CalcCtrlSub25\">\n  <h3>Subtraction Calculator #25</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Minuend\">\n  -\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Subtrahend\">\n  <button ng-click=\"sub()\">Subtract</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppSub25 = angular.module('calcAppSub25', []);\ncalcAppSub25.controller('CalcCtrlSub25', function($scope) {\n  $scope.a = 0;\n  $scope.b = 0;\n  $scope.result = 0;\n  $scope.sub = function() {\n    $scope.result = Number($scope.a) - Number($scope.b);\n  };\n});\n</script>",
+    "input": "User enters 50 and 12, clicks Subtract \u2192 Result: 38",
+    "output": "Subtracts second number from the first and shows the result."
+  },
+  {
+    "title": "Four Operation Calculator #25",
+    "code": "<div ng-app=\"calcAppOps25\" ng-controller=\"CalcCtrlOps25\">\n  <h3>Four Operation Calculator #25</h3>\n  <input type=\"number\" ng-model=\"a\" placeholder=\"Number A\">\n  <select ng-model=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <input type=\"number\" ng-model=\"b\" placeholder=\"Number B\">\n  <button ng-click=\"calc()\">Calculate</button>\n  <p>Result: {'{'}result{'}'}</p>\n</div>\n<script>\nvar calcAppOps25 = angular.module('calcAppOps25', []);\ncalcAppOps25.controller('CalcCtrlOps25', function($scope) {\n  $scope.op = \"+\";\n  $scope.calc = function() {\n    var a = Number($scope.a), b = Number($scope.b);\n    switch ($scope.op) {\n      case \"+\": $scope.result = a + b; break;\n      case \"-\": $scope.result = a - b; break;\n      case \"*\": $scope.result = a * b; break;\n      case \"/\": $scope.result = b !== 0 ? (a / b) : \"NaN\"; break;\n    }\n  };\n});\n</script>",
+    "input": "User selects '*' and enters 6 and 7 \u2192 Result: 42",
+    "output": "Performs +, -, * or / based on selected operator."
+  },
+  {
+    "title": "Temperature Converter C\u2192F #25",
+    "code": "<div ng-app=\"tempApp25\" ng-controller=\"TempCtrl25\">\n  <h3>Temperature Converter #25</h3>\n  <input type=\"number\" ng-model=\"celsius\" placeholder=\"Celsius\">\n  <button ng-click=\"convert()\">Convert</button>\n  <p>Fahrenheit: {'{'}fahrenheit{'}'}</p>\n</div>\n<script>\nvar tempApp25 = angular.module('tempApp25', []);\ntempApp25.controller('TempCtrl25', function($scope) {\n  $scope.convert = function() {\n    $scope.fahrenheit = ($scope.celsius * 9 / 5) + 32;\n  };\n});\n</script>",
+    "input": "User enters 25 \u2192 Fahrenheit: 77",
+    "output": "Converts a Celsius value to Fahrenheit and displays it."
+  },
+  {
+    "title": "Full Name Joiner #25",
+    "code": "<div ng-app=\"nameApp25\" ng-controller=\"NameCtrl25\">\n  <h3>Full Name Joiner #25</h3>\n  <input ng-model=\"first\" placeholder=\"First name\">\n  <input ng-model=\"last\" placeholder=\"Last name\">\n  <button ng-click=\"join()\">Join</button>\n  <p>Full name: {'{'}fullName{'}'}</p>\n</div>\n<script>\nvar nameApp25 = angular.module('nameApp25', []);\nnameApp25.controller('NameCtrl25', function($scope) {\n  $scope.join = function() {\n    $scope.fullName = ($scope.first || \"\") + \" \" + ($scope.last || \"\");\n  };\n});\n</script>",
+    "input": "User types 'Sumit' and 'Sonar' \u2192 Full name: Sumit Sonar",
+    "output": "Joins first and last name with a space."
+  },
+  {
+    "title": "String Length and Words Counter #25",
+    "code": "<div ng-app=\"textApp25\" ng-controller=\"TextCtrl25\">\n  <h3>Text Analyzer #25</h3>\n  <textarea ng-model=\"text\" placeholder=\"Type something...\"></textarea>\n  <p>Characters: {'{'}text.length || 0{'}'}</p>\n  <p>Words: {'{'}(text && text.split(/\\s+/).filter(Boolean).length) || 0{'}'}</p>\n</div>\n<script>\nvar textApp25 = angular.module('textApp25', []);\ntextApp25.controller('TextCtrl25', function($scope) {\n  $scope.text = \"\";\n});\n</script>",
+    "input": "User types 'Hello Angular JS' \u2192 Characters: 16, Words: 3",
+    "output": "Counts characters and words in the textarea content."
+  }
+]

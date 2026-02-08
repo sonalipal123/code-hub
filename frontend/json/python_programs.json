@@ -1,0 +1,1202 @@
+[
+  {
+    "title": "Print Hello World",
+    "code": "print('Hello, World!')",
+    "output": "Hello, World!",
+    "input": ""
+  },
+  {
+    "title": "Input Example",
+    "code": "num = input('Enter a number: ')\nprint('You entered:', num)",
+    "output": "Enter a number: 10\nYou entered: 10",
+    "input": "10"
+  },
+  {
+    "title": "Add Two Numbers",
+    "code": "a = int(input('Enter first number: '))\nb = int(input('Enter second number: '))\nprint('Sum =', a + b)",
+    "output": "Enter first number: 5\nEnter second number: 3\nSum = 8",
+    "input": "5 3"
+  },
+  {
+    "title": "Subtract Two Numbers",
+    "code": "a = int(input())\nb = int(input())\nprint('Subtraction =', a - b)",
+    "output": "Input: 8, 3\nSubtraction = 5",
+    "input": "8, 3"
+  },
+  {
+    "title": "Multiply Two Numbers",
+    "code": "a = int(input())\nb = int(input())\nprint('Product =', a * b)",
+    "output": "Input: 4, 3\nProduct = 12",
+    "input": "4, 3"
+  },
+  {
+    "title": "Square Root of a Number",
+    "code": "import math\nn = int(input())\nprint('Square Root:', math.sqrt(n))",
+    "output": "Input: 25\nSquare Root: 5.0",
+    "input": "25"
+  },
+  {
+    "title": "Check Positive Number",
+    "code": "num = int(input())\nif num > 0:\n    print('Positive')\nelse:\n    print('Not Positive')",
+    "output": "Input: 5\nPositive",
+    "input": "5"
+  },
+  {
+    "title": "Even or Odd",
+    "code": "n = int(input())\nif n % 2 == 0:\n    print('Even')\nelse:\n    print('Odd')",
+    "output": "Input: 7\nOdd",
+    "input": "7"
+  },
+  {
+    "title": "Largest of Two Numbers",
+    "code": "a = int(input())\nb = int(input())\nprint(max(a, b))",
+    "output": "Input: 5, 8\n8",
+    "input": "5, 8"
+  },
+  {
+    "title": "Simple Calculator",
+    "code": "a = int(input())\nb = int(input())\nprint('Sum:', a+b)\nprint('Sub:', a-b)\nprint('Mul:', a*b)\nprint('Div:', a/b)",
+    "output": "Input: 6, 3\nSum: 9\nSub: 3\nMul: 18\nDiv: 2.0",
+    "input": "6, 3"
+  },
+  {
+    "title": "Area of Circle",
+    "code": "r = float(input())\narea = 3.14 * r * r\nprint('Area =', area)",
+    "output": "Input: 5\nArea = 78.5",
+    "input": "5"
+  },
+  {
+    "title": "Swap Two Numbers",
+    "code": "a = int(input())\nb = int(input())\na, b = b, a\nprint(a, b)",
+    "output": "Input: 10, 20\n20 10",
+    "input": "10, 20"
+  },
+  {
+    "title": "AND Operator Example",
+    "code": "a, b = 5, 10\nif a > 0 and b > 0:\n    print('Both positive')\nelse:\n    print('Not positive')",
+    "output": "Both positive",
+    "input": ""
+  },
+  {
+    "title": "OR Operator Example",
+    "code": "a, b = -5, 10\nif a > 0 or b > 0:\n    print('At least one is positive')\nelse:\n    print('Both negative')",
+    "output": "At least one is positive",
+    "input": ""
+  },
+  {
+    "title": "NOT Operator Example",
+    "code": "a = 0\nif not a:\n    print('a is zero')",
+    "output": "a is zero",
+    "input": ""
+  },
+  {
+    "title": "Prefix, Postfix (Python Behavior)",
+    "code": "a = 10\nprint('Prefix-like:', a+1)\nprint('Postfix-like:', a)\na += 1\nprint('Actual a:', a)",
+    "output": "Prefix-like: 11\nPostfix-like: 10\nActual a: 11",
+    "input": ""
+  },
+  {
+    "title": "Bitwise Operators",
+    "code": "a, b = 3, 6\nprint(a & b)\nprint(a | b)\nprint(a ^ b)\nprint(~a)\nprint(a << 2)\nprint(b >> 1)",
+    "output": "2\n7\n5\n-4\n12\n3",
+    "input": ""
+  },
+  {
+    "title": "Check Voting Eligibility",
+    "code": "age = int(input())\nif age >= 18:\n    print('Eligible')\nelse:\n    print('Not eligible')",
+    "output": "Input: 16\nNot eligible",
+    "input": "16"
+  },
+  {
+    "title": "Factorial of a Number",
+    "code": "n = int(input())\nf = 1\nfor i in range(1, n+1):\n    f *= i\nprint(f)",
+    "output": "Input: 5\n120",
+    "input": "5"
+  },
+  {
+    "title": "Sum of First N Numbers",
+    "code": "n = int(input())\nprint(sum(range(n+1)))",
+    "output": "Input: 5\n15",
+    "input": "5"
+  },
+  {
+    "title": "Print Numbers 1 to 10",
+    "code": "for i in range(1, 11):\n    print(i)",
+    "output": "1 2 3 4 5 6 7 8 9 10",
+    "input": ""
+  },
+  {
+    "title": "Reverse a Number",
+    "code": "n = input()\nprint(n[::-1])",
+    "output": "Input: 1234\n4321",
+    "input": "1234"
+  },
+  {
+    "title": "Palindrome String",
+    "code": "s = input()\nif s == s[::-1]:\n    print('Palindrome')\nelse:\n    print('Not Palindrome')",
+    "output": "Input: madam\nPalindrome",
+    "input": "madam"
+  },
+  {
+    "title": "Fibonacci Series",
+    "code": "a, b = 0, 1\nn = int(input())\nfor _ in range(n):\n    print(a, end=' ')\n    a, b = b, a+b",
+    "output": "Input: 5\n0 1 1 2 3",
+    "input": "5"
+  },
+  {
+    "title": "Check Prime Number",
+    "code": "n = int(input())\nflag = True\nfor i in range(2, n):\n    if n % i == 0:\n        flag = False\n        break\nprint('Prime' if flag else 'Not Prime')",
+    "output": "Input: 7\nPrime",
+    "input": "7"
+  },
+  {
+    "title": "Check Leap Year",
+    "code": "year = int(input())\nif (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):\n    print('Leap Year')\nelse:\n    print('Not Leap Year')",
+    "output": "Input: 2020\nLeap Year",
+    "input": "2020"
+  },
+  {
+    "title": "Count Digits in a Number",
+    "code": "n = input()\nprint('Digits:', len(n))",
+    "output": "Input: 4582\nDigits: 4",
+    "input": "4582"
+  },
+  {
+    "title": "Sum of Digits",
+    "code": "n = input()\nsum_digits = sum(int(i) for i in n)\nprint(sum_digits)",
+    "output": "Input: 1234\n10",
+    "input": "1234"
+  },
+  {
+    "title": "Find Minimum in a List",
+    "code": "lst = [5, 2, 9, 1]\nprint(min(lst))",
+    "output": "1",
+    "input": ""
+  },
+  {
+    "title": "Find Maximum in a List",
+    "code": "lst = [5, 2, 9, 1]\nprint(max(lst))",
+    "output": "9",
+    "input": ""
+  },
+  {
+    "title": "Sort a List",
+    "code": "lst = [4, 1, 3, 2]\nlst.sort()\nprint(lst)",
+    "output": "[1, 2, 3, 4]",
+    "input": ""
+  },
+  {
+    "title": "Reverse a List",
+    "code": "lst = [1, 2, 3]\nlst.reverse()\nprint(lst)",
+    "output": "[3, 2, 1]",
+    "input": ""
+  },
+  {
+    "title": "Check Element in List",
+    "code": "lst = [1, 2, 3, 4]\nx = 3\nprint(x in lst)",
+    "output": "True",
+    "input": ""
+  },
+  {
+    "title": "List Comprehension Example",
+    "code": "squares = [x*x for x in range(5)]\nprint(squares)",
+    "output": "[0, 1, 4, 9, 16]",
+    "input": ""
+  },
+  {
+    "title": "Dictionary Example",
+    "code": "d = {'a': 1, 'b': 2}\nprint(d['b'])",
+    "output": "2",
+    "input": ""
+  },
+  {
+    "title": "Loop Through Dictionary",
+    "code": "d = {'a': 1, 'b': 2}\nfor k, v in d.items():\n    print(k, v)",
+    "output": "a 1\nb 2",
+    "input": ""
+  },
+  {
+    "title": "Function Example",
+    "code": "def add(a, b):\n    return a + b\nprint(add(5, 3))",
+    "output": "8",
+    "input": ""
+  },
+  {
+    "title": "Function With Default Argument",
+    "code": "def greet(name='User'):\n    print('Hello', name)\ngreet()",
+    "output": "Hello User",
+    "input": ""
+  },
+  {
+    "title": "Lambda Function",
+    "code": "f = lambda x: x*x\nprint(f(5))",
+    "output": "25",
+    "input": ""
+  },
+  {
+    "title": "Map Function",
+    "code": "nums = [1, 2, 3]\nsq = list(map(lambda x: x*x, nums))\nprint(sq)",
+    "output": "[1, 4, 9]",
+    "input": ""
+  },
+  {
+    "title": "Filter Even Numbers",
+    "code": "nums = [1, 2, 3, 4]\nev = list(filter(lambda x: x%2==0, nums))\nprint(ev)",
+    "output": "[2, 4]",
+    "input": ""
+  },
+  {
+    "title": "Reduce Function",
+    "code": "from functools import reduce\nnums = [1, 2, 3]\nres = reduce(lambda a,b: a+b, nums)\nprint(res)",
+    "output": "6",
+    "input": ""
+  },
+  {
+    "title": "Class and Object",
+    "code": "class A:\n    def show(self):\n        print('Hello Class')\nobj = A()\nobj.show()",
+    "output": "Hello Class",
+    "input": ""
+  },
+  {
+    "title": "Constructor Example",
+    "code": "class A:\n    def __init__(self):\n        print('Constructor called')\nA()",
+    "output": "Constructor called",
+    "input": ""
+  },
+  {
+    "title": "Class With Attributes",
+    "code": "class Car:\n    def __init__(self, brand):\n        self.brand = brand\nc = Car('BMW')\nprint(c.brand)",
+    "output": "BMW",
+    "input": ""
+  },
+  {
+    "title": "Inheritance Example",
+    "code": "class A:\n    def show(self): print('A')\nclass B(A):\n    pass\nB().show()",
+    "output": "A",
+    "input": ""
+  },
+  {
+    "title": "File Write Example",
+    "code": "f = open('demo.txt', 'w')\nf.write('Hello File')\nf.close()",
+    "output": "File created with content",
+    "input": ""
+  },
+  {
+    "title": "File Read Example",
+    "code": "f = open('demo.txt', 'r')\nprint(f.read())",
+    "output": "Hello File",
+    "input": ""
+  },
+  {
+    "title": "Try Except Example",
+    "code": "try:\n    print(10/0)\nexcept:\n    print('Error')",
+    "output": "Error",
+    "input": ""
+  },
+  {
+    "title": "Random Number Generate",
+    "code": "import random\nprint(random.randint(1,10))",
+    "output": "Random number between 1 and 10",
+    "input": ""
+  },
+  {
+    "title": "Sum of List Items",
+    "code": "lst = [1,2,3,4]\nprint(sum(lst))",
+    "output": "10",
+    "input": ""
+  },
+  {
+    "title": "Check Armstrong Number",
+    "code": "n = input()\ns = sum(int(i)**3 for i in n)\nprint('Armstrong' if s == int(n) else 'Not Armstrong')",
+    "output": "Input: 153\nArmstrong",
+    "input": "153"
+  },
+  {
+    "title": "Count Vowels",
+    "code": "s = input()\nv = 'aeiouAEIOU'\ncount = sum(1 for i in s if i in v)\nprint(count)",
+    "output": "Input: apple\n2",
+    "input": "apple"
+  },
+  {
+    "title": "Remove Duplicates From List",
+    "code": "lst = [1,2,2,3,3,4]\nprint(list(set(lst)))",
+    "output": "[1, 2, 3, 4]",
+    "input": ""
+  },
+  {
+    "title": "Merge Two Lists",
+    "code": "a = [1,2]\nb = [3,4]\nprint(a + b)",
+    "output": "[1, 2, 3, 4]",
+    "input": ""
+  },
+  {
+    "title": "Sum of First N Natural Numbers #1",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #1",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #1",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #1",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #1",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #2",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #2",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #2",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #2",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #2",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #3",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #3",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #3",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #3",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #3",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #4",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #4",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #4",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #4",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #4",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #5",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #5",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #5",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #5",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #5",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #6",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #6",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #6",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #6",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #6",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #7",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #7",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #7",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #7",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #7",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #8",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #8",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #8",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #8",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #8",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #9",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #9",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #9",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #9",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #9",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #10",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #10",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #10",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #10",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #10",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #11",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #11",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #11",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #11",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #11",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #12",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #12",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #12",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #12",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #12",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #13",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #13",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #13",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #13",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #13",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #14",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #14",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #14",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #14",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #14",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #15",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #15",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #15",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #15",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #15",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #16",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #16",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #16",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #16",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #16",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #17",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #17",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #17",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #17",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #17",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #18",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #18",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #18",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #18",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #18",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #19",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #19",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #19",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #19",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #19",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Sum of First N Natural Numbers #20",
+    "code": "n = int(input(\"Enter N: \"))\ntotal = n * (n + 1) // 2\nprint(\"Sum =\", total)",
+    "input": "10",
+    "output": "Sum = 55"
+  },
+  {
+    "title": "Multiplication Table of a Number #20",
+    "code": "n = int(input(\"Enter a number: \"))\nfor i in range(1, 11):\n    print(n, \"x\", i, \"=\", n * i)",
+    "input": "5",
+    "output": "Prints 5 x 1 = 5 ... 5 x 10 = 50"
+  },
+  {
+    "title": "Check Positive, Negative or Zero #20",
+    "code": "num = float(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelif num < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "input": "-3",
+    "output": "Negative"
+  },
+  {
+    "title": "Largest of Three Numbers #20",
+    "code": "a = float(input(\"Enter first: \"))\nb = float(input(\"Enter second: \"))\nc = float(input(\"Enter third: \"))\nlargest = a\nif b > largest:\n    largest = b\nif c > largest:\n    largest = c\nprint(\"Largest =\", largest)",
+    "input": "7 2 9",
+    "output": "Largest = 9.0"
+  },
+  {
+    "title": "Grade Calculator Using Percentage #20",
+    "code": "marks = float(input(\"Enter percentage: \"))\nif marks >= 90:\n    grade = \"A+\"\nelif marks >= 80:\n    grade = \"A\"\nelif marks >= 70:\n    grade = \"B\"\nelif marks >= 60:\n    grade = \"C\"\nelif marks >= 50:\n    grade = \"D\"\nelse:\n    grade = \"F\"\nprint(\"Grade:\", grade)",
+    "input": "85",
+    "output": "Grade: A"
+  },
+  {
+    "title": "Count Uppercase and Lowercase Letters #1",
+    "code": "s = input(\"Enter a string: \")\nupper = lower = 0\nfor ch in s:\n    if ch.isupper():\n        upper += 1\n    elif ch.islower():\n        lower += 1\nprint(\"Uppercase:\", upper)\nprint(\"Lowercase:\", lower)",
+    "input": "Hello World",
+    "output": "Uppercase: 2\nLowercase: 8"
+  },
+  {
+    "title": "Remove Vowels from String #1",
+    "code": "s = input(\"Enter a string: \")\nvowels = \"aeiouAEIOU\"\nresult = \"\".join(ch for ch in s if ch not in vowels)\nprint(result)",
+    "input": "beautiful",
+    "output": "btfl"
+  },
+  {
+    "title": "Check Anagram Strings #1",
+    "code": "s1 = input(\"Enter first string: \")\ns2 = input(\"Enter second string: \")\nif sorted(s1.replace(\" \", \"\").lower()) == sorted(s2.replace(\" \", \"\").lower()):\n    print(\"Anagram\")\nelse:\n    print(\"Not Anagram\")",
+    "input": "listen\nsilent",
+    "output": "Anagram"
+  },
+  {
+    "title": "Count Words in a Sentence #1",
+    "code": "s = input(\"Enter a sentence: \")\nwords = s.split()\nprint(\"Words:\", len(words))",
+    "input": "I love Python programming",
+    "output": "Words: 4"
+  },
+  {
+    "title": "Count Uppercase and Lowercase Letters #2",
+    "code": "s = input(\"Enter a string: \")\nupper = lower = 0\nfor ch in s:\n    if ch.isupper():\n        upper += 1\n    elif ch.islower():\n        lower += 1\nprint(\"Uppercase:\", upper)\nprint(\"Lowercase:\", lower)",
+    "input": "Hello World",
+    "output": "Uppercase: 2\nLowercase: 8"
+  },
+  {
+    "title": "Remove Vowels from String #2",
+    "code": "s = input(\"Enter a string: \")\nvowels = \"aeiouAEIOU\"\nresult = \"\".join(ch for ch in s if ch not in vowels)\nprint(result)",
+    "input": "beautiful",
+    "output": "btfl"
+  },
+  {
+    "title": "Check Anagram Strings #2",
+    "code": "s1 = input(\"Enter first string: \")\ns2 = input(\"Enter second string: \")\nif sorted(s1.replace(\" \", \"\").lower()) == sorted(s2.replace(\" \", \"\").lower()):\n    print(\"Anagram\")\nelse:\n    print(\"Not Anagram\")",
+    "input": "listen\nsilent",
+    "output": "Anagram"
+  },
+  {
+    "title": "Count Words in a Sentence #2",
+    "code": "s = input(\"Enter a sentence: \")\nwords = s.split()\nprint(\"Words:\", len(words))",
+    "input": "I love Python programming",
+    "output": "Words: 4"
+  },
+  {
+    "title": "Count Uppercase and Lowercase Letters #3",
+    "code": "s = input(\"Enter a string: \")\nupper = lower = 0\nfor ch in s:\n    if ch.isupper():\n        upper += 1\n    elif ch.islower():\n        lower += 1\nprint(\"Uppercase:\", upper)\nprint(\"Lowercase:\", lower)",
+    "input": "Hello World",
+    "output": "Uppercase: 2\nLowercase: 8"
+  },
+  {
+    "title": "Remove Vowels from String #3",
+    "code": "s = input(\"Enter a string: \")\nvowels = \"aeiouAEIOU\"\nresult = \"\".join(ch for ch in s if ch not in vowels)\nprint(result)",
+    "input": "beautiful",
+    "output": "btfl"
+  },
+  {
+    "title": "Check Anagram Strings #3",
+    "code": "s1 = input(\"Enter first string: \")\ns2 = input(\"Enter second string: \")\nif sorted(s1.replace(\" \", \"\").lower()) == sorted(s2.replace(\" \", \"\").lower()):\n    print(\"Anagram\")\nelse:\n    print(\"Not Anagram\")",
+    "input": "listen\nsilent",
+    "output": "Anagram"
+  },
+  {
+    "title": "Count Words in a Sentence #3",
+    "code": "s = input(\"Enter a sentence: \")\nwords = s.split()\nprint(\"Words:\", len(words))",
+    "input": "I love Python programming",
+    "output": "Words: 4"
+  },
+  {
+    "title": "Count Uppercase and Lowercase Letters #4",
+    "code": "s = input(\"Enter a string: \")\nupper = lower = 0\nfor ch in s:\n    if ch.isupper():\n        upper += 1\n    elif ch.islower():\n        lower += 1\nprint(\"Uppercase:\", upper)\nprint(\"Lowercase:\", lower)",
+    "input": "Hello World",
+    "output": "Uppercase: 2\nLowercase: 8"
+  },
+  {
+    "title": "Remove Vowels from String #4",
+    "code": "s = input(\"Enter a string: \")\nvowels = \"aeiouAEIOU\"\nresult = \"\".join(ch for ch in s if ch not in vowels)\nprint(result)",
+    "input": "beautiful",
+    "output": "btfl"
+  },
+  {
+    "title": "Check Anagram Strings #4",
+    "code": "s1 = input(\"Enter first string: \")\ns2 = input(\"Enter second string: \")\nif sorted(s1.replace(\" \", \"\").lower()) == sorted(s2.replace(\" \", \"\").lower()):\n    print(\"Anagram\")\nelse:\n    print(\"Not Anagram\")",
+    "input": "listen\nsilent",
+    "output": "Anagram"
+  },
+  {
+    "title": "Count Words in a Sentence #4",
+    "code": "s = input(\"Enter a sentence: \")\nwords = s.split()\nprint(\"Words:\", len(words))",
+    "input": "I love Python programming",
+    "output": "Words: 4"
+  },
+  {
+    "title": "Count Uppercase and Lowercase Letters #5",
+    "code": "s = input(\"Enter a string: \")\nupper = lower = 0\nfor ch in s:\n    if ch.isupper():\n        upper += 1\n    elif ch.islower():\n        lower += 1\nprint(\"Uppercase:\", upper)\nprint(\"Lowercase:\", lower)",
+    "input": "Hello World",
+    "output": "Uppercase: 2\nLowercase: 8"
+  },
+  {
+    "title": "Remove Vowels from String #5",
+    "code": "s = input(\"Enter a string: \")\nvowels = \"aeiouAEIOU\"\nresult = \"\".join(ch for ch in s if ch not in vowels)\nprint(result)",
+    "input": "beautiful",
+    "output": "btfl"
+  },
+  {
+    "title": "Check Anagram Strings #5",
+    "code": "s1 = input(\"Enter first string: \")\ns2 = input(\"Enter second string: \")\nif sorted(s1.replace(\" \", \"\").lower()) == sorted(s2.replace(\" \", \"\").lower()):\n    print(\"Anagram\")\nelse:\n    print(\"Not Anagram\")",
+    "input": "listen\nsilent",
+    "output": "Anagram"
+  },
+  {
+    "title": "Count Words in a Sentence #5",
+    "code": "s = input(\"Enter a sentence: \")\nwords = s.split()\nprint(\"Words:\", len(words))",
+    "input": "I love Python programming",
+    "output": "Words: 4"
+  },
+  {
+    "title": "Count Uppercase and Lowercase Letters #6",
+    "code": "s = input(\"Enter a string: \")\nupper = lower = 0\nfor ch in s:\n    if ch.isupper():\n        upper += 1\n    elif ch.islower():\n        lower += 1\nprint(\"Uppercase:\", upper)\nprint(\"Lowercase:\", lower)",
+    "input": "Hello World",
+    "output": "Uppercase: 2\nLowercase: 8"
+  },
+  {
+    "title": "Remove Vowels from String #6",
+    "code": "s = input(\"Enter a string: \")\nvowels = \"aeiouAEIOU\"\nresult = \"\".join(ch for ch in s if ch not in vowels)\nprint(result)",
+    "input": "beautiful",
+    "output": "btfl"
+  },
+  {
+    "title": "Check Anagram Strings #6",
+    "code": "s1 = input(\"Enter first string: \")\ns2 = input(\"Enter second string: \")\nif sorted(s1.replace(\" \", \"\").lower()) == sorted(s2.replace(\" \", \"\").lower()):\n    print(\"Anagram\")\nelse:\n    print(\"Not Anagram\")",
+    "input": "listen\nsilent",
+    "output": "Anagram"
+  },
+  {
+    "title": "Count Words in a Sentence #6",
+    "code": "s = input(\"Enter a sentence: \")\nwords = s.split()\nprint(\"Words:\", len(words))",
+    "input": "I love Python programming",
+    "output": "Words: 4"
+  },
+  {
+    "title": "Count Uppercase and Lowercase Letters #7",
+    "code": "s = input(\"Enter a string: \")\nupper = lower = 0\nfor ch in s:\n    if ch.isupper():\n        upper += 1\n    elif ch.islower():\n        lower += 1\nprint(\"Uppercase:\", upper)\nprint(\"Lowercase:\", lower)",
+    "input": "Hello World",
+    "output": "Uppercase: 2\nLowercase: 8"
+  },
+  {
+    "title": "Remove Vowels from String #7",
+    "code": "s = input(\"Enter a string: \")\nvowels = \"aeiouAEIOU\"\nresult = \"\".join(ch for ch in s if ch not in vowels)\nprint(result)",
+    "input": "beautiful",
+    "output": "btfl"
+  },
+  {
+    "title": "Check Anagram Strings #7",
+    "code": "s1 = input(\"Enter first string: \")\ns2 = input(\"Enter second string: \")\nif sorted(s1.replace(\" \", \"\").lower()) == sorted(s2.replace(\" \", \"\").lower()):\n    print(\"Anagram\")\nelse:\n    print(\"Not Anagram\")",
+    "input": "listen\nsilent",
+    "output": "Anagram"
+  },
+  {
+    "title": "Count Words in a Sentence #7",
+    "code": "s = input(\"Enter a sentence: \")\nwords = s.split()\nprint(\"Words:\", len(words))",
+    "input": "I love Python programming",
+    "output": "Words: 4"
+  },
+  {
+    "title": "Count Uppercase and Lowercase Letters #8",
+    "code": "s = input(\"Enter a string: \")\nupper = lower = 0\nfor ch in s:\n    if ch.isupper():\n        upper += 1\n    elif ch.islower():\n        lower += 1\nprint(\"Uppercase:\", upper)\nprint(\"Lowercase:\", lower)",
+    "input": "Hello World",
+    "output": "Uppercase: 2\nLowercase: 8"
+  },
+  {
+    "title": "Remove Vowels from String #8",
+    "code": "s = input(\"Enter a string: \")\nvowels = \"aeiouAEIOU\"\nresult = \"\".join(ch for ch in s if ch not in vowels)\nprint(result)",
+    "input": "beautiful",
+    "output": "btfl"
+  },
+  {
+    "title": "Check Anagram Strings #8",
+    "code": "s1 = input(\"Enter first string: \")\ns2 = input(\"Enter second string: \")\nif sorted(s1.replace(\" \", \"\").lower()) == sorted(s2.replace(\" \", \"\").lower()):\n    print(\"Anagram\")\nelse:\n    print(\"Not Anagram\")",
+    "input": "listen\nsilent",
+    "output": "Anagram"
+  },
+  {
+    "title": "Count Words in a Sentence #8",
+    "code": "s = input(\"Enter a sentence: \")\nwords = s.split()\nprint(\"Words:\", len(words))",
+    "input": "I love Python programming",
+    "output": "Words: 4"
+  },
+  {
+    "title": "Count Uppercase and Lowercase Letters #9",
+    "code": "s = input(\"Enter a string: \")\nupper = lower = 0\nfor ch in s:\n    if ch.isupper():\n        upper += 1\n    elif ch.islower():\n        lower += 1\nprint(\"Uppercase:\", upper)\nprint(\"Lowercase:\", lower)",
+    "input": "Hello World",
+    "output": "Uppercase: 2\nLowercase: 8"
+  },
+  {
+    "title": "Remove Vowels from String #9",
+    "code": "s = input(\"Enter a string: \")\nvowels = \"aeiouAEIOU\"\nresult = \"\".join(ch for ch in s if ch not in vowels)\nprint(result)",
+    "input": "beautiful",
+    "output": "btfl"
+  },
+  {
+    "title": "Check Anagram Strings #9",
+    "code": "s1 = input(\"Enter first string: \")\ns2 = input(\"Enter second string: \")\nif sorted(s1.replace(\" \", \"\").lower()) == sorted(s2.replace(\" \", \"\").lower()):\n    print(\"Anagram\")\nelse:\n    print(\"Not Anagram\")",
+    "input": "listen\nsilent",
+    "output": "Anagram"
+  },
+  {
+    "title": "Count Words in a Sentence #9",
+    "code": "s = input(\"Enter a sentence: \")\nwords = s.split()\nprint(\"Words:\", len(words))",
+    "input": "I love Python programming",
+    "output": "Words: 4"
+  },
+  {
+    "title": "Count Uppercase and Lowercase Letters #10",
+    "code": "s = input(\"Enter a string: \")\nupper = lower = 0\nfor ch in s:\n    if ch.isupper():\n        upper += 1\n    elif ch.islower():\n        lower += 1\nprint(\"Uppercase:\", upper)\nprint(\"Lowercase:\", lower)",
+    "input": "Hello World",
+    "output": "Uppercase: 2\nLowercase: 8"
+  },
+  {
+    "title": "Remove Vowels from String #10",
+    "code": "s = input(\"Enter a string: \")\nvowels = \"aeiouAEIOU\"\nresult = \"\".join(ch for ch in s if ch not in vowels)\nprint(result)",
+    "input": "beautiful",
+    "output": "btfl"
+  },
+  {
+    "title": "Check Anagram Strings #10",
+    "code": "s1 = input(\"Enter first string: \")\ns2 = input(\"Enter second string: \")\nif sorted(s1.replace(\" \", \"\").lower()) == sorted(s2.replace(\" \", \"\").lower()):\n    print(\"Anagram\")\nelse:\n    print(\"Not Anagram\")",
+    "input": "listen\nsilent",
+    "output": "Anagram"
+  },
+  {
+    "title": "Count Words in a Sentence #10",
+    "code": "s = input(\"Enter a sentence: \")\nwords = s.split()\nprint(\"Words:\", len(words))",
+    "input": "I love Python programming",
+    "output": "Words: 4"
+  },
+  {
+    "title": "Count Uppercase and Lowercase Letters #11",
+    "code": "s = input(\"Enter a string: \")\nupper = lower = 0\nfor ch in s:\n    if ch.isupper():\n        upper += 1\n    elif ch.islower():\n        lower += 1\nprint(\"Uppercase:\", upper)\nprint(\"Lowercase:\", lower)",
+    "input": "Hello World",
+    "output": "Uppercase: 2\nLowercase: 8"
+  },
+  {
+    "title": "Remove Vowels from String #11",
+    "code": "s = input(\"Enter a string: \")\nvowels = \"aeiouAEIOU\"\nresult = \"\".join(ch for ch in s if ch not in vowels)\nprint(result)",
+    "input": "beautiful",
+    "output": "btfl"
+  },
+  {
+    "title": "Check Anagram Strings #11",
+    "code": "s1 = input(\"Enter first string: \")\ns2 = input(\"Enter second string: \")\nif sorted(s1.replace(\" \", \"\").lower()) == sorted(s2.replace(\" \", \"\").lower()):\n    print(\"Anagram\")\nelse:\n    print(\"Not Anagram\")",
+    "input": "listen\nsilent",
+    "output": "Anagram"
+  },
+  {
+    "title": "Count Words in a Sentence #11",
+    "code": "s = input(\"Enter a sentence: \")\nwords = s.split()\nprint(\"Words:\", len(words))",
+    "input": "I love Python programming",
+    "output": "Words: 4"
+  },
+  {
+    "title": "Count Uppercase and Lowercase Letters #12",
+    "code": "s = input(\"Enter a string: \")\nupper = lower = 0\nfor ch in s:\n    if ch.isupper():\n        upper += 1\n    elif ch.islower():\n        lower += 1\nprint(\"Uppercase:\", upper)\nprint(\"Lowercase:\", lower)",
+    "input": "Hello World",
+    "output": "Uppercase: 2\nLowercase: 8"
+  }
+]

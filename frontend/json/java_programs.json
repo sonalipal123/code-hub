@@ -1,0 +1,866 @@
+[
+  {
+    "title": "Print Hello World",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    System.out.println(\"Hello, World!\");\n  }\n}",
+    "output": "Hello, World!",
+    "input": ""
+  },
+  {
+    "title": "Input an Integer",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int num = sc.nextInt();\n    System.out.println(\"You entered: \" + num);\n  }\n}",
+    "output": "You entered: 10",
+    "input": "10"
+  },
+  {
+    "title": "Add Two Numbers",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int a = sc.nextInt();\n    int b = sc.nextInt();\n    System.out.println(\"Sum = \" + (a + b));\n  }\n}",
+    "output": "Sum = 11",
+    "input": "5 6"
+  },
+  {
+    "title": "Subtract Two Numbers",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int a = sc.nextInt();\n    int b = sc.nextInt();\n    System.out.println(\"Difference = \" + (a - b));\n  }\n}",
+    "output": "Difference = 6",
+    "input": "10 4"
+  },
+  {
+    "title": "Multiply Two Numbers",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int a = sc.nextInt();\n    int b = sc.nextInt();\n    System.out.println(\"Product = \" + (a * b));\n  }\n}",
+    "output": "Product = 21",
+    "input": "7 3"
+  },
+  {
+    "title": "Divide Two Numbers",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int a = sc.nextInt();\n    int b = sc.nextInt();\n    System.out.println(\"Quotient = \" + (a / b));\n  }\n}",
+    "output": "Quotient = 5",
+    "input": "20 4"
+  },
+  {
+    "title": "Find Square Root",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    System.out.println(\"Square root: \" + Math.sqrt(n));\n  }\n}",
+    "output": "Square root: 5.0",
+    "input": "25"
+  },
+  {
+    "title": "Check Even or Odd",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    if(n % 2 == 0) System.out.println(\"Even\");\n    else System.out.println(\"Odd\");\n  }\n}",
+    "output": "Even",
+    "input": "8"
+  },
+  {
+    "title": "Largest of Two Numbers",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int a = sc.nextInt();\n    int b = sc.nextInt();\n    System.out.println(a > b ? a : b);\n  }\n}",
+    "output": "12",
+    "input": "5 12"
+  },
+  {
+    "title": "Largest of Three Numbers",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int a = sc.nextInt();\n    int b = sc.nextInt();\n    int c = sc.nextInt();\n    int max = Math.max(a, Math.max(b, c));\n    System.out.println(\"Largest = \" + max);\n  }\n}",
+    "output": "Largest = 22",
+    "input": "10 5 22"
+  },
+  {
+    "title": "Simple If Statement",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    int a = 10;\n    if(a > 5) System.out.println(\"Greater than 5\");\n  }\n}",
+    "output": "Greater than 5",
+    "input": ""
+  },
+  {
+    "title": "If-Else Example",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    int age = 16;\n    if(age >= 18) System.out.println(\"Adult\");\n    else System.out.println(\"Minor\");\n  }\n}",
+    "output": "Minor",
+    "input": ""
+  },
+  {
+    "title": "Nested If",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    int a = 10;\n    if(a > 0) {\n      if(a % 2 == 0)\n        System.out.println(\"Positive Even\");\n    }\n  }\n}",
+    "output": "Positive Even",
+    "input": ""
+  },
+  {
+    "title": "Switch Case Example",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int day = sc.nextInt();\n    switch(day) {\n      case 1: System.out.println(\"Sunday\"); break;\n      case 2: System.out.println(\"Monday\"); break;\n      default: System.out.println(\"Invalid\");\n    }\n  }\n}",
+    "output": "Sunday",
+    "input": "1"
+  },
+  {
+    "title": "For Loop Example",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    for(int i = 1; i <= 5; i++)\n      System.out.println(i);\n  }\n}",
+    "output": "1\n2\n3\n4\n5",
+    "input": ""
+  },
+  {
+    "title": "While Loop Example",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    int i = 1;\n    while(i <= 5) {\n      System.out.println(i);\n      i++;\n    }\n  }\n}",
+    "output": "1\n2\n3\n4\n5",
+    "input": ""
+  },
+  {
+    "title": "Do-While Loop",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    int i = 1;\n    do {\n      System.out.println(i);\n      i++;\n    } while(i <= 5);\n  }\n}",
+    "output": "1\n2\n3\n4\n5",
+    "input": ""
+  },
+  {
+    "title": "Sum of First N Numbers",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    int sum = 0;\n    for(int i=1;i<=n;i++) sum+=i;\n    System.out.println(sum);\n  }\n}",
+    "output": "15",
+    "input": "5"
+  },
+  {
+    "title": "Factorial (Iterative)",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    int fact = 1;\n    for(int i=1;i<=n;i++) fact *= i;\n    System.out.println(fact);\n  }\n}",
+    "output": "120",
+    "input": "5"
+  },
+  {
+    "title": "Check Prime Number",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    boolean prime = true;\n    for(int i=2;i<=n/2;i++) if(n%i==0) prime=false;\n    if(prime) System.out.println(\"Prime\"); else System.out.println(\"Not Prime\");\n  }\n}",
+    "output": "Prime",
+    "input": "7"
+  },
+  {
+    "title": "Reverse a Number",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    int rev = 0;\n    while(n > 0){ rev = rev*10 + n%10; n/=10; }\n    System.out.println(rev);\n  }\n}",
+    "output": "4321",
+    "input": "1234"
+  },
+  {
+    "title": "Palindrome Number",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    int t=n, rev=0;\n    while(n>0){ rev=rev*10+n%10; n/=10; }\n    if(t==rev) System.out.println(\"Palindrome\");\n    else System.out.println(\"Not Palindrome\");\n  }\n}",
+    "output": "Palindrome",
+    "input": "121"
+  },
+  {
+    "title": "Fibonacci Series",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    int a=0,b=1;\n    for(int i=1;i<=n;i++){\n      System.out.print(a+\" \");\n      int temp=a+b;\n      a=b; b=temp;\n    }\n  }\n}",
+    "output": "0 1 1 2 3",
+    "input": "5"
+  },
+  {
+    "title": "Sum of Digits",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int n=sc.nextInt(); int sum=0;\n    while(n>0){ sum+=n%10; n/=10; }\n    System.out.println(sum);\n  }\n}",
+    "output": "6",
+    "input": "123"
+  },
+  {
+    "title": "Armstrong Number",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt(); int temp=n, sum=0;\n    while(temp>0){ int r=temp%10; sum+=r*r*r; temp/=10; }\n    System.out.println(sum==n ? \"Armstrong\" : \"Not Armstrong\");\n  }\n}",
+    "output": "Armstrong",
+    "input": "153"
+  },
+  {
+    "title": "Swap Two Numbers (No Temp)",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    int a=5,b=10;\n    a=a+b; b=a-b; a=a-b;\n    System.out.println(a+\" \"+b);\n  }\n}",
+    "output": "10 5",
+    "input": ""
+  },
+  {
+    "title": "Simple Interest",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc=new Scanner(System.in);\n    float p=sc.nextFloat(); float r=sc.nextFloat(); float t=sc.nextFloat();\n    System.out.println((p*r*t)/100);\n  }\n}",
+    "output": "100.0",
+    "input": "1000 5 2"
+  },
+  {
+    "title": "Area of Circle",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc=new Scanner(System.in);\n    int r=sc.nextInt();\n    System.out.println(3.14*r*r);\n  }\n}",
+    "output": "78.5",
+    "input": "5"
+  },
+  {
+    "title": "Area of Rectangle",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc=new Scanner(System.in);\n    int l=sc.nextInt(); int b=sc.nextInt();\n    System.out.println(l*b);\n  }\n}",
+    "output": "24",
+    "input": "4 6"
+  },
+  {
+    "title": "Positive or Negative",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    if(n>0) System.out.println(\"Positive\");\n    else if(n<0) System.out.println(\"Negative\");\n    else System.out.println(\"Zero\");\n  }\n}",
+    "output": "Negative",
+    "input": "-5"
+  },
+  {
+    "title": "Count Digits",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt(); int c=0;\n    while(n>0){ c++; n/=10; }\n    System.out.println(c);\n  }\n}",
+    "output": "3",
+    "input": "567"
+  },
+  {
+    "title": "Print Array Elements",
+    "code": "public class Main {\n  public static void main(String[] args){\n    int arr[]={1,2,3,4,5};\n    for(int x : arr) System.out.print(x+\" \");\n  }\n}",
+    "output": "1 2 3 4 5",
+    "input": ""
+  },
+  {
+    "title": "Find Largest in Array",
+    "code": "public class Main {\n  public static void main(String[] args){\n    int arr[]={10,44,66,23};\n    int max=arr[0];\n    for(int i=1;i<arr.length;i++) if(arr[i]>max) max=arr[i];\n    System.out.println(max);\n  }\n}",
+    "output": "66",
+    "input": ""
+  },
+  {
+    "title": "Linear Search",
+    "code": "public class Main {\n  public static void main(String[] args){\n    int arr[]={5,9,2,8}; int key=8;\n    for(int i=0;i<arr.length;i++) if(arr[i]==key) System.out.println(\"Found\");\n  }\n}",
+    "output": "Found",
+    "input": ""
+  },
+  {
+    "title": "Reverse Array",
+    "code": "public class Main {\n  public static void main(String[] args){\n    int arr[]={1,2,3,4};\n    for(int i=arr.length-1;i>=0;i--) System.out.print(arr[i]+\" \");\n  }\n}",
+    "output": "4 3 2 1",
+    "input": ""
+  },
+  {
+    "title": "Sum of Array Elements",
+    "code": "public class Main {\n  public static void main(String[] args){\n    int arr[]={1,2,3,4}; int sum=0;\n    for(int x : arr) sum+=x;\n    System.out.println(sum);\n  }\n}",
+    "output": "10",
+    "input": ""
+  },
+  {
+    "title": "2D Array Example",
+    "code": "public class Main {\n  public static void main(String[] args){\n    int[][] a={{1,2},{3,4}};\n    System.out.println(a[0][1]);\n  }\n}",
+    "output": "2",
+    "input": ""
+  },
+  {
+    "title": "Method Example",
+    "code": "public class Main {\n  static void greet(){ System.out.println(\"Hello\"); }\n  public static void main(String[] args){ greet(); }\n}",
+    "output": "Hello",
+    "input": ""
+  },
+  {
+    "title": "Method with Parameters",
+    "code": "public class Main {\n  static int add(int a,int b){ return a+b; }\n  public static void main(String[] args){ System.out.println(add(5,6)); }\n}",
+    "output": "11",
+    "input": ""
+  },
+  {
+    "title": "Class and Object Example",
+    "code": "class Demo { int x=10; }\npublic class Main {\n  public static void main(String[] args){ Demo d=new Demo(); System.out.println(d.x); }\n}",
+    "output": "10",
+    "input": ""
+  },
+  {
+    "title": "Constructor Example",
+    "code": "class Demo{\n  Demo(){ System.out.println(\"Constructor Called\"); }\n}\npublic class Main{\n  public static void main(String[] args){ new Demo(); }\n}",
+    "output": "Constructor Called",
+    "input": ""
+  },
+  {
+    "title": "Inheritance Example",
+    "code": "class A{ void show(){ System.out.println(\"A\"); }}\nclass B extends A{}\npublic class Main{ public static void main(String[] args){ B obj=new B(); obj.show(); }}",
+    "output": "A",
+    "input": ""
+  },
+  {
+    "title": "Polymorphism Example",
+    "code": "class A{ void show(){ System.out.println(\"A\"); }}\nclass B extends A{ void show(){ System.out.println(\"B\"); }}\npublic class Main{\n  public static void main(String[] args){ A obj=new B(); obj.show(); }\n}",
+    "output": "B",
+    "input": ""
+  },
+  {
+    "title": "Encapsulation Example",
+    "code": "class Demo{\n  private int age;\n  public void setAge(int a){ age=a; }\n  public int getAge(){ return age; }\n}\npublic class Main{\n  public static void main(String[] args){\n    Demo d=new Demo(); d.setAge(25);\n    System.out.println(d.getAge());\n  }\n}",
+    "output": "25",
+    "input": ""
+  },
+  {
+    "title": "Abstraction Example",
+    "code": "abstract class A{ abstract void show(); }\nclass B extends A{ void show(){ System.out.println(\"Hello\"); }}\npublic class Main{ public static void main(String[] args){ new B().show(); }}",
+    "output": "Hello",
+    "input": ""
+  },
+  {
+    "title": "Interface Example",
+    "code": "interface A{ void show(); }\nclass B implements A{ public void show(){ System.out.println(\"Interface Working\"); }}\npublic class Main{ public static void main(String[] args){ new B().show(); }}",
+    "output": "Interface Working",
+    "input": ""
+  },
+  {
+    "title": "Exception Handling",
+    "code": "public class Main{\n  public static void main(String[] args){\n    try{ int a=10/0; }\n    catch(Exception e){ System.out.println(\"Error\"); }\n  }\n}",
+    "output": "Error",
+    "input": ""
+  },
+  {
+    "title": "File Handling Example",
+    "code": "import java.io.*;\npublic class Main{\n  public static void main(String[] args) throws Exception{\n    FileWriter fw=new FileWriter(\"test.txt\");\n    fw.write(\"Hello File\"); fw.close();\n    System.out.println(\"Written\");\n  }\n}",
+    "output": "Written",
+    "input": ""
+  },
+  {
+    "title": "Factorial using Recursion",
+    "code": "public class Main {\n  static int factorial(int n) {\n    if (n == 0) return 1;\n    else return n * factorial(n - 1);\n  }\n  public static void main(String[] args) {\n    System.out.println(factorial(5));\n  }\n}",
+    "output": "120",
+    "input": ""
+  },
+  {
+    "title": "Fibonacci using Recursion",
+    "code": "public class Main {\n  static int n1=0,n2=1,n3=0;\n  static void printFibonacci(int count){\n    if(count>0){\n      n3 = n1 + n2;\n      n1 = n2;\n      n2 = n3;\n      System.out.print(\" \"+n3);\n      printFibonacci(count-1);\n    }\n  }\n  public static void main(String[] args) {\n    System.out.print(n1+\" \"+n2);\n    printFibonacci(3);\n  }\n}",
+    "output": "0 1 1 2 3",
+    "input": ""
+  },
+  {
+    "title": "Bubble Sort",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    int arr[] = {3, 60, 35, 2, 45, 320, 5};\n    for(int i=0; i < arr.length; i++){\n      for(int j=1; j < (arr.length-i); j++){\n        if(arr[j-1] > arr[j]){\n           int temp = arr[j-1];\n           arr[j-1] = arr[j];\n           arr[j] = temp;\n        }\n      }\n    }\n    for(int i=0; i < arr.length; i++) System.out.print(arr[i] + \" \");\n  }\n}",
+    "output": "2 3 5 35 45 60 320",
+    "input": ""
+  },
+  {
+    "title": "Binary Search",
+    "code": "import java.util.Arrays;\npublic class Main {\n  public static void main(String args[]){\n    int arr[] = {10,20,30,40,50};\n    int key = 30;\n    int result = Arrays.binarySearch(arr,key);\n    if (result < 0) System.out.println(\"Not Found\");\n    else System.out.println(\"Found at index: \" + result);\n  }\n}",
+    "output": "Found at index: 2",
+    "input": ""
+  },
+  {
+    "title": "Selection Sort",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    int arr[] = {9, 14, 3, 2, 43};\n    for (int i = 0; i < arr.length - 1; i++) {\n      int index = i;\n      for (int j = i + 1; j < arr.length; j++){\n        if (arr[j] < arr[index]) index = j;\n      }\n      int smallerNumber = arr[index];\n      arr[index] = arr[i];\n      arr[i] = smallerNumber;\n    }\n    for(int i:arr) System.out.print(i+\" \");\n  }\n}",
+    "output": "2 3 9 14 43",
+    "input": ""
+  },
+  {
+    "title": "Matrix Addition",
+    "code": "public class Main{\npublic static void main(String args[]){\nint a[][]={{1,3},{2,4}}; int b[][]={{1,1},{1,1}};\nint c[][]=new int[2][2];\nfor(int i=0;i<2;i++){\n for(int j=0;j<2;j++){\n   c[i][j]=a[i][j]+b[i][j];\n   System.out.print(c[i][j]+\" \");\n }\n System.out.println();\n}\n}}",
+    "output": "2 4 \n3 5",
+    "input": ""
+  },
+  {
+    "title": "Matrix Multiplication",
+    "code": "public class Main{\npublic static void main(String args[]){\nint a[][]={{1,1},{2,2}}; int b[][]={{1,1},{2,2}};\nint c[][]=new int[2][2];\nfor(int i=0;i<2;i++){\n for(int j=0;j<2;j++){\n   c[i][j]=0;\n   for(int k=0;k<2;k++) c[i][j]+=a[i][k]*b[k][j];\n   System.out.print(c[i][j]+\" \");\n }\n System.out.println();\n}\n}}",
+    "output": "3 3 \n6 6",
+    "input": ""
+  },
+  {
+    "title": "Check Leap Year",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String[] args) {\n    Scanner sc = new Scanner(System.in);\n    int year = sc.nextInt();\n    if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))\n      System.out.println(\"Leap Year\");\n    else\n      System.out.println(\"Not a Leap Year\");\n  }\n}",
+    "output": "Leap Year",
+    "input": "2020"
+  },
+  {
+    "title": "LCM of Two Numbers",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    int n1 = 72, n2 = 120, lcm;\n    lcm = (n1 > n2) ? n1 : n2;\n    while(true) {\n      if( lcm % n1 == 0 && lcm % n2 == 0 ) {\n        System.out.printf(\"LCM: %d\", lcm);\n        break;\n      }\n      ++lcm;\n    }\n  }\n}",
+    "output": "LCM: 360",
+    "input": ""
+  },
+  {
+    "title": "GCD of Two Numbers",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    int n1 = 81, n2 = 153;\n    int gcd = 1;\n    for(int i = 1; i <= n1 && i <= n2; ++i) {\n      if(n1 % i == 0 && n2 % i == 0) gcd = i;\n    }\n    System.out.println(\"GCD: \" + gcd);\n  }\n}",
+    "output": "GCD: 9",
+    "input": ""
+  },
+  {
+    "title": "Palindrome String",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String args[]){\n    Scanner sc = new Scanner(System.in);\n    String str = sc.nextLine(), reverse = \"\";\n    int length = str.length();\n    for ( int i = length - 1; i >= 0; i-- ) reverse = reverse + str.charAt(i);\n    if (str.equals(reverse)) System.out.println(\"Palindrome\");\n    else System.out.println(\"Not Palindrome\");\n  }\n}",
+    "output": "Palindrome",
+    "input": "madam"
+  },
+  {
+    "title": "Anagram String",
+    "code": "import java.util.Arrays;\npublic class Main {\n  public static void main(String[] args) {\n    String str1 = \"Race\";\n    String str2 = \"Care\";\n    str1 = str1.toLowerCase();\n    str2 = str2.toLowerCase();\n    if(str1.length() == str2.length()) {\n      char[] charArray1 = str1.toCharArray();\n      char[] charArray2 = str2.toCharArray();\n      Arrays.sort(charArray1);\n      Arrays.sort(charArray2);\n      boolean result = Arrays.equals(charArray1, charArray2);\n      if(result) System.out.println(\"Anagram\");\n      else System.out.println(\"Not Anagram\");\n    }\n  }\n}",
+    "output": "Anagram",
+    "input": ""
+  },
+  {
+    "title": "Count Vowels in String",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    String line = \"This is a sample sentence\";\n    int vowels = 0;\n    line = line.toLowerCase();\n    for (int i = 0; i < line.length(); ++i) {\n      char ch = line.charAt(i);\n      if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {\n        ++vowels;\n      }\n    }\n    System.out.println(\"Vowels: \" + vowels);\n  }\n}",
+    "output": "Vowels: 8",
+    "input": ""
+  },
+  {
+    "title": "Remove Spaces from String",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        String str = \"Java   Programming\";\n        String noSpaceStr = str.replaceAll(\"\\\\s\", \"\");\n        System.out.println(noSpaceStr);\n    }\n}",
+    "output": "JavaProgramming",
+    "input": ""
+  },
+  {
+    "title": "String to Integer",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        String s = \"200\";\n        int i = Integer.parseInt(s);\n        System.out.println(i + 100);\n    }\n}",
+    "output": "300",
+    "input": ""
+  },
+  {
+    "title": "Integer to String",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        int i = 200;\n        String s = String.valueOf(i);\n        System.out.println(s + \"100\");\n    }\n}",
+    "output": "200100",
+    "input": ""
+  },
+  {
+    "title": "Pattern: Star Pyramid",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    int rows = 5;\n    for(int i = 1; i <= rows; ++i) {\n      for(int j = 1; j <= i; ++j) {\n        System.out.print(\"* \");\n      }\n      System.out.println();\n    }\n  }\n}",
+    "output": "* \n* * \n* * * \n* * * * \n* * * * *",
+    "input": ""
+  },
+  {
+    "title": "Pattern: Inverted Star Pyramid",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    int rows = 5;\n    for(int i = rows; i >= 1; --i) {\n      for(int j = 1; j <= i; ++j) {\n        System.out.print(\"* \");\n      }\n      System.out.println();\n    }\n  }\n}",
+    "output": "* * * * * \n* * * * \n* * * \n* * \n*",
+    "input": ""
+  },
+  {
+    "title": "Pattern: Numbers",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    for(int i = 1; i <= 5; ++i) {\n      for(int j = 1; j <= i; ++j) {\n        System.out.print(j + \" \");\n      }\n      System.out.println();\n    }\n  }\n}",
+    "output": "1 \n1 2 \n1 2 3 \n1 2 3 4 \n1 2 3 4 5",
+    "input": ""
+  },
+  {
+    "title": "ArrayList Example",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String args[]){\n    ArrayList<String> list=new ArrayList<String>();\n    list.add(\"Mango\");\n    list.add(\"Apple\");\n    list.add(\"Banana\");\n    System.out.println(list);\n  }\n}",
+    "output": "[Mango, Apple, Banana]",
+    "input": ""
+  },
+  {
+    "title": "Iterate ArrayList",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String args[]){\n    ArrayList<String> list=new ArrayList<String>();\n    list.add(\"A\"); list.add(\"B\");\n    for(String s:list) System.out.println(s);\n  }\n}",
+    "output": "A\nB",
+    "input": ""
+  },
+  {
+    "title": "Sort ArrayList",
+    "code": "import java.util.*;\npublic class Main {\n  public static void main(String args[]){\n    ArrayList<Integer> list=new ArrayList<>();\n    list.add(5); list.add(1); list.add(3);\n    Collections.sort(list);\n    System.out.println(list);\n  }\n}",
+    "output": "[1, 3, 5]",
+    "input": ""
+  },
+  {
+    "title": "HashMap Example",
+    "code": "import java.util.*;\npublic class Main{\n public static void main(String args[]){\n   HashMap<Integer,String> map=new HashMap<Integer,String>();\n   map.put(1,\"Mango\");\n   map.put(2,\"Apple\");\n   System.out.println(map.get(1));\n }\n}",
+    "output": "Mango",
+    "input": ""
+  },
+  {
+    "title": "Iterate HashMap",
+    "code": "import java.util.*;\npublic class Main{\n public static void main(String args[]){\n   HashMap<Integer,String> hm=new HashMap<Integer,String>();\n   hm.put(100,\"Amit\");\n   hm.put(101,\"Vijay\");\n   for(Map.Entry m:hm.entrySet()){\n    System.out.println(m.getKey()+\" \"+m.getValue());\n   }\n }\n}",
+    "output": "100 Amit\n101 Vijay",
+    "input": ""
+  },
+  {
+    "title": "HashSet Example",
+    "code": "import java.util.*;\npublic class Main{\n public static void main(String args[]){\n   HashSet<String> set=new HashSet<String>();\n   set.add(\"One\");\n   set.add(\"Two\");\n   set.add(\"One\");\n   System.out.println(set);\n }\n}",
+    "output": "[One, Two]",
+    "input": ""
+  },
+  {
+    "title": "Date and Time",
+    "code": "import java.time.LocalDateTime;\npublic class Main {\n  public static void main(String[] args) {\n    LocalDateTime myObj = LocalDateTime.now();\n    System.out.println(myObj.toLocalDate());\n  }\n}",
+    "output": "2023-10-27 (Current Date)",
+    "input": ""
+  },
+  {
+    "title": "Try-Catch-Finally",
+    "code": "public class Main{\n  public static void main(String args[]){\n  try{\n    int data=25/5;\n    System.out.println(data);\n  }\n  catch(NullPointerException e){System.out.println(e);}\n  finally{System.out.println(\"finally block is always executed\");}\n  }\n}",
+    "output": "5\nfinally block is always executed",
+    "input": ""
+  },
+  {
+    "title": "Throw Exception",
+    "code": "public class Main {\n  static void checkAge(int age) {\n    if (age < 18) throw new ArithmeticException(\"Access denied\");\n    else System.out.println(\"Access granted\");\n  }\n  public static void main(String[] args) {\n    checkAge(15);\n  }\n}",
+    "output": "Exception in thread... ArithmeticException: Access denied",
+    "input": ""
+  },
+  {
+    "title": "Inner Class",
+    "code": "class Outer {\n  int x = 10;\n  class Inner {\n    int y = 5;\n  }\n}\npublic class Main {\n  public static void main(String[] args) {\n    Outer myOuter = new Outer();\n    Outer.Inner myInner = myOuter.new Inner();\n    System.out.println(myInner.y + myOuter.x);\n  }\n}",
+    "output": "15",
+    "input": ""
+  },
+  {
+    "title": "Enum Example",
+    "code": "enum Level { LOW, MEDIUM, HIGH }\npublic class Main {\n  public static void main(String[] args) {\n    Level myVar = Level.MEDIUM;\n    System.out.println(myVar);\n  }\n}",
+    "output": "MEDIUM",
+    "input": ""
+  },
+  {
+    "title": "Java Lambda Expression",
+    "code": "import java.util.ArrayList;\npublic class Main {\n  public static void main(String[] args) {\n    ArrayList<Integer> numbers = new ArrayList<Integer>();\n    numbers.add(5); numbers.add(9); numbers.add(8); numbers.add(1);\n    numbers.forEach( (n) -> { System.out.print(n + \" \"); } );\n  }\n}",
+    "output": "5 9 8 1",
+    "input": ""
+  },
+  {
+    "title": "Wrapper Class",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    Integer myInt = 5;\n    Double myDouble = 5.99;\n    Character myChar = 'A';\n    System.out.println(myInt.intValue());\n    System.out.println(myDouble.doubleValue());\n    System.out.println(myChar.charValue());\n  }\n}",
+    "output": "5\n5.99\nA",
+    "input": ""
+  },
+  {
+    "title": "Type Casting (Widening)",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    int myInt = 9;\n    double myDouble = myInt;\n    System.out.println(myInt);\n    System.out.println(myDouble);\n  }\n}",
+    "output": "9\n9.0",
+    "input": ""
+  },
+  {
+    "title": "Type Casting (Narrowing)",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    double myDouble = 9.78d;\n    int myInt = (int) myDouble;\n    System.out.println(myDouble);\n    System.out.println(myInt);\n  }\n}",
+    "output": "9.78\n9",
+    "input": ""
+  },
+  {
+    "title": "Perfect Number",
+    "code": "import java.util.Scanner;\npublic class Main {\n    public static void main(String[] args) {\n        int n = 28, sum = 0;\n        for(int i = 1; i < n; i++) {\n            if(n % i == 0) sum = sum + i;\n        }\n        if(sum == n) System.out.println(\"Perfect Number\");\n        else System.out.println(\"Not Perfect\");\n    }\n}",
+    "output": "Perfect Number",
+    "input": ""
+  },
+  {
+    "title": "Binary to Decimal",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        String binaryString = \"1010\";\n        int decimal = Integer.parseInt(binaryString, 2);\n        System.out.println(decimal);\n    }\n}",
+    "output": "10",
+    "input": ""
+  },
+  {
+    "title": "Decimal to Binary",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        int decimal = 10;\n        String binary = Integer.toBinaryString(decimal);\n        System.out.println(binary);\n    }\n}",
+    "output": "1010",
+    "input": ""
+  },
+  {
+    "title": "Calculate Power of Number",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        int base = 3, exponent = 4;\n        long result = 1;\n        for (; exponent != 0; --exponent) {\n            result *= base;\n        }\n        System.out.println(\"Answer = \" + result);\n    }\n}",
+    "output": "Answer = 81",
+    "input": ""
+  },
+  {
+    "title": "Average of Array",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        double[] numArray = { 45.3, 67.5, -45.6, 20.34, 33.0, 45.6 };\n        double sum = 0.0;\n        for (double num : numArray) {\n            sum += num;\n        }\n        double average = sum / numArray.length;\n        System.out.format(\"The average is: %.2f\", average);\n    }\n}",
+    "output": "The average is: 27.69",
+    "input": ""
+  },
+  {
+    "title": "Concatenate Two Arrays",
+    "code": "import java.util.Arrays;\npublic class Main {\n    public static void main(String[] args) {\n        int[] array1 = {1, 2, 3};\n        int[] array2 = {4, 5, 6};\n        int aLen = array1.length;\n        int bLen = array2.length;\n        int[] result = new int[aLen + bLen];\n        System.arraycopy(array1, 0, result, 0, aLen);\n        System.arraycopy(array2, 0, result, aLen, bLen);\n        System.out.println(Arrays.toString(result));\n    }\n}",
+    "output": "[1, 2, 3, 4, 5, 6]",
+    "input": ""
+  },
+  {
+    "title": "Character to String",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        char ch = 'c';\n        String st = Character.toString(ch);\n        System.out.println(\"The string is: \" + st);\n    }\n}",
+    "output": "The string is: c",
+    "input": ""
+  },
+  {
+    "title": "Duplicate Elements in Array",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        int [] arr = new int [] {1, 2, 3, 4, 2, 7, 8, 8, 3};\n        System.out.println(\"Duplicate elements in given array: \");\n        for(int i = 0; i < arr.length; i++) {\n            for(int j = i + 1; j < arr.length; j++) {\n                if(arr[i] == arr[j])\n                    System.out.println(arr[j]);\n            }\n        }\n    }\n}",
+    "output": "Duplicate elements: \n2\n3\n8",
+    "input": ""
+  },
+  {
+    "title": "Frequency of Each Element",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        int [] arr = new int [] {1, 2, 8, 3, 2, 2, 2, 5, 1};\n        int [] fr = new int [arr.length];\n        int visited = -1;\n        for(int i = 0; i < arr.length; i++){\n            int count = 1;\n            for(int j = i+1; j < arr.length; j++){\n                if(arr[i] == arr[j]){\n                    count++;\n                    fr[j] = visited;\n                }\n            }\n            if(fr[i] != visited)\n                fr[i] = count;\n        }\n        for(int i = 0; i < fr.length; i++){\n            if(fr[i] != visited)\n                System.out.println(\"    \" + arr[i] + \"    |    \" + fr[i]);\n        }\n    }\n}",
+    "output": "1 | 2\n2 | 4\n8 | 1\n3 | 1\n5 | 1",
+    "input": ""
+  },
+  {
+    "title": "Rotate Array Left",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        int [] arr = new int [] {1, 2, 3, 4, 5};\n        int n = 3;\n        for(int i = 0; i < n; i++){\n            int j, first;\n            first = arr[0];\n            for(j = 0; j < arr.length-1; j++){\n                arr[j] = arr[j+1];\n            }\n            arr[j] = first;\n        }\n        for(int i = 0; i < arr.length; i++) System.out.print(arr[i] + \" \");\n    }\n}",
+    "output": "4 5 1 2 3",
+    "input": ""
+  },
+  {
+    "title": "Smallest Element in Array",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        int [] arr = new int [] {25, 11, 7, 75, 56};\n        int min = arr[0];\n        for (int i = 0; i < arr.length; i++) {\n            if(arr[i] < min)\n               min = arr[i];\n        }\n        System.out.println(\"Smallest element: \" + min);\n    }\n}",
+    "output": "Smallest element: 7",
+    "input": ""
+  },
+  {
+    "title": "Print Ascii Value",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        char ch1 = 'a';\n        char ch2 = 'b';\n        int asciivalue1 = ch1;\n        int asciivalue2 = ch2;\n        System.out.println(\"The ASCII value of \" + ch1 + \" is: \" + asciivalue1);\n        System.out.println(\"The ASCII value of \" + ch2 + \" is: \" + asciivalue2);\n    }\n}",
+    "output": "The ASCII value of a is: 97\nThe ASCII value of b is: 98",
+    "input": ""
+  },
+  {
+    "title": "Automorphic Number",
+    "code": "public class Main {\n    public static void main(String args[]) {\n        int num = 76;\n        int square = num * num;\n        String strNum = Integer.toString(num);\n        String strSquare = Integer.toString(square);\n        if(strSquare.endsWith(strNum))\n            System.out.println(\"Automorphic Number\");\n        else\n            System.out.println(\"Not Automorphic Number\");\n    }\n}",
+    "output": "Automorphic Number",
+    "input": ""
+  },
+  {
+    "title": "Peterson Number",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        int n = 145;\n        int temp = n;\n        int sum = 0;\n        while (n > 0) {\n            int digit = n % 10;\n            int fact = 1;\n            for (int i = 1; i <= digit; i++) fact = fact * i;\n            sum += fact;\n            n = n / 10;\n        }\n        if (sum == temp) System.out.println(\"Peterson Number\");\n        else System.out.println(\"Not Peterson Number\");\n    }\n}",
+    "output": "Peterson Number",
+    "input": ""
+  },
+  {
+    "title": "Sunny Number",
+    "code": "public class Main {\n    public static void main(String args[]) {\n        int N = 80;\n        double root = Math.sqrt(N + 1);\n        if ((int)root == root)\n            System.out.println(\"Sunny Number\");\n        else\n            System.out.println(\"Not Sunny Number\");\n    }\n}",
+    "output": "Sunny Number",
+    "input": ""
+  },
+  {
+    "title": "Tech Number",
+    "code": "public class Main {\n    public static void main(String args[]) {\n        int n = 2025;\n        int digits = (int) Math.log10(n) + 1;\n        if (digits % 2 == 0) {\n            int firstHalf = n / (int) Math.pow(10, digits / 2);\n            int secondHalf = n % (int) Math.pow(10, digits / 2);\n            int squareOfSum = (firstHalf + secondHalf) * (firstHalf + secondHalf);\n            if (n == squareOfSum) System.out.println(\"Tech Number\");\n            else System.out.println(\"Not Tech Number\");\n        }\n    }\n}",
+    "output": "Tech Number",
+    "input": ""
+  },
+  {
+    "title": "Fascinating Number",
+    "code": "public class Main {\n    public static void main(String args[]) {\n        int num = 192;\n        String str = num + \"\" + num * 2 + \"\" + num * 3;\n        boolean flag = true;\n        for (char c = '1'; c <= '9'; c++) {\n            if (str.indexOf(c) == -1) {\n                flag = false;\n                break;\n            }\n        }\n        if (flag) System.out.println(\"Fascinating Number\");\n        else System.out.println(\"Not Fascinating Number\");\n    }\n}",
+    "output": "Fascinating Number",
+    "input": ""
+  },
+  {
+    "title": "Keith Number",
+    "code": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        int x = 197;\n        ArrayList<Integer> terms = new ArrayList<>();\n        int temp = x; int n = 0; \n        while (temp > 0) {\n            terms.add(0, temp % 10);\n            temp /= 10;\n            n++;\n        }\n        int next_term = 0;\n        while (next_term < x) {\n            next_term = 0;\n            for (int i = 0; i < n; i++) next_term += terms.get(terms.size() - 1 - i);\n            terms.add(next_term);\n            if (next_term == x) {\n                System.out.println(\"Keith Number\");\n                return;\n            }\n        }\n        System.out.println(\"Not Keith Number\");\n    }\n}",
+    "output": "Keith Number",
+    "input": ""
+  },
+  {
+    "title": "Neon Number",
+    "code": "public class Main {\n    public static void main(String args[]) {\n        int n = 9;\n        int square = n * n;\n        int sum = 0;\n        while (square > 0) {\n            sum += square % 10;\n            square /= 10;\n        }\n        if (sum == n) System.out.println(\"Neon Number\");\n        else System.out.println(\"Not Neon Number\");\n    }\n}",
+    "output": "Neon Number",
+    "input": ""
+  },
+  {
+    "title": "Spy Number",
+    "code": "public class Main {\n    public static void main(String args[]) {\n        int num = 1124;\n        int product = 1, sum = 0, lastdigit;\n        while (num > 0) {\n            lastdigit = num % 10;\n            sum = sum + lastdigit;\n            product = product * lastdigit;\n            num = num / 10;\n        }\n        if (sum == product) System.out.println(\"Spy Number\");\n        else System.out.println(\"Not Spy Number\");\n    }\n}",
+    "output": "Spy Number",
+    "input": ""
+  },
+  {
+    "title": "ATM Program",
+    "code": "import java.util.Scanner;\npublic class Main {\n    public static void main(String args[]) {\n        int balance = 100000, withdraw = 50000, deposit = 20000;\n        System.out.println(\"Balance: \"+balance);\n        balance = balance - withdraw;\n        System.out.println(\"After Withdraw: \"+balance);\n        balance = balance + deposit;\n        System.out.println(\"After Deposit: \"+balance);\n    }\n}",
+    "output": "Balance: 100000\nAfter Withdraw: 50000\nAfter Deposit: 70000",
+    "input": ""
+  },
+  {
+    "title": "Matrix Transpose",
+    "code": "public class Main{\npublic static void main(String args[]){\nint original[][]={{1,3,4},{2,4,3},{3,4,5}};\nSystem.out.println(\"Printing Matrix without transpose:\");\nfor(int i=0;i<3;i++){\nfor(int j=0;j<3;j++){\nSystem.out.print(original[i][j]+\" \");\n}\nSystem.out.println();\n}\nSystem.out.println(\"Printing Matrix After Transpose:\");\nfor(int i=0;i<3;i++){\nfor(int j=0;j<3;j++){\nSystem.out.print(original[j][i]+\" \");\n}\nSystem.out.println();\n}\n}}",
+    "output": "Matrix Transposed",
+    "input": ""
+  },
+  {
+    "title": "Sparse Matrix",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        int rows, cols, size, count = 0;\n        int a[][] = {{4, 0, 0}, {0, 5, 0}, {0, 0, 6}};\n        rows = a.length;\n        cols = a[0].length;\n        size = rows * cols;\n        for(int i = 0; i < rows; i++){\n            for(int j = 0; j < cols; j++){\n                if(a[i][j] == 0) count++;\n            }\n        }\n        if(count > (size/2)) System.out.println(\"Sparse Matrix\");\n        else System.out.println(\"Not a Sparse Matrix\");\n    }\n}",
+    "output": "Sparse Matrix",
+    "input": ""
+  },
+  {
+    "title": "Identity Matrix",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        int rows, cols;\n        boolean flag = true;\n        int a[][] = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};\n        rows = a.length;\n        cols = a[0].length;\n        if(rows != cols) System.out.println(\"Not a square matrix\");\n        else {\n            for(int i = 0; i < rows; i++){\n                for(int j = 0; j < cols; j++){\n                    if(i == j && a[i][j] != 1) flag = false;\n                    if(i != j && a[i][j] != 0) flag = false;\n                }\n            }\n            if(flag) System.out.println(\"Identity Matrix\");\n            else System.out.println(\"Not an Identity Matrix\");\n        }\n    }\n}",
+    "output": "Identity Matrix",
+    "input": ""
+  },
+  {
+    "title": "String Replace",
+    "code": "public class Main{\npublic static void main(String args[]){\nString s1=\"javatpoint is a very good website\";\nString replaceString=s1.replace('a','e');\nSystem.out.println(replaceString);\n}}",
+    "output": "jevetpoint is e very good website",
+    "input": ""
+  },
+  {
+    "title": "Substring Example",
+    "code": "public class Main{\npublic static void main(String args[]){\nString s1=\"Javatpoint\";\nSystem.out.println(s1.substring(2,4));\nSystem.out.println(s1.substring(2));\n}}",
+    "output": "va\nvatpoint",
+    "input": ""
+  },
+  {
+    "title": "String Comparison",
+    "code": "public class Main{\npublic static void main(String args[]){\nString s1=\"Sachin\";\nString s2=\"Sachin\";\nString s3=new String(\"Sachin\");\nSystem.out.println(s1==s2);\nSystem.out.println(s1==s3);\n}}",
+    "output": "true\nfalse",
+    "input": ""
+  },
+  {
+    "title": "String Concatenation Test",
+    "code": "public class Main{\n public static void main(String args[]){\n   String s=\"Sachin\"+\" Tendulkar\";\n   System.out.println(s);\n }\n}",
+    "output": "Sachin Tendulkar",
+    "input": ""
+  },
+  {
+    "title": "StringBuffer Append",
+    "code": "public class Main{\npublic static void main(String args[]){\nStringBuffer sb=new StringBuffer(\"Hello \");\nsb.append(\"Java\");\nSystem.out.println(sb);\n}}",
+    "output": "Hello Java",
+    "input": ""
+  },
+  {
+    "title": "StringBuilder Example",
+    "code": "public class Main{\npublic static void main(String args[]){\nStringBuilder sb=new StringBuilder(\"Hello \");\nsb.append(\"Java\");\nSystem.out.println(sb);\n}}",
+    "output": "Hello Java",
+    "input": ""
+  },
+  {
+    "title": "String Tokenizer",
+    "code": "import java.util.StringTokenizer;\npublic class Main{\n public static void main(String args[]){\n   StringTokenizer st = new StringTokenizer(\"my name is khan\",\" \");\n   while (st.hasMoreTokens()) {\n     System.out.println(st.nextToken());\n   }\n }\n}",
+    "output": "my\nname\nis\nkhan",
+    "input": ""
+  },
+  {
+    "title": "Static Block",
+    "code": "public class Main{\n  static{System.out.println(\"static block is invoked\");}\n  public static void main(String args[]){\n   System.out.println(\"Hello main\");\n  }\n}",
+    "output": "static block is invoked\nHello main",
+    "input": ""
+  },
+  {
+    "title": "This Keyword",
+    "code": "class Student{\nint rollno;\nStudent(int rollno){\nthis.rollno=rollno;\n}\nvoid display(){System.out.println(rollno);}\n}\npublic class Main{\npublic static void main(String args[]){\nStudent s1=new Student(111);\ns1.display();\n}}",
+    "output": "111",
+    "input": ""
+  },
+  {
+    "title": "Super Keyword",
+    "code": "class Animal{ String color=\"white\"; }\nclass Dog extends Animal{\nString color=\"black\";\nvoid printColor(){\nSystem.out.println(color);\nSystem.out.println(super.color);\n}\n}\npublic class Main{ public static void main(String args[]){ Dog d=new Dog(); d.printColor(); }}",
+    "output": "black\nwhite",
+    "input": ""
+  },
+  {
+    "title": "Instance Initializer Block",
+    "code": "class Bike7{\n    int speed;\n    Bike7(){System.out.println(\"speed is \"+speed);}\n    {speed=100;}\n    public static void main(String args[]){\n    Bike7 b1=new Bike7();\n    }\n}",
+    "output": "speed is 100",
+    "input": ""
+  },
+  {
+    "title": "Runtime Polymorphism",
+    "code": "class Bank{float getRateOfInterest(){return 0;}}\nclass SBI extends Bank{float getRateOfInterest(){return 8.4f;}}\nclass ICICI extends Bank{float getRateOfInterest(){return 7.3f;}}\npublic class Main{\npublic static void main(String args[]){\nBank b=new SBI();\nSystem.out.println(\"SBI Rate of Interest: \"+b.getRateOfInterest());\n}}",
+    "output": "SBI Rate of Interest: 8.4",
+    "input": ""
+  },
+  {
+    "title": "Final Keyword (Variable)",
+    "code": "class Bike9{\n final int speedlimit=90;\n void run(){\n  // speedlimit=400; // This would cause error\n  System.out.println(speedlimit);\n }\n public static void main(String args[]){\n new Bike9().run();\n }\n}",
+    "output": "90",
+    "input": ""
+  },
+  {
+    "title": "Interface Inheritance",
+    "code": "interface Printable{void print();}\ninterface Showable{void show();}\nclass A7 implements Printable,Showable{\npublic void print(){System.out.println(\"Hello\");}\npublic void show(){System.out.println(\"Welcome\");}\npublic static void main(String args[]){\nA7 obj = new A7();\nobj.print();\nobj.show();\n}}",
+    "output": "Hello\nWelcome",
+    "input": ""
+  },
+  {
+    "title": "Nested Try Block",
+    "code": "public class Main{\n public static void main(String args[]){\n  try{\n    try{\n     int b =39/0;\n    }catch(ArithmeticException e){System.out.println(e);}\n    try{\n    int a[]=new int[5];\n    a[5]=4;\n    }catch(ArrayIndexOutOfBoundsException e){System.out.println(e);}\n  }catch(Exception e){System.out.println(\"handled\");}\n }\n}",
+    "output": "ArithmeticException\nArrayIndexOutOfBoundsException",
+    "input": ""
+  },
+  {
+    "title": "User Defined Exception",
+    "code": "class InvalidAgeException extends Exception{\n InvalidAgeException(String s){\n  super(s);\n }\n}\npublic class Main{\n static void validate(int age)throws InvalidAgeException{\n   if(age<18) throw new InvalidAgeException(\"not valid\");\n   else System.out.println(\"welcome to vote\");\n }\n public static void main(String args[]){\n  try{ validate(13); }catch(Exception m){System.out.println(\"Exception: \"+m);}\n }\n}",
+    "output": "Exception: InvalidAgeException: not valid",
+    "input": ""
+  },
+  {
+    "title": "Garbage Collection",
+    "code": "public class Main{\n public void finalize(){System.out.println(\"object is garbage collected\");}\n public static void main(String args[]){\n  Main s1=new Main();\n  s1=null;\n  System.gc();\n }\n}",
+    "output": "object is garbage collected",
+    "input": ""
+  },
+  {
+    "title": "Thread Extension",
+    "code": "class Multi extends Thread{\npublic void run(){System.out.println(\"thread is running...\");}\npublic static void main(String args[]){\nMulti t1=new Multi();\nt1.start();\n}}",
+    "output": "thread is running...",
+    "input": ""
+  },
+  {
+    "title": "Runnable Interface",
+    "code": "class Multi3 implements Runnable{\npublic void run(){System.out.println(\"thread is running...\");}\npublic static void main(String args[]){\nMulti3 m1=new Multi3();\nThread t1 =new Thread(m1);\nt1.start();\n}}",
+    "output": "thread is running...",
+    "input": ""
+  },
+  {
+    "title": "Sleep Thread",
+    "code": "class TestSleepMethod1 extends Thread{\n public void run(){\n  for(int i=1;i<3;i++){\n    try{Thread.sleep(500);}catch(InterruptedException e){System.out.println(e);}\n    System.out.println(i);\n  }\n }\n public static void main(String args[]){\n  TestSleepMethod1 t1=new TestSleepMethod1();\n  t1.start();\n }\n}",
+    "output": "1\n2",
+    "input": ""
+  },
+  {
+    "title": "Join Thread",
+    "code": "class TestJoinMethod1 extends Thread{\n public void run(){\n  for(int i=1;i<=2;i++){ System.out.println(i); }\n }\n public static void main(String args[]){\n  TestJoinMethod1 t1=new TestJoinMethod1();\n  t1.start();\n  try{ t1.join(); }catch(Exception e){System.out.println(e);}\n  System.out.println(\"Main done\");\n }\n}",
+    "output": "1\n2\nMain done",
+    "input": ""
+  },
+  {
+    "title": "Priority of Thread",
+    "code": "class TestMultiPriority1 extends Thread{\n public void run(){ System.out.println(\"running thread name is:\"+Thread.currentThread().getName() + \" Priority: \" + Thread.currentThread().getPriority()); }\n public static void main(String args[]){\n  TestMultiPriority1 m1=new TestMultiPriority1();\n  m1.setPriority(Thread.MIN_PRIORITY);\n  m1.start();\n }\n}",
+    "output": "running thread name is:Thread-0 Priority: 1",
+    "input": ""
+  },
+  {
+    "title": "Synchronization Block",
+    "code": "class Table{\n void printTable(int n){\n   synchronized(this){\n     for(int i=1;i<=2;i++){\n      System.out.println(n*i);\n     }\n   }\n }\n}\npublic class Main{\n public static void main(String args[]){ new Table().printTable(5); }\n}",
+    "output": "5\n10",
+    "input": ""
+  },
+  {
+    "title": "Vector Example",
+    "code": "import java.util.*;\npublic class Main{\n public static void main(String args[]){\n  Vector<String> v=new Vector<String>();\n  v.add(\"Ayush\");\n  v.add(\"Amit\");\n  Iterator<String> itr=v.iterator();\n  while(itr.hasNext()){ System.out.println(itr.next()); }\n }\n}",
+    "output": "Ayush\nAmit",
+    "input": ""
+  },
+  {
+    "title": "Stack Example",
+    "code": "import java.util.*;\npublic class Main{\npublic static void main(String args[]){\nStack<String> stack = new Stack<String>();\nstack.push(\"Ayush\");\nstack.push(\"Garvit\");\nstack.pop();\nIterator<String> itr=stack.iterator();\nwhile(itr.hasNext()){ System.out.println(itr.next()); }\n}}",
+    "output": "Ayush",
+    "input": ""
+  },
+  {
+    "title": "LinkedList Example",
+    "code": "import java.util.*;\npublic class Main{\n public static void main(String args[]){\n  LinkedList<String> al=new LinkedList<String>();\n  al.add(\"Ravi\");\n  al.add(\"Vijay\");\n  Iterator<String> itr=al.iterator();\n  while(itr.hasNext()){ System.out.println(itr.next()); }\n }\n}",
+    "output": "Ravi\nVijay",
+    "input": ""
+  },
+  {
+    "title": "LinkedHashSet Example",
+    "code": "import java.util.*;\npublic class Main{\n public static void main(String args[]){\n  LinkedHashSet<String> set=new LinkedHashSet<String>();\n  set.add(\"Ravi\");\n  set.add(\"Vijay\");\n  set.add(\"Ravi\");\n  Iterator<String> itr=set.iterator();\n  while(itr.hasNext()){ System.out.println(itr.next()); }\n }\n}",
+    "output": "Ravi\nVijay",
+    "input": ""
+  },
+  {
+    "title": "TreeSet Example",
+    "code": "import java.util.*;\npublic class Main{\n public static void main(String args[]){\n  TreeSet<String> set=new TreeSet<String>();\n  set.add(\"Ravi\");\n  set.add(\"Vijay\");\n  set.add(\"Ravi\");\n  set.add(\"Ajay\");\n  Iterator<String> itr=set.iterator();\n  while(itr.hasNext()){ System.out.println(itr.next()); }\n }\n}",
+    "output": "Ajay\nRavi\nVijay",
+    "input": ""
+  },
+  {
+    "title": "PriorityQueue Example",
+    "code": "import java.util.*;\npublic class Main{\npublic static void main(String args[]){\nPriorityQueue<String> queue=new PriorityQueue<String>();\nqueue.add(\"Amit\");\nqueue.add(\"Vijay\");\nqueue.add(\"Karan\");\nSystem.out.println(\"head:\"+queue.element());\nqueue.remove();\nSystem.out.println(\"after remove:\"+queue.element());\n}}",
+    "output": "head:Amit\nafter remove:Karan",
+    "input": ""
+  },
+  {
+    "title": "TreeMap Example",
+    "code": "import java.util.*;\npublic class Main{\n public static void main(String args[]){\n   TreeMap<Integer,String> map=new TreeMap<Integer,String>();\n   map.put(100,\"Amit\");\n   map.put(102,\"Ravi\");\n   map.put(101,\"Vijay\");\n   for(Map.Entry m:map.entrySet()){\n    System.out.println(m.getKey()+\" \"+m.getValue());\n   }\n }\n}",
+    "output": "100 Amit\n101 Vijay\n102 Ravi",
+    "input": ""
+  },
+  {
+    "title": "Hashtable Example",
+    "code": "import java.util.*;\npublic class Main{\n public static void main(String args[]){\n  Hashtable<Integer,String> hm=new Hashtable<Integer,String>();\n  hm.put(100,\"Amit\");\n  hm.put(102,\"Ravi\");\n  for(Map.Entry m:hm.entrySet()){\n   System.out.println(m.getKey()+\" \"+m.getValue());\n  }\n }\n}",
+    "output": "102 Ravi\n100 Amit",
+    "input": ""
+  },
+  {
+    "title": "Comparable Interface",
+    "code": "import java.util.*;\nclass Student implements Comparable<Student>{\nint rollno; String name;\nStudent(int rollno,String name){this.rollno=rollno;this.name=name;}\npublic int compareTo(Student st){ return this.rollno - st.rollno; }\n}\npublic class Main{\npublic static void main(String args[]){\nArrayList<Student> al=new ArrayList<Student>();\nal.add(new Student(106,\"Vijay\"));\nal.add(new Student(101,\"Ajay\"));\nCollections.sort(al);\nfor(Student st:al){System.out.println(st.rollno+\" \"+st.name);}\n}}",
+    "output": "101 Ajay\n106 Vijay",
+    "input": ""
+  },
+  {
+    "title": "Comparator Interface",
+    "code": "import java.util.*;\nclass Student{int rollno;String name; Student(int r,String n){rollno=r;name=n;}}\nclass AgeComparator implements Comparator<Student>{\npublic int compare(Student s1,Student s2){return s1.name.compareTo(s2.name);}\n}\npublic class Main{\npublic static void main(String args[]){\nArrayList<Student> al=new ArrayList<Student>();\nal.add(new Student(101,\"Vijay\"));\nal.add(new Student(106,\"Ajay\"));\nCollections.sort(al,new AgeComparator());\nfor(Student st:al){System.out.println(st.rollno+\" \"+st.name);}\n}}",
+    "output": "106 Ajay\n101 Vijay",
+    "input": ""
+  },
+  {
+    "title": "Java Annotations",
+    "code": "class Animal{void eatSomething(){System.out.println(\"eating something\");}}\nclass Dog extends Animal{\n@Override\nvoid eatSomething(){System.out.println(\"eating foods\");}\n}\npublic class Main{public static void main(String args[]){Animal a=new Dog();a.eatSomething();}}",
+    "output": "eating foods",
+    "input": ""
+  },
+  {
+    "title": "Read File Line by Line",
+    "code": "import java.io.*;\npublic class Main {\n  public static void main(String[] args) {\n    try {\n      File myObj = new File(\"filename.txt\");\n      Scanner myReader = new Scanner(myObj);\n      while (myReader.hasNextLine()) {\n        String data = myReader.nextLine();\n        System.out.println(data);\n      }\n      myReader.close();\n    } catch (FileNotFoundException e) {\n      System.out.println(\"File not found.\");\n    }\n  }\n}",
+    "output": "File not found.",
+    "input": ""
+  },
+  {
+    "title": "Delete File",
+    "code": "import java.io.File;\npublic class Main {\n  public static void main(String[] args) {\n    File myObj = new File(\"filename.txt\");\n    if (myObj.delete()) {\n      System.out.println(\"Deleted the file: \" + myObj.getName());\n    } else {\n      System.out.println(\"Failed to delete the file.\");\n    }\n  }\n}",
+    "output": "Failed to delete the file.",
+    "input": ""
+  },
+  {
+    "title": "Get Current Thread",
+    "code": "public class Main {\n  public static void main(String[] args) {\n    Thread t = Thread.currentThread();\n    System.out.println(t.getName());\n  }\n}",
+    "output": "main",
+    "input": ""
+  },
+  {
+    "title": "Daemon Thread",
+    "code": "public class Main extends Thread{\n public void run(){ if(Thread.currentThread().isDaemon()){ System.out.println(\"daemon thread work\"); } else { System.out.println(\"user thread work\"); } }\n public static void main(String[] args){\n  Main t1=new Main();\n  t1.setDaemon(true);\n  t1.start();\n }\n}",
+    "output": "daemon thread work",
+    "input": ""
+  }
+]

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Java Programs</title>
+
+    <!-- Bootstrap CSS (for quick UI) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Prism for syntax highlighting (C) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-c.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allan:wght@400;700&family=Anton+SC&family=Aref+Ruqaa+Ink:wght@400;700&family=Bebas+Neue&family=Bungee+Spice&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=Days+One&family=Delius+Unicase:wght@400;700&family=Eagle+Lake&family=Fira+Mono:wght@400;500;700&family=Ga+Maamli&family=Lemon&family=Lemonada:wght@300..700&family=Momo+Trust+Display&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Rowdies:wght@300;400;700&family=Rubik+Glitch&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&family=Yatra+One&display=swap" rel="stylesheet">
+
+     <link rel="stylesheet" href="/css/for_all_lang.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <h1 class="logo-brand">Code Hub</h1>
+      <div class="d-flex align-items-center gap-2">
+          <button id="btnShowBookmarks" class="btn btn-outline-warning" onclick="toggleBookmarkView()">
+            <i class="bi bi-bookmark-star"></i> My Bookmarks
+          </button>
+          
+          <button title="logout" class="btn btn-danger logoutBtn ms-2">Logout</button>
+        </div>
+    </div>
+  </nav>
+
+    <div class="container">
+      <nav class="mb-3">
+        <a href="/code.html" class="btn btn-link"
+          ><i class="bi bi-box-arrow-left"></i> Back</a
+        >
+      </nav>
+
+      <header class="mb-3">
+        <h2 class="mb-1 lang-title">Java Programs</h2>
+        <div class="meta">
+          Practice Java programs, search to get your needs.
+        </div>
+      </header>
+
+      <section class="mb-3">
+        <div class="row g-2 align-items-center">
+          <div class="col-md-8">
+            <input
+              id="search"
+              class="form-control"
+              placeholder="Search programs (e.g., loops, classes, arrays...)"
+              autofocus />
+          </div>
+          <div class="col-md-4 text-md-end">
+            <small id="stats" class="text-muted">Loading...</small>
+          </div>
+        </div>
+      </section>
+
+      <section id="listArea"></section>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-c.min.js"></script>
+
+    <script src="/js/bookmark.js"></script>
+    <script src="/js/java_programs.js"></script>
+  </body>
+</html>

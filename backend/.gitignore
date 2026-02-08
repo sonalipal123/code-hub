@@ -1,0 +1,18 @@
+
+
+# Environment variables
+.env
+
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+build/
+coverage/
+
+# IDE settings
+.vscode/
+.idea/
+
+
